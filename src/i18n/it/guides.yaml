@@ -1,0 +1,87 @@
+# Keyed by guide slug in src/data/pages.yaml. `picks` is keyed by product slug.
+best-wordpress-inventory-plugins:
+  title: "Migliori plugin di magazzino per WordPress ({year}): 8 a confronto con fonti"
+  nav: Migliori plugin di magazzino in assoluto
+  description: "Otto plugin WordPress mantenuti per magazzino e giacenze, in classifica per ciò che ciascuno fa meglio, con prezzi, numeri di wordpress.org e fonti."
+  h1: Migliori plugin di magazzino per WordPress
+  intro:
+    - "In WordPress \"gestione magazzino\" copre tre tipi di plugin. Alcuni gestiscono le giacenze dei prodotti WooCommerce. Alcuni sono sistemi di magazzino autonomi per magazzini, attrezzature o forniture. Alcuni sono suite contabili o ERP con un modulo di magazzino."
+    - "La classifica qui sotto valuta quanto fa ciascun plugin, quanto costa e quanto è collaudato, poi indica dove un altro plugin è più adatto."
+  picks:
+    atum: "La suite di magazzino più completa per WooCommerce, con più di 10.000 installazioni attive. Ordini d'acquisto, fornitori, log di magazzino e il valore delle giacenze sono gratuiti. Sedi, codici a barre, esportazione CSV e il log completo delle azioni sono add-on a pagamento, con un prezzo per sito all'anno."
+    plugixa-inventory: "Il nostro plugin. Il sistema di magazzino autonomo gratuito più completo di questo confronto: più magazzini, movimenti, prestiti, un registro bloccato, email di scorta bassa e importazione ed esportazione CSV. È secondo, non primo, perché è nuovo, non ha ordini d'acquisto e non si collega a WooCommerce."
+    wp-inventory-manager: "Un plugin autonomo di lunga data costruito attorno a un catalogo pubblico di articoli. Sedi, registro, importazione ed esportazione sono add-on che richiedono una licenza Pro."
+    stock-manager-for-woocommerce: "Il plugin più installato di questo confronto, e gratuito. È una tabella veloce per modificare giacenze e prezzi WooCommerce, non un sistema di magazzino completo."
+    stock-locations-for-woocommerce: "Giacenze per sede gratuite per WooCommerce, con gli ordini assegnati a una sede e un'API REST."
+    bizuno: "Un sistema di contabilità gratuito e open source con un solido modulo di magazzino, che include numeri di serie, trasferimenti e costo FIFO o LIFO. Ha pochissimi utenti, e il suo collegamento con WooCommerce è stato chiuso su wordpress.org."
+    wp-erp: "Una suite per personale, contabilità e CRM. Carichi e scarichi richiedono il piano Scale, e magazzini e avvisi di scorta bassa non sono documentati."
+    zintory: "Un piccolo registro di transazioni tra conti, con trasferimenti e ordini gratuiti, ma senza avvisi di scorta bassa né dashboard."
+  how:
+    - "Abbiamo stilato la classifica in base a quattro aspetti verificabili: che cosa include la versione gratuita, quanto costano i piani a pagamento, quanto attivamente è mantenuto il plugin e che cosa dicono i suoi utenti su wordpress.org."
+    - "Non abbiamo eseguito test di velocità e non abbiamo provato a mano ogni funzione. I valori provengono dalle pagine di ciascun produttore e dal codice dei plugin; la pagina della metodologia ne spiega i limiti."
+
+best-free-inventory-plugins:
+  title: "Migliori plugin di magazzino gratuiti per WordPress ({year})"
+  nav: Migliori plugin di magazzino gratuiti
+  description: "Che cosa include senza pagare ogni plugin di magazzino gratuito per WordPress, da magazzini e registri fino agli ordini d'acquisto, con le fonti."
+  h1: Migliori plugin di magazzino gratuiti per WordPress
+  intro:
+    - "Ogni plugin di questo elenco ha una versione gratuita, ma ciascuno riserva ai piani a pagamento cose diverse. Uno offre i magazzini gratis e fa pagare i trasferimenti. Un altro offre gli ordini d'acquisto gratis e fa pagare le sedi."
+    - "Il plugin gratuito giusto dipende dalla funzione di cui puoi fare meno a meno."
+  picks:
+    plugixa-inventory: "Il nostro plugin. Gratis: più magazzini, movimenti di carico e scarico, prestiti, un registro bloccato, valorizzazione al costo, email di scorta bassa, una dashboard, importazione ed esportazione CSV, un'API REST e WP-CLI. Trasferimenti, rettifiche e report sono Pro."
+    atum: "Gratis: ordini d'acquisto, fornitori, log di magazzino, valore delle giacenze al prezzo d'acquisto, una dashboard e un'API REST, per prodotti WooCommerce. Sedi ed esportazione CSV sono add-on a pagamento."
+    bizuno: "Interamente gratuito e open source, con giacenze per punto vendita, trasferimenti, numeri di serie e costo FIFO o LIFO. In cambio ti prendi un'intera applicazione di contabilità, con pochi altri utenti."
+    stock-manager-for-woocommerce: "Modifica in blocco delle giacenze WooCommerce interamente gratuita, con importazione ed esportazione CSV e un log di base."
+    wp-inventory-manager: "Un catalogo di articoli gratuito con immagini, una soglia di scorta bassa e un elenco pubblico. Movimenti di magazzino e sedi richiedono add-on a pagamento."
+    zintory: "Transazioni gratuite tra conti, trasferimenti tra magazzini e ordini di acquisto e vendita numerati. Niente avvisi né dashboard."
+  how:
+    - "Abbiamo considerato solo la versione gratuita di ogni plugin, e ciò che permette di fare senza alcun add-on a pagamento."
+
+woocommerce-inventory-plugins:
+  title: "Migliori plugin di magazzino per WooCommerce ({year})"
+  nav: Plugin di magazzino per WooCommerce
+  description: "Plugin WordPress che gestiscono le giacenze di WooCommerce, confrontati su ordini d'acquisto, sedi e prezzo, con le fonti."
+  h1: Migliori plugin di magazzino per WooCommerce
+  intro:
+    - "WooCommerce conta le giacenze per prodotto, e questi plugin aggiungono ciò che gli manca, come acquisti, sedi o una modifica più rapida. Tutti e tre richiedono WooCommerce."
+    - "Se una parte delle tue giacenze non viene venduta tramite il negozio, potrebbe essere più adatto un plugin autonomo; vedi la guida ai plugin senza WooCommerce."
+  picks:
+    atum: "L'opzione più completa, con ordini d'acquisto, fornitori, log e una dashboard gratis, e sedi, codici a barre e inventari fisici come add-on a pagamento."
+    stock-manager-for-woocommerce: "Il modo più rapido per modificare le giacenze di molti prodotti, gratis."
+    stock-locations-for-woocommerce: "Giacenze per sede gratuite, con gli ordini assegnati a una sede."
+  how:
+    - "Abbiamo incluso solo plugin mantenuti il cui compito principale sono le giacenze di WooCommerce. Gli editor di prodotti in blocco in cui la giacenza è solo uno dei tanti campi sono stati esclusi."
+
+inventory-plugins-without-woocommerce:
+  title: "Plugin di magazzino per WordPress senza WooCommerce ({year})"
+  nav: Magazzino senza WooCommerce
+  description: "Plugin WordPress autonomi che gestiscono giacenze, attrezzature e forniture senza WooCommerce, confrontati con le fonti."
+  h1: Plugin di magazzino che non richiedono WooCommerce
+  intro:
+    - "Non tutta la merce è in vendita. Attrezzature date in prestito, forniture che si consumano e ricambi tenuti in un deposito richiedono una gestione del magazzino senza un negozio. Questi plugin tengono i propri record e non richiedono WooCommerce."
+  picks:
+    plugixa-inventory: "Il nostro plugin. Magazzini, movimenti, prestito a persone con nome e un registro che nessuno può modificare, gratis, con trasferimenti e rettifiche in Pro."
+    wp-inventory-manager: "Un catalogo di articoli che puoi pubblicare sul tuo sito, con add-on a pagamento per sedi e registro."
+    bizuno: "Il magazzino dentro un sistema di contabilità gratuito, con trasferimenti, numeri di serie e costi."
+    zintory: "Un registro essenziale di transazioni tra magazzini, fornitori e clienti."
+    wp-erp: "Il magazzino come parte di una suite per personale e contabilità, nel piano Scale."
+  how:
+    - "Abbiamo incluso i plugin che tengono il magazzino nei propri record e funzionano senza WooCommerce. Alcuni possono anche leggere i prodotti WooCommerce; la tabella lo segnala."
+
+multi-warehouse-inventory-plugins:
+  title: "Plugin di magazzino per WordPress con più magazzini ({year})"
+  nav: Magazzino su più sedi
+  description: "Plugin WordPress che tengono le giacenze per magazzino o sede, confrontati su trasferimenti, prezzo e storico, con le fonti."
+  h1: Plugin di magazzino per più magazzini
+  intro:
+    - "Tenere merce in più di un luogo significa che ogni luogo ha bisogno di una propria quantità, e spostare merce tra l'uno e l'altro dovrebbe essere un unico trasferimento registrato. Questi plugin tengono le giacenze per sede; si differenziano per i trasferimenti e per ciò che è gratuito."
+  picks:
+    plugixa-inventory: "Il nostro plugin. Giacenze per magazzino, una panoramica del magazzino e le scorte basse per magazzino sono gratuite; i trasferimenti che scrivono entrambe le parti nel registro sono Pro."
+    bizuno: "Giacenze per punto vendita e trasferimenti tra punti vendita, gratis, dentro un sistema di contabilità."
+    stock-locations-for-woocommerce: "Giacenze per sede gratuite per WooCommerce, con gli ordini assegnati a una sede. Non c'è un documento di trasferimento."
+    zintory: "Ogni magazzino è un conto con un proprio saldo, e i trasferimenti sono gratuiti."
+    atum: "Giacenze per sede tramite l'add-on a pagamento Multi-Inventory, per WooCommerce."
+    wp-inventory-manager: "Sedi tramite l'add-on a pagamento Locations Manager, che richiede una licenza Pro."
+  how:
+    - "Abbiamo incluso i plugin in cui ogni sede ha una propria quantità a magazzino, non solo un'etichetta di sede sull'articolo."

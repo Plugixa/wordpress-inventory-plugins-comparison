@@ -1,0 +1,54 @@
+# Keyed by `target` in src/data/pages.yaml. `picks` is keyed by product slug.
+atum:
+  description: "Alternative ad ATUM Inventory Management, confrontate su che cosa è gratuito, quanto costano gli add-on e se serve WooCommerce, con le fonti."
+  intro: "ATUM è la suite di magazzino più completa per WooCommerce, e i suoi ordini d'acquisto gratuiti sono un vero punto di forza. Si cerca altrove perché sedi, codici a barre, esportazione CSV e uno storico completo delle modifiche sono venduti ciascuno come add-on annuale, e perché funziona solo con WooCommerce."
+  why:
+    - "Le giacenze per sede richiedono l'add-on Multi-Inventory, a €184 l'anno per un sito."
+    - "Esportazione CSV, codici a barre, inventari fisici e il log completo delle azioni sono add-on separati, ciascuno con un prezzo per sito all'anno."
+    - "Richiede WooCommerce, quindi non può gestire merce che non sia un prodotto del negozio."
+  picks:
+    stock-manager-for-woocommerce: "Modifica in blocco gratuita di giacenze e prezzi WooCommerce in un'unica tabella, con un semplice log delle modifiche."
+    stock-locations-for-woocommerce: "Giacenze per sede gratuite per WooCommerce, con gli ordini assegnati a una sede."
+    plugixa-inventory: "Più magazzini, movimenti registrati, prestiti e un registro bloccato, gratis e senza WooCommerce."
+    bizuno: "Contabilità open source gratuita con magazzino per punto vendita, trasferimenti e costo FIFO o LIFO."
+  migrate: "Esporta in CSV i tuoi prodotti e i livelli di giacenza, poi usa l'importatore del plugin di destinazione. Ordini d'acquisto, fornitori e log di ATUM non si trasferiscono in questo modo. Prova prima l'importazione su una copia di staging."
+
+wp-inventory-manager:
+  description: "Alternative a WP Inventory Manager per seguire le giacenze su più sedi con uno storico vero e proprio, confrontate con le fonti."
+  intro: "WP Inventory Manager è un buon modo per pubblicare un catalogo di articoli su un sito WordPress. Si cerca altrove quando serve un vero controllo delle giacenze, perché sedi, registro, importazione ed esportazione sono add-on che richiedono anche una licenza Pro."
+  why:
+    - "Sedi, registro, importazione ed esportazione sono ciascuno add-on a pagamento che richiedono Pro."
+    - "Le voci del registro si possono modificare o eliminare, quindi lo storico non è una traccia di audit."
+    - "Non c'è un'API REST né WP-CLI."
+  picks:
+    plugixa-inventory: "Più magazzini, movimenti, un registro che nessuno può modificare, importazione ed esportazione CSV, un'API REST e WP-CLI, tutto gratis."
+    bizuno: "Magazzino per punto vendita, trasferimenti, numeri di serie e costi gratuiti, dentro un sistema di contabilità completo."
+    zintory: "Un piccolo registro di transazioni gratuito con trasferimenti tra magazzini e un prezzo Pro una tantum."
+    atum: "La scelta giusta se i tuoi articoli sono prodotti WooCommerce e ti servono ordini d'acquisto."
+  migrate: "L'add-on Import and Export di WP Inventory Manager scrive un CSV dei tuoi articoli. Abbina le sue colonne all'importatore del plugin di destinazione e carica la giacenza iniziale per ogni sede. Prova prima su una copia di staging."
+
+stock-manager-for-woocommerce:
+  description: "Alternative a Stock Manager for WooCommerce quando ti serve più di un editor di giacenze in blocco, confrontate con le fonti."
+  intro: "Stock Manager for WooCommerce è gratuito e fa bene una cosa sola, modificare in fretta le giacenze di molti prodotti. Si cerca altrove quando servono sedi, acquisti o uno storico completo."
+  why:
+    - "Non ci sono sedi, ordini d'acquisto né fornitori."
+    - "Il log delle giacenze conserva solo la data e la nuova quantità."
+    - "Il plugin stesso definisce la sua importazione ed esportazione CSV \"da usare a proprio rischio\"."
+  picks:
+    atum: "Ordini d'acquisto, fornitori, log di magazzino e una dashboard gratis, con add-on a pagamento per sedi e codici a barre."
+    stock-locations-for-woocommerce: "Giacenze per sede gratuite, con gli ordini assegnati a una sede."
+    plugixa-inventory: "Un sistema di magazzino separato con magazzini e un registro bloccato, per merce che non sia solo prodotti del negozio."
+  migrate: "Le giacenze stanno in WooCommerce stesso, quindi ATUM e Stock Locations for WooCommerce le leggono così come sono. Un sistema separato come Plugixa Inventory richiede di importare articoli e giacenza iniziale da un'esportazione CSV."
+
+business-manager:
+  description: "Alternative al plugin Business Manager, chiuso su wordpress.org, per magazzino e giacenze dentro WordPress."
+  intro: "Business Manager, un plugin ERP con gestione del personale, CRM e progetti, è stato chiuso su wordpress.org il 28 ottobre 2024 per una violazione delle linee guida. Un plugin chiuso non riceve aggiornamenti dalla directory, quindi i siti che lo usano ancora dovrebbero pianificare un trasferimento."
+  why:
+    - "Chiuso su wordpress.org dal 28 ottobre 2024."
+    - "Nessun aggiornamento tramite wordpress.org, comprese le correzioni di sicurezza."
+  picks:
+    plugixa-inventory: "Un sistema di magazzino mirato con magazzini, movimenti e un registro bloccato, gratis."
+    wp-erp: "Una suite ERP mantenuta con gestione del personale, contabilità e un CRM, e il magazzino nel piano Scale."
+    bizuno: "Un sistema gratuito e open source di contabilità ed ERP con il magazzino incluso."
+    wp-inventory-manager: "Un catalogo di magazzino con un elenco pubblico e add-on a pagamento per sedi e registro."
+  migrate: "Prima di rimuovere il plugin esporta in CSV tutto quello che puoi, poi importa gli articoli nel nuovo plugin. Prova prima su una copia di staging."

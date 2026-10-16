@@ -1,0 +1,16 @@
+{
+  "slug": "plugixa-inventory",
+  "api_url": "https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request[slug]=plugixa-inventory",
+  "fetched_at": "2026-10-16",
+  "listed": true,
+  "name": "Plugixa Inventory",
+  "version": "1.0.0",
+  "active_installs": 0,
+  "rating": null,
+  "num_ratings": 0,
+  "last_updated": "2026-10-02",
+  "added": "2026-10-02",
+  "requires_wp": "6.5",
+  "requires_php": "8.2",
+  "tested_up_to": "7.1.3"
+}

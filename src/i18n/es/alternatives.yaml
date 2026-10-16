@@ -1,0 +1,54 @@
+# Keyed by `target` in src/data/pages.yaml. `picks` is keyed by product slug.
+atum:
+  description: Alternativas a ATUM Inventory Management, comparadas según lo que es gratis, lo que cuestan los complementos y si requieren WooCommerce, con fuentes.
+  intro: ATUM es la suite de inventario más completa para WooCommerce, y sus órdenes de compra gratuitas son un verdadero punto fuerte. Se buscan otras opciones porque las ubicaciones, los códigos de barras, la exportación CSV y el historial completo de cambios se venden cada uno como un complemento anual, y porque solo funciona con WooCommerce.
+  why:
+    - El stock por ubicación requiere el complemento Multi-Inventory, a €184 al año para un sitio.
+    - La exportación CSV, los códigos de barras, los recuentos de inventario y el registro completo de acciones son complementos aparte, cada uno con precio por sitio y por año.
+    - Requiere WooCommerce, así que no puede gestionar stock que no sea un producto de la tienda.
+  picks:
+    stock-manager-for-woocommerce: Edición masiva gratuita del stock y los precios de WooCommerce en una sola tabla, con un registro de cambios sencillo.
+    stock-locations-for-woocommerce: Stock por ubicación gratis para WooCommerce, con los pedidos asignados a una ubicación.
+    plugixa-inventory: "Varios almacenes, movimientos registrados, préstamos y un libro de movimientos bloqueado, gratis y sin WooCommerce."
+    bizuno: Contabilidad gratuita y de código abierto con inventario por tienda, transferencias y coste FIFO o LIFO.
+  migrate: "Exporta tus productos y niveles de stock a CSV y usa el importador del plugin de destino. Las órdenes de compra, los proveedores y los registros de ATUM no se trasladan de esta forma. Prueba antes la importación en una copia de pruebas (staging)."
+
+wp-inventory-manager:
+  description: Alternativas a WP Inventory Manager para controlar el stock en varias ubicaciones con un historial fiable, comparadas con fuentes.
+  intro: WP Inventory Manager es una buena forma de publicar un catálogo de artículos en un sitio WordPress. Se buscan otras opciones cuando hace falta un control de stock real, porque las ubicaciones, el libro de movimientos, la importación y la exportación son complementos que además requieren una licencia Pro.
+  why:
+    - Las ubicaciones, el libro de movimientos, la importación y la exportación son complementos de pago que requieren Pro.
+    - Las entradas del libro de movimientos se pueden editar o borrar, así que el historial no sirve como registro de auditoría.
+    - No hay API REST ni WP-CLI.
+  picks:
+    plugixa-inventory: "Varios almacenes, movimientos, un libro de movimientos que nadie puede editar, importación y exportación CSV, una API REST y WP-CLI, todo gratis."
+    bizuno: Inventario por tienda, transferencias, números de serie y cálculo de costes gratis, dentro de un sistema de contabilidad completo.
+    zintory: Un pequeño registro gratuito de transacciones con transferencias entre almacenes y un precio Pro de pago único.
+    atum: La opción adecuada si tus artículos son productos de WooCommerce y necesitas órdenes de compra.
+  migrate: "El complemento Import and Export de WP Inventory Manager genera un CSV con tus artículos. Asigna sus columnas en el importador del plugin de destino e introduce el stock inicial por ubicación. Prueba antes en una copia de pruebas (staging)."
+
+stock-manager-for-woocommerce:
+  description: Alternativas a Stock Manager for WooCommerce cuando necesitas algo más que un editor masivo de stock, comparadas con fuentes.
+  intro: Stock Manager for WooCommerce es gratuito y hace bien una sola cosa, editar rápidamente el stock de muchos productos. Se buscan otras opciones cuando hacen falta ubicaciones, compras o un historial completo.
+  why:
+    - No tiene ubicaciones, órdenes de compra ni proveedores.
+    - El registro de stock solo guarda la fecha y la nueva cantidad.
+    - "El propio plugin dice que su importación y exportación CSV se usan «bajo tu propia responsabilidad»."
+  picks:
+    atum: Órdenes de compra, proveedores, registros de inventario y un panel gratis, con complementos de pago para ubicaciones y códigos de barras.
+    stock-locations-for-woocommerce: Stock por ubicación gratis, con los pedidos asignados a una ubicación.
+    plugixa-inventory: Un sistema de stock independiente con almacenes y un libro de movimientos bloqueado, para stock que no sea solo productos de la tienda.
+  migrate: El stock está en el propio WooCommerce, así que ATUM y Stock Locations for WooCommerce lo leen tal cual. Un sistema independiente como Plugixa Inventory necesita importar los artículos y el stock inicial desde una exportación CSV.
+
+business-manager:
+  description: Alternativas al plugin Business Manager, cerrado en wordpress.org, para gestionar el inventario y el stock dentro de WordPress.
+  intro: Business Manager, un plugin ERP con RR. HH., CRM y proyectos, se cerró en wordpress.org el 28 de octubre de 2024 por incumplir las directrices. Un plugin cerrado no recibe actualizaciones del directorio, así que los sitios que todavía lo usan deberían planificar un cambio.
+  why:
+    - Cerrado en wordpress.org desde el 28 de octubre de 2024.
+    - No recibe actualizaciones a través de wordpress.org, tampoco correcciones de seguridad.
+  picks:
+    plugixa-inventory: "Un sistema de stock centrado en lo esencial, con almacenes, movimientos y un libro de movimientos bloqueado, gratis."
+    wp-erp: Una suite ERP mantenida con RR. HH., contabilidad y un CRM, e inventario en el plan Scale.
+    bizuno: Un sistema de contabilidad y ERP gratuito y de código abierto con inventario incluido.
+    wp-inventory-manager: Un catálogo de inventario con listado público y complementos de pago para ubicaciones y un libro de movimientos.
+  migrate: Exporta a CSV todo lo que puedas antes de eliminar el plugin y después importa los artículos en el nuevo plugin. Prueba antes en una copia de pruebas (staging).

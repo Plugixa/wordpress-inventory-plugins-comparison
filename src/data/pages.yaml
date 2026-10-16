@@ -1,0 +1,43 @@
+# Language-neutral page structure. Prose for each entry lives in src/i18n/{locale}/.
+
+# "X vs Y" pages. Key in compare.yaml is "{a}-vs-{b}".
+compare:
+  - { a: plugixa-inventory, b: atum }
+  - { a: plugixa-inventory, b: wp-inventory-manager }
+  - { a: plugixa-inventory, b: stock-manager-for-woocommerce }
+  - { a: plugixa-inventory, b: wp-erp }
+  - { a: plugixa-inventory, b: zintory }
+  - { a: plugixa-inventory, b: bizuno }
+  - { a: atum, b: stock-manager-for-woocommerce }
+  - { a: atum, b: stock-locations-for-woocommerce }
+
+# "Alternatives to X" pages. `target` is a product slug, or a legacy plugin with `name`.
+alternatives:
+  - target: atum
+    picks: [stock-manager-for-woocommerce, stock-locations-for-woocommerce, plugixa-inventory, bizuno]
+  - target: wp-inventory-manager
+    picks: [plugixa-inventory, bizuno, zintory, atum]
+  - target: stock-manager-for-woocommerce
+    picks: [atum, stock-locations-for-woocommerce, plugixa-inventory]
+  - target: business-manager
+    name: Business Manager
+    picks: [plugixa-inventory, wp-erp, bizuno, wp-inventory-manager]
+
+# "Best of" guides, picks in ranked order.
+guides:
+  - slug: best-wordpress-inventory-plugins
+    picks: [atum, plugixa-inventory, wp-inventory-manager, stock-manager-for-woocommerce, stock-locations-for-woocommerce, bizuno, wp-erp, zintory]
+  - slug: best-free-inventory-plugins
+    picks: [plugixa-inventory, atum, bizuno, stock-manager-for-woocommerce, wp-inventory-manager, zintory]
+  - slug: woocommerce-inventory-plugins
+    picks: [atum, stock-manager-for-woocommerce, stock-locations-for-woocommerce]
+  - slug: inventory-plugins-without-woocommerce
+    picks: [plugixa-inventory, wp-inventory-manager, bizuno, zintory, wp-erp]
+  - slug: multi-warehouse-inventory-plugins
+    picks: [plugixa-inventory, bizuno, stock-locations-for-woocommerce, zintory, atum, wp-inventory-manager]
+
+# Plugins that are no longer a safe choice. reason: author | guideline | security | at_risk
+legacy:
+  - { name: Business Manager, slug: business-manager, reason: guideline, date: "2024-10-28", source: "https://wordpress.org/plugins/business-manager/" }
+  - { name: Stock Count Report for WooCommerce, slug: stock-count-report-for-woocommerce, reason: at_risk, date: "2026-10-16", source: "https://wordpress.org/plugins/stock-count-report-for-woocommerce/" }
+  - { name: Simple Inventory, slug: simple-inventory, reason: at_risk, date: "2026-10-16", source: "https://wordpress.org/plugins/simple-inventory/" }

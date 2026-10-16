@@ -1,0 +1,17 @@
+items:
+  - q: "¿Cuál es el mejor plugin de inventario para WordPress?"
+    a: Depende de dónde esté tu stock. Para una tienda WooCommerce, ATUM es el más completo, y Stock Manager for WooCommerce es el más rápido para ediciones masivas. Para stock o equipos fuera de una tienda, en varios almacenes y con un historial que no se puede modificar, Plugixa Inventory. Para contabilidad e inventario juntos, Bizuno o WP ERP.
+  - q: "¿Qué plugin de inventario para WordPress es gratuito?"
+    a: "Los ocho tienen una versión gratuita, y dos son totalmente gratuitos: Stock Manager for WooCommerce y Bizuno. Plugixa Inventory ofrece gratis varios almacenes, movimientos y un libro de movimientos bloqueado. ATUM ofrece gratis órdenes de compra y proveedores. WP ERP reserva los movimientos de stock para su plan Scale."
+  - q: "¿Necesito WooCommerce para gestionar el inventario en WordPress?"
+    a: "No. Plugixa Inventory, WP Inventory Manager, Zintory, Bizuno y WP ERP guardan sus propios registros y funcionan sin WooCommerce. ATUM, Stock Manager for WooCommerce y Stock Locations for WooCommerce lo necesitan."
+  - q: "¿Qué plugins gestionan varios almacenes?"
+    a: "Plugixa Inventory, Bizuno, Zintory y Stock Locations for WooCommerce guardan el stock por ubicación en sus versiones gratuitas. ATUM y WP Inventory Manager lo hacen mediante complementos de pago. Stock Manager for WooCommerce no."
+  - q: "¿Qué plugins tienen órdenes de compra?"
+    a: "ATUM, Bizuno y Zintory las tienen gratis. WP ERP tiene gratis una pantalla de órdenes de compra, pero recibir stock con ella requiere el plan Scale. Plugixa Inventory, Stock Manager for WooCommerce y Stock Locations for WooCommerce no las tienen."
+  - q: "¿Dónde se guardan los datos de mi inventario?"
+    a: Los ocho guardan los datos en tu base de datos de WordPress. Los complementos para WooCommerce guardan el stock en los productos de WooCommerce, a veces con tablas propias al lado. Los plugins independientes y las suites usan sus propias tablas.
+  - q: "¿Quién mantiene esta comparativa?"
+    a: Plugixa, la empresa que desarrolla Plugixa Inventory. Eso es un conflicto de intereses. Para limitarlo, cada valor enlaza a su fuente, la página de cada plugin recoge sus puntos débiles además de los fuertes, y nuestro propio plugin solo aparece en primer lugar donde los datos lo respaldan.
+  - q: "¿Cada cuánto se actualizan los datos?"
+    a: El número de instalaciones, las valoraciones y los números de versión se leen de la API de wordpress.org cada semana. Las funciones y los precios se comprueban a mano, y la página de cada plugin muestra la fecha de la última comprobación.

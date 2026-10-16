@@ -1,0 +1,8 @@
+# Plugixa Inventory screenshots shown on its review page. Files are in public/plugixa/.
+items:
+  - { file: dashboard.webp, alt: "Dashboard con valore delle giacenze, scorte basse, l'andamento dei movimenti a 30 giorni e gli articoli più movimentati" }
+  - { file: items.webp, alt: "Catalogo articoli con SKU, tipi di articolo e totali a magazzino" }
+  - { file: stock-movement.webp, alt: "Un movimento di magazzino prima in bozza, poi finalizzato per scrivere il registro" }
+  - { file: ledger.webp, alt: "Registro di magazzino con ogni variazione di ogni quantità, dalla più recente" }
+  - { file: warehouse.webp, alt: "Panoramica del magazzino con giacenze, scorte basse e attività recenti di una sede" }
+  - { file: stock-health.webp, alt: "Controllo delle giacenze che dimostra che le quantità derivano ancora dal registro" }

@@ -1,0 +1,105 @@
+areas:
+  items: Articles
+  locations: Entrepôts et emplacements
+  movements: Mouvements de stock
+  ledger: Historique et traçabilité
+  valuation: Valorisation du stock
+  alerts: Alertes
+  reports: Rapports
+  data: Import, export et API
+  access: "Accès de l'équipe"
+  extras: Plateforme
+features:
+  items.types:
+    label: "Types d'articles"
+    def: "Distingue les types d'articles, par exemple le matériel que vous prêtez, les consommables que vous utilisez et les marchandises que vous vendez."
+  items.sku_barcode:
+    label: SKU et code-barres
+    def: "Chaque article a un SKU ou une référence, et un champ code-barres."
+  items.serials:
+    label: Numéros de série ou de lot
+    def: "Suit un numéro de série par unité, ou un numéro de lot."
+  items.images:
+    label: Images des articles
+    def: Les articles peuvent avoir une ou plusieurs photos.
+  items.custom_fields:
+    label: Champs personnalisés
+    def: Vous pouvez ajouter vos propres champs aux articles.
+  items.units:
+    label: Unités de mesure
+    def: "Les articles sont comptés dans des unités comme la pièce, le kilogramme ou le carton, avec des conversions entre elles."
+  locations.multiple:
+    label: Plusieurs entrepôts
+    def: "Le stock est tenu séparément par entrepôt ou emplacement, chacun avec sa propre quantité."
+  locations.transfers:
+    label: Transferts
+    def: "Le stock passe d'un emplacement à un autre par un transfert enregistré, et non par deux modifications manuelles."
+  movements.receive_issue:
+    label: Entrées et sorties de stock
+    def: "Les entrées et les sorties de stock sont enregistrées comme des mouvements, au lieu de modifier la quantité."
+  movements.checkout:
+    label: Prêt et retour
+    def: "Les articles sont prêtés à une personne puis rendus, avec une trace de qui détient quoi."
+  movements.adjustments:
+    label: Ajustements
+    def: "Les corrections et les mises au rebut, par exemple une casse ou un écart d'inventaire, sont enregistrées avec un motif."
+  movements.purchase_orders:
+    label: Bons de commande
+    def: "Commandes aux fournisseurs qui ajoutent du stock à la réception des marchandises."
+  movements.sales_orders:
+    label: Commandes clients
+    def: "Commandes clients ou factures qui sortent du stock lorsqu'elles sont exécutées."
+  ledger.history:
+    label: Historique du stock
+    def: "Chaque modification d'une quantité est conservée, pour que vous puissiez voir comment le stock d'un article en est arrivé là."
+  ledger.locked:
+    label: Historique verrouillé
+    def: "Les mouvements validés et les entrées de l'historique ne peuvent plus être modifiés ni supprimés."
+  valuation.cost:
+    label: Valorisation au coût
+    def: "Indique la valeur du stock disponible à son coût d'achat."
+  valuation.fifo_lifo:
+    label: Coût FIFO ou LIFO
+    def: "Valorise les sorties de stock selon des couches de coût premier entré, premier sorti (FIFO) ou dernier entré, premier sorti (LIFO)."
+  alerts.low_stock:
+    label: Seuils de stock bas
+    def: "Chaque article peut avoir un niveau de réapprovisionnement, et les articles en dessous sont listés ou signalés."
+  alerts.email:
+    label: E-mail de stock bas
+    def: "Un e-mail est envoyé lorsqu'un article passe sous son niveau de réapprovisionnement."
+  reports.dashboard:
+    label: Tableau de bord
+    def: "Une vue d'ensemble du stock avec des totaux et des graphiques."
+  reports.reports:
+    label: Rapports de stock
+    def: "Rapports sur les mouvements, la rotation, la valorisation ou l'ancienneté du stock, par exemple."
+  data.csv_import:
+    label: Import CSV
+    def: "Les articles, et idéalement leur stock, peuvent être importés depuis un tableur."
+  data.csv_export:
+    label: Export CSV
+    def: Les articles et les niveaux de stock peuvent être exportés vers un tableur.
+  data.rest_api:
+    label: API REST
+    def: "Une API REST documentée pour lire et modifier le stock depuis d'autres logiciels."
+  data.wp_cli:
+    label: WP-CLI
+    def: Des commandes en ligne de commande pour les tâches de gestion de stock.
+  access.roles:
+    label: Rôles dédiés au stock
+    def: "La gestion de stock a ses propres capacités ou rôles, pour que le personnel puisse l'utiliser sans être administrateur."
+  access.permissions:
+    label: Permissions détaillées
+    def: "Des règles qui définissent qui peut voir ou modifier quels enregistrements, quelles actions ou quels emplacements."
+  extras.frontend:
+    label: Sur le site public
+    def: "Le stock peut être affiché sur votre site public, ou l'application peut fonctionner sur une page de votre site."
+  extras.scanner:
+    label: Lecture de codes-barres
+    def: "Retrouve ou déplace des articles en scannant un code-barres ou un QR code avec un lecteur ou une caméra."
+  extras.woocommerce:
+    label: WooCommerce
+    def: "Fonctionne avec les produits et les commandes WooCommerce. Pour les extensions WooCommerce, WooCommerce est obligatoire."
+  extras.storage:
+    label: Stockage des données
+    def: "L'endroit où le plugin conserve les articles et les enregistrements de stock."

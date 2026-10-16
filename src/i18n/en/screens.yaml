@@ -1,0 +1,8 @@
+# Plugixa Inventory screenshots shown on its review page. Files are in public/plugixa/.
+items:
+  - { file: dashboard.webp, alt: "Dashboard with stock value, low stock, a 30-day movement trend and the top movers" }
+  - { file: items.webp, alt: "Item catalogue with SKUs, item types and on-hand totals" }
+  - { file: stock-movement.webp, alt: "A stock movement drafted first, then finalised to write the ledger" }
+  - { file: ledger.webp, alt: "Stock ledger listing every change to every quantity, newest first" }
+  - { file: warehouse.webp, alt: "Warehouse overview with stock, low stock and recent activity for one location" }
+  - { file: stock-health.webp, alt: "Stock health check proving the quantities still follow from the ledger" }

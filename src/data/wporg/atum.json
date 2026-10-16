@@ -1,0 +1,16 @@
+{
+  "slug": "atum-stock-manager-for-woocommerce",
+  "api_url": "https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request[slug]=atum-stock-manager-for-woocommerce",
+  "fetched_at": "2026-10-16",
+  "listed": true,
+  "name": "ATUM WooCommerce Inventory Management and Stock Tracking",
+  "version": "2.0.6",
+  "active_installs": 10000,
+  "rating": 4.66,
+  "num_ratings": 128,
+  "last_updated": "2026-10-16",
+  "added": "2017-01-05",
+  "requires_wp": "6.8",
+  "requires_php": "7.4",
+  "tested_up_to": "7.1.3"
+}

@@ -1,0 +1,87 @@
+# Indexé par slug de guide dans src/data/pages.yaml. `picks` est indexé par slug de produit.
+best-wordpress-inventory-plugins:
+  title: "Meilleurs plugins de gestion de stock WordPress ({year}) : 8 plugins comparés et sourcés"
+  nav: Meilleurs plugins de stock
+  description: "Huit plugins WordPress de gestion de stock maintenus, classés selon ce que chacun fait le mieux, avec prix, chiffres wordpress.org et sources."
+  h1: Meilleurs plugins de gestion de stock WordPress
+  intro:
+    - "Dans WordPress, la « gestion de stock » recouvre trois types de plugins. Certains gèrent le stock des produits WooCommerce. D'autres sont des systèmes de stock autonomes pour des entrepôts, du matériel ou des fournitures. D'autres encore sont des suites comptables ou ERP avec un module de stock."
+    - "Le classement ci-dessous tient compte de ce que fait chaque plugin, de son prix et de sa maturité, puis indique où un autre plugin convient mieux."
+  picks:
+    atum: "La suite de gestion de stock la plus complète pour WooCommerce, avec plus de 10 000 installations actives. Les bons de commande, les fournisseurs, les journaux de stock et la valeur du stock sont gratuits. Les emplacements, les codes-barres, l'export CSV et le journal complet des actions sont des add-ons payants, facturés par site et par an."
+    plugixa-inventory: "Notre propre plugin. Le système de stock autonome gratuit le plus complet de cette sélection : plusieurs entrepôts, des mouvements, le prêt de matériel, un registre verrouillé, des e-mails de stock bas, ainsi que l'import et l'export CSV. Il est classé deuxième, et non premier, parce qu'il est récent, qu'il n'a pas de bons de commande et qu'il ne se connecte pas à WooCommerce."
+    wp-inventory-manager: "Un plugin autonome de longue date, construit autour d'un catalogue public d'articles. Les emplacements, un registre, l'import et l'export sont des add-ons qui nécessitent une licence Pro."
+    stock-manager-for-woocommerce: "Le plugin le plus installé de cette sélection, et gratuit. C'est un tableau rapide pour modifier le stock et les prix WooCommerce, pas un système de gestion de stock complet."
+    stock-locations-for-woocommerce: "Stock par emplacement gratuit pour WooCommerce, avec des commandes affectées à un emplacement et une API REST."
+    bizuno: "Un système comptable gratuit et open source avec un module de stock solide, qui inclut les numéros de série, les transferts et la valorisation FIFO ou LIFO. Il a très peu d'utilisateurs, et sa passerelle WooCommerce a été fermée sur wordpress.org."
+    wp-erp: "Une suite RH, comptabilité et CRM. Les entrées et sorties de stock nécessitent la formule Scale, et les entrepôts comme les alertes de stock bas ne sont pas documentés."
+    zintory: "Un petit registre de transactions entre comptes, avec des transferts et des commandes gratuits, mais sans alertes de stock bas ni tableau de bord."
+  how:
+    - "Nous avons classé les plugins selon quatre critères vérifiables : ce que comprend la version gratuite, le prix des formules payantes, le rythme de maintenance du plugin et l'avis de ses utilisateurs sur wordpress.org."
+    - "Nous n'avons pas réalisé de tests de vitesse, et nous n'avons pas testé chaque fonctionnalité à la main. Les valeurs proviennent des pages de chaque éditeur et du code des plugins ; la page méthodologie en explique les limites."
+
+best-free-inventory-plugins:
+  title: "Meilleurs plugins gratuits de gestion de stock WordPress ({year})"
+  nav: Meilleurs plugins de stock gratuits
+  description: "Ce que chaque plugin WordPress de gestion de stock gratuit inclut sans payer, des entrepôts et registres aux bons de commande, avec sources."
+  h1: Meilleurs plugins gratuits de gestion de stock WordPress
+  intro:
+    - "Chaque plugin de cette sélection a une version gratuite, mais ils ne réservent pas les mêmes choses aux versions payantes. L'un offre les entrepôts et fait payer les transferts. Un autre offre les bons de commande et fait payer les emplacements."
+    - "Le bon plugin gratuit dépend de la fonctionnalité dont vous pouvez le moins vous passer."
+  picks:
+    plugixa-inventory: "Notre propre plugin. Gratuit : plusieurs entrepôts, des mouvements d'entrée et de sortie, le prêt de matériel, un registre verrouillé, la valorisation au coût, des e-mails de stock bas, un tableau de bord, l'import et l'export CSV, une API REST et WP-CLI. Les transferts, les ajustements et les rapports sont dans Pro."
+    atum: "Gratuit : bons de commande, fournisseurs, journaux de stock, valeur du stock au prix d'achat, tableau de bord et API REST, pour les produits WooCommerce. Les emplacements et l'export CSV sont des add-ons payants."
+    bizuno: "Entièrement gratuit et open source, avec stock par magasin, transferts, numéros de série et valorisation FIFO ou LIFO. Vous adoptez aussi une application comptable complète, qui compte peu d'autres utilisateurs."
+    stock-manager-for-woocommerce: "Modification en masse du stock WooCommerce entièrement gratuite, avec import et export CSV et un journal basique."
+    wp-inventory-manager: "Un catalogue d'articles gratuit avec images, seuil de stock bas et liste publique. Les mouvements de stock et les emplacements nécessitent des add-ons payants."
+    zintory: "Transactions entre comptes, transferts entre entrepôts et commandes d'achat et de vente numérotées, gratuits. Ni alertes ni tableau de bord."
+  how:
+    - "Nous n'avons regardé que la version gratuite de chaque plugin, et ce qu'elle permet de faire sans aucun add-on payant."
+
+woocommerce-inventory-plugins:
+  title: "Meilleurs plugins de gestion de stock pour WooCommerce ({year})"
+  nav: Plugins de stock pour WooCommerce
+  description: "Plugins WordPress qui gèrent le stock WooCommerce, comparés sur les bons de commande, les emplacements et le prix, avec sources."
+  h1: Meilleurs plugins de gestion de stock pour WooCommerce
+  intro:
+    - "WooCommerce compte le stock par produit, et ces plugins ajoutent ce qui lui manque, comme les achats, les emplacements ou une modification plus rapide. Les trois nécessitent WooCommerce."
+    - "Si une partie de votre stock n'est pas vendue via la boutique, un plugin autonome peut mieux convenir ; consultez le guide des plugins sans WooCommerce."
+  picks:
+    atum: "L'option la plus complète, avec bons de commande, fournisseurs, journaux et tableau de bord gratuits, et emplacements, codes-barres et inventaires physiques en add-ons payants."
+    stock-manager-for-woocommerce: "Le moyen le plus rapide de modifier le stock de nombreux produits, gratuitement."
+    stock-locations-for-woocommerce: "Stock par emplacement gratuit, avec des commandes affectées à un emplacement."
+  how:
+    - "Nous n'avons retenu que des plugins maintenus dont la fonction principale est le stock WooCommerce. Les outils de modification de produits en masse, où le stock n'est qu'un champ parmi d'autres, ont été écartés."
+
+inventory-plugins-without-woocommerce:
+  title: "Plugins de gestion de stock WordPress sans WooCommerce ({year})"
+  nav: Stock sans WooCommerce
+  description: "Plugins WordPress autonomes qui suivent le stock, le matériel et les fournitures sans WooCommerce, comparés avec sources."
+  h1: Plugins de gestion de stock qui ne nécessitent pas WooCommerce
+  intro:
+    - "Tout le stock n'est pas destiné à la vente. Le matériel prêté, les fournitures consommées et les pièces rangées dans une réserve demandent une gestion de stock sans boutique. Ces plugins conservent leurs propres enregistrements et n'ont pas besoin de WooCommerce."
+  picks:
+    plugixa-inventory: "Notre propre plugin. Entrepôts, mouvements, prêt de matériel à des personnes nommées et un registre que personne ne peut modifier, gratuitement, avec les transferts et les ajustements dans Pro."
+    wp-inventory-manager: "Un catalogue d'articles que vous pouvez publier sur votre site, avec des add-ons payants pour les emplacements et un registre."
+    bizuno: "La gestion de stock au sein d'un système comptable gratuit, avec transferts, numéros de série et valorisation."
+    zintory: "Un registre léger de transactions entre entrepôts, fournisseurs et clients."
+    wp-erp: "La gestion de stock comme partie d'une suite RH et comptable, dans la formule Scale."
+  how:
+    - "Nous avons retenu des plugins qui conservent le stock dans leurs propres enregistrements et fonctionnent sans WooCommerce. Certains peuvent aussi lire les produits WooCommerce ; c'est indiqué dans le tableau."
+
+multi-warehouse-inventory-plugins:
+  title: "Plugins de gestion de stock WordPress pour plusieurs entrepôts ({year})"
+  nav: Stock multi-entrepôts
+  description: "Plugins WordPress qui tiennent le stock par entrepôt ou emplacement, comparés sur les transferts, le prix et l'historique, avec sources."
+  h1: Plugins de gestion de stock pour plusieurs entrepôts
+  intro:
+    - "Tenir du stock à plusieurs endroits signifie que chaque endroit doit avoir sa propre quantité, et qu'un déplacement de stock entre eux doit être un seul transfert enregistré. Ces plugins tiennent le stock par emplacement ; ils diffèrent sur les transferts et sur ce qui est gratuit."
+  picks:
+    plugixa-inventory: "Notre propre plugin. Le stock par entrepôt, une vue d'ensemble par entrepôt et le stock bas par entrepôt sont gratuits ; les transferts qui inscrivent les deux mouvements au registre sont dans Pro."
+    bizuno: "Stock par magasin et transferts entre magasins, gratuits, au sein d'un système comptable."
+    stock-locations-for-woocommerce: "Stock par emplacement gratuit pour WooCommerce, avec des commandes affectées à un emplacement. Il n'y a pas de document de transfert."
+    zintory: "Chaque entrepôt est un compte avec son propre solde, et les transferts sont gratuits."
+    atum: "Stock par emplacement via l'add-on payant Multi-Inventory, pour WooCommerce."
+    wp-inventory-manager: "Emplacements via l'add-on payant Locations Manager, qui nécessite une licence Pro."
+  how:
+    - "Nous avons retenu les plugins où chaque emplacement a sa propre quantité en stock, et pas seulement une étiquette d'emplacement sur un article."

@@ -1,0 +1,309 @@
+# Prose per plugin. `notes` and `texts` are keyed by feature id (see src/data/features.yaml).
+plugixa-inventory:
+  summary: A stock system that runs inside WordPress, with items, warehouses, stock movements and a stock ledger that cannot be edited, plus a dashboard, valuation at cost and CSV import and export. The free version covers all of that; Pro adds transfers between warehouses, adjustments, FIFO and LIFO costing, reports, custom fields, units and fine-grained permissions.
+  award: Best free multi-warehouse stock ledger
+  best_for: Small businesses and teams that hold stock or equipment in more than one place and want correct per-warehouse quantities and an audit trail inside WordPress, without a hosted inventory service.
+  status: New plugin. Version 1.0.0 was listed on wordpress.org recently, so it has no install base or public reviews yet.
+  pros:
+    - Stock is held per item and per warehouse, and several warehouses are free.
+    - Every quantity change is written to a stock ledger that no screen, API route or setting can edit or delete, with a reconcile that checks the numbers against it.
+    - Check in and check out of equipment to named people is free.
+    - Low-stock alerts in the app and by email, a dashboard and stock valued at cost are free.
+    - CSV import with column matching, opening stock and an undo, plus CSV export from every list, are free.
+    - Records live in the plugin's own database tables on your site; nothing is sent to Plugixa.
+  cons:
+    - No purchase orders, suppliers, sales orders or invoices.
+    - No WooCommerce integration, so shop stock and inventory stock are kept separately.
+    - Transfers between warehouses, adjustments, FIFO and LIFO costing and reports need Pro.
+    - Serial numbers are one field per item, not tracked per unit, and there are no lots or batches.
+    - New, with no track record or reviews yet.
+  notes:
+    items.types: Each item is an asset, a consumable or a sellable good, and the type decides which movements it can be part of.
+    items.serials: An item has one serial number field, searchable by the scanner, but serials and lots are not tracked per unit.
+    items.images: One image per item, picked from the WordPress media library.
+    items.custom_fields: Twelve field types on items, warehouses and recipients.
+    items.units: Units of measurement arranged in chains, such as a dozen of pieces, with conversion between them.
+    locations.multiple: Quantities are stored per item and per warehouse, and each warehouse has its own overview with stock, low stock and activity.
+    locations.transfers: A transfer writes both legs to the ledger, out of one warehouse and into the other.
+    movements.receive_issue: Add stock and remove stock documents are drafted, then finalized, and finalizing is what writes the ledger.
+    movements.checkout: Assets are checked out to a recipient, a person with a name, email and department, and checked back in.
+    movements.adjustments: Addition, damage and subtraction adjustments, each with a reason.
+    movements.purchase_orders: Receipts are add-stock movements with a reference field; there are no supplier records or purchase orders.
+    movements.sales_orders: There are no sales orders or invoices; stock leaves through remove-stock or check-out movements.
+    ledger.locked: Finalized documents cannot be edited or deleted except for notes and attachments, and ledger rows can never be changed; a mistake is corrected with an opposite document.
+    valuation.cost: Stock is valued at the item's cost price with average costing, falling back to the sale price only when no cost is recorded.
+    valuation.fifo_lifo: FIFO and LIFO keep a cost layer for each receipt.
+    alerts.low_stock: Each item has a reorder level, and items below it show in the dashboard and in the notification bell.
+    alerts.email: A daily low-stock digest by email to the users who opt in, throttled so one delivery does not send a flood of mail.
+    reports.dashboard: Stock value, a 30-day movement trend, low stock and the top movers on one screen.
+    reports.reports: Valuation by category, warehouse and type, turnover, cost of goods sold, trends and stock ageing, with CSV exports.
+    data.csv_import: Items, categories, warehouses and recipients, with a column-matching step, opening stock as a finalized movement and a revert for the whole run.
+    data.rest_api: A REST API under plugixa-inventory/v1 that the app itself uses, so it follows the same permission rules.
+    data.wp_cli: WP-CLI commands for stock maintenance, such as reconciling quantities against the ledger; there are no CLI commands for everyday records.
+    access.roles: Six inventory capabilities and a ready-made Inventory Manager role are free; Pro adds a screen for building and assigning roles.
+    access.permissions: Per record type and per action, a role can reach all records, only its own, or none.
+    extras.frontend: A shortcode puts the whole app on a page of your site, inside your theme, with the same permissions as wp-admin.
+    extras.scanner: Works with a handheld barcode scanner that types into the search box and finds items by barcode, SKU or serial number; there is no camera scanning.
+    extras.woocommerce: The plugin does not read or update WooCommerce product stock.
+  texts:
+    extras.storage: Your WordPress database, in the plugin's own tables
+
+stock-manager-for-woocommerce:
+  summary: Stock Manager for WooCommerce is a free table editor for WooCommerce stock, prices and SKUs, with a simple stock log and CSV import and export. It has no paid version of its own; its upgrade links point to StoreApps' separate Smart Manager plugin.
+  award: "Best for quick bulk stock edits"
+  best_for: Small WooCommerce shops that want to edit stock for many products and variations on one screen and see a basic stock history.
+  status: Free only. The "Go Pro" menu item leads to Smart Manager Pro, a different StoreApps product.
+  pros:
+    - Completely free, with no paid tier of its own.
+    - Edit stock, prices, SKU, tax and shipping class for products and variations in one table.
+    - Records a stock log entry each time a product's stock changes, including from orders.
+    - CSV export and import of stock data.
+    - Small and simple, with few settings to learn.
+  cons:
+    - Requires WooCommerce; it edits WooCommerce products only.
+    - No locations, purchase orders, suppliers or stock valuation.
+    - The stock log stores only the date and new quantity, with no user or reason.
+    - The readme says the CSV import and export needs refactoring and is used at your own risk.
+    - No REST API, WP-CLI commands or barcode support.
+    - Adds upsell pages for StoreApps' Smart Manager to the admin menu.
+  notes:
+    items.sku_barcode: You can edit the WooCommerce SKU, but the plugin adds no barcode field.
+    items.images: The table shows the WooCommerce product thumbnail.
+    items.custom_fields: The readme points to the separate Smart Manager plugin for custom fields.
+    movements.receive_issue: Stock is changed by editing the quantity; there are no receipt or issue documents.
+    movements.adjustments: The stock log stores only date, product and quantity, so there is no adjustment reason.
+    movements.sales_orders: WooCommerce orders reduce stock as usual, and each change is written to the stock log.
+    ledger.history: The plugin hooks WooCommerce stock changes and saves the new quantity with a date in its own stock_log table.
+    ledger.locked: The plugin offers no screen to edit or delete log entries, but the table has no other protection.
+    alerts.low_stock: Rows below WooCommerce's global low stock threshold are highlighted; there is no separate low-stock list.
+    alerts.email: The plugin sends no emails of its own; WooCommerce's built-in stock emails still apply.
+    reports.dashboard: The "dashboard" is an editable product table, not a statistics overview.
+    data.csv_import: The readme says import and export need refactoring and should be used at your own risk.
+    data.rest_api: The plugin only adds an out-of-stock filter to WooCommerce's product REST endpoint and has no API of its own.
+    access.roles: Access uses the WooCommerce manage_woocommerce capability, which a filter can change.
+    extras.woocommerce: The plugin is built for WooCommerce and requires it.
+  texts:
+    extras.storage: WooCommerce product meta for stock and prices, plus its own stock_log table holding date, product ID and quantity.
+
+atum:
+  summary: ATUM is a free WooCommerce plugin that adds a Stock Central screen, suppliers, purchase orders, inventory logs and a statistics dashboard on top of WooCommerce products. Multi-location stock, bills of materials, CSV export, audit logs and barcode scanning are sold as separate yearly add-ons.
+  award: "Best free core for WooCommerce stock"
+  best_for: WooCommerce shops that want purchase orders, suppliers and stock overviews for free, and are willing to buy add-ons for warehouses or manufacturing.
+  pros:
+    - Free core includes purchase orders, suppliers, inbound stock and inventory logs.
+    - Stock Central shows all products, SKUs, purchase prices and stock on one screen.
+    - Dashboard widgets for sales, lost sales, stock control and current stock value.
+    - Documented REST API and WP-CLI commands in the free plugin.
+    - Detailed capabilities for purchase orders, inventory logs and suppliers.
+    - Add-ons cover multi-inventory, bills of materials, stock takes and pick and pack.
+  cons:
+    - Requires WooCommerce; it manages WooCommerce products only.
+    - Separate stock per warehouse needs the paid Multi-Inventory add-on.
+    - CSV export and import need the paid Export PRO add-on; the free plugin exports PDF.
+    - A full change history needs the paid Action Logs add-on.
+    - Add-ons are priced individually per year, so several add-ons add up quickly.
+    - The vendor's refund policy offers no general money-back guarantee.
+  notes:
+    items.types: The Product Levels add-on adds Raw Material, Product Part and their variable versions as WooCommerce product types.
+    items.sku_barcode: SKUs are WooCommerce's own field, and the free plugin adds a barcode field to products and variations.
+    items.serials: Multi-Inventory tracks batch numbers and expiry dates per inventory, not serial numbers per unit.
+    locations.multiple: The free plugin only tags products with location terms; separate stock quantities per location need Multi-Inventory.
+    movements.receive_issue: Inventory logs increase or reduce stock, and purchase orders add stock when items are received.
+    movements.adjustments: Inventory log types include Reserved Stock, Customer Returns, Warehouse Damage, Lost in Post and Other.
+    movements.purchase_orders: Free purchase orders add stock on receipt; Purchase Orders PRO adds deliveries, invoices and more.
+    movements.sales_orders: Stock is reduced by normal WooCommerce orders.
+    ledger.history: The Action Logs add-on records each change with user, source and time; the free plugin keeps only inventory logs and order notes.
+    valuation.cost: The free plugin stores purchase prices and shows a Current Stock Value dashboard widget based on them.
+    valuation.fifo_lifo: Multi-Inventory can sell from inventories in FIFO, LIFO or expiry order, but this is a selling order, not FIFO or LIFO cost valuation.
+    alerts.email: The plugin relies on WooCommerce's built-in low and out of stock emails and can hold them back in some cases.
+    reports.reports: Reports are dashboard statistics and a PDF export of Stock Central.
+    data.csv_import: Export PRO is described as an export and import tool; import details were not checked in depth.
+    data.csv_export: Export PRO exports to CSV, XML or JSON, manually or on a schedule; the free plugin exports PDF only.
+    data.wp_cli: The free plugin registers a "wp atum" command that runs the ATUM tools.
+    access.roles: The plugin adds its own capabilities, such as atum_edit_purchase_price and atum_read_inbound_stock, rather than its own roles.
+    access.permissions: Capabilities separate your own and other users' purchase orders, logs and suppliers, but the free plugin has no per-location access rules.
+    extras.frontend: Multi-Inventory can limit inventories by region so customers see stock and prices for their area; no other front-end display was confirmed.
+    extras.scanner: Barcodes PRO lets you search ATUM list tables by scanned barcode and supports 1D and 2D formats.
+    extras.woocommerce: ATUM is a WooCommerce extension and requires WooCommerce.
+  texts:
+    extras.storage: WooCommerce products and their meta, plus ATUM's own tables (atum_product_data, atum_order_items, atum_order_itemmeta) for stock data, purchase orders and inventory logs.
+
+wp-erp:
+  summary: WP ERP is a free HR, CRM and accounting suite for WordPress. The free accounting module has products and purchase orders, but stock tracking comes from the Inventory extension, which is part of the paid Scale plan.
+  award: Best for HR and accounting together
+  best_for: Small businesses that already run HR, CRM or accounting in WP ERP and need simple stock counts tied to purchases and sales.
+  pros:
+    - Free core with HR, CRM and accounting modules and no user limit.
+    - Stock is added by purchases and reduced by sales, so quantities follow real transactions.
+    - Product purchase, product sales and inventory reports in the accounting module.
+    - Products can be imported from and exported to CSV in the free version.
+    - Products are typed as inventory or service.
+    - Active development, with an update in October 2026.
+  cons:
+    - Stock tracking needs the Scale plan at 474 USD a year, priced by user count.
+    - No documented warehouses, transfers or stock adjustments.
+    - No documented low-stock alerts, barcodes, serial numbers or units of measure.
+    - Valuation method is not documented.
+    - The vendor says WooCommerce inventory sync is still being worked on.
+    - Refund window is 14 days.
+  notes:
+    items.types: The free accounting module has two product types, Inventory and Service.
+    items.sku_barcode: The Inventory screen shows an item code; no barcode field is documented.
+    movements.receive_issue: Purchases add stock and sales remove it, recorded per transaction.
+    movements.checkout: The separate Asset Manager extension assigns company assets to employees, but it is not linked to stock.
+    movements.purchase_orders: Purchase orders are in the free accounting module; stock is only received with the Inventory extension.
+    ledger.history: Stock in and out is stored per transaction in the database; no per-item history screen is documented.
+    reports.reports: Product purchase, product sales and inventory reports are available, and most reports export to CSV.
+    data.csv_import: Imports the product list from CSV, not stock quantities.
+    data.csv_export: Exports the product list to CSV.
+    data.rest_api: The plugin has REST routes for products and categories, but we found no public API reference.
+    data.wp_cli: WP-CLI commands exist for modules, HR and CRM, but none for products or stock.
+    access.roles: Only the Accounting Manager role can use the Inventory menus; there is no inventory-only role.
+    extras.woocommerce: The WooCommerce integration in the Growth plan syncs orders into accounting, not stock.
+  texts:
+    extras.storage: Custom tables with the erp_acct_ prefix in the WordPress database, on your own server.
+
+wp-inventory-manager:
+  summary: "WP Inventory Manager is a long-running catalogue and stock-count plugin that stores items in its own tables and lists them on the front end with a shortcode. The free core covers unlimited items, images, categories and a single quantity per item; locations, item types, custom fields, CSV, a stock ledger and analytics are paid add-ons that need a Pro or All Access licence."
+  award: "Best for public inventory catalogues"
+  best_for: "Pick it if you mainly want to show equipment, parts or collections on your website and keep a simple quantity count, and are willing to buy add-ons for more."
+  pros:
+    - "Free core has no item limit and does not need WooCommerce."
+    - "Front-end listing with search and sorting via the [wpinventory] shortcode."
+    - "Item photos, low-stock threshold and a small status dashboard in the free version."
+    - "Wide add-on range: locations, item types, CSV import/export, ledger, analytics, QR codes."
+    - "Actively maintained (2.5.9, updated October 2026) with a 30-day money-back guarantee."
+  cons:
+    - "Free version tracks one quantity number per item; there are no stock movements."
+    - "Most stock features are separate yearly add-ons ($24.99–$79.99 each) on top of a Pro licence."
+    - "Ledger entries can be edited or deleted, so history is not audit-proof."
+    - "No purchase orders, documented stock valuation or recorded transfers between locations."
+    - "No REST API or WP-CLI commands in the plugin code."
+  notes:
+    items.sku_barcode: "Each item has an item number field; there is no dedicated barcode field."
+    items.serials: "One serial number field per item record, not per unit."
+    items.custom_fields: "The free version only lets you relabel its fixed fields; new fields need the add-on."
+    movements.receive_issue: "The Ledger records increases and decreases from reservations or manual entries; the free version only edits the quantity."
+    movements.adjustments: "Manual Ledger entries can change quantity, but there is no dedicated reason field."
+    movements.sales_orders: "The Ledger can generate customer invoices from entries; no full sales order workflow is described."
+    ledger.history: "The Ledger logs reservation and manual entries; the Locations Manager also logs quantity edits."
+    ledger.locked: "The Ledger documentation states every entry can be edited or deleted."
+    alerts.low_stock: "A global low-quantity threshold highlights items in the admin and counts them on the dashboard."
+    alerts.email: "The free low-quantity email is sent only after a front-end reservation; the Notifications add-on covers wider alerts."
+    reports.dashboard: "The free version shows count tiles; charts and breakdowns come with the Analytics add-on."
+    reports.reports: "Analytics covers category, status, location, low-stock and reservation summaries, but no valuation or movement report."
+    access.roles: "A setting chooses the minimum WordPress role that can add or edit items; there are no inventory roles."
+    access.permissions: "You can limit non-admins to editing only their own items; per-user rules need Advanced User Control."
+    extras.frontend: "The [wpinventory] shortcode shows a searchable, sortable item list on any page."
+    extras.scanner: "Generates QR codes that open the item in the admin from a phone camera; it does not move stock."
+    extras.woocommerce: "The plugin works independently and has no WooCommerce integration."
+  texts:
+    extras.storage: "Its own database tables (wpinventory_item, category, image, status and others)."
+
+stock-locations-for-woocommerce:
+  summary: Stock Locations for WooCommerce splits a product's stock across locations such as stores or warehouses and reduces the right location when orders come in. The free version covers locations, order allocation, REST access and front-end shortcodes, while a premium version adds maps, location archives and a few display options.
+  award: "Best free per-location stock for WooCommerce"
+  best_for: WooCommerce shops with several stores or warehouses that need stock per location and want customers to see or choose a location.
+  pros:
+    - Free per-location stock for simple and variable products.
+    - Orders are allocated to locations automatically or by the customer.
+    - Shortcodes show stock per location on product and cart pages.
+    - Per-location prices and location email notifications.
+    - REST API and cron endpoints for updating stock per location.
+    - Barcode fields for ISBN, UPC, EAN and ASIN on products.
+  cons:
+    - Requires WooCommerce; it extends WooCommerce products only.
+    - No stock transfers, purchase orders or adjustment records.
+    - No stock valuation or low-stock alerts per location.
+    - CSV import and export need a separate paid add-on.
+    - Small developer team and around 900 active installs.
+    - The refund policy only covers features that do not work as described.
+  notes:
+    items.sku_barcode: SKUs are WooCommerce's own field, and the plugin adds a Barcodes tab with ISBN, UPC, EAN and ASIN fields.
+    items.images: Products use WooCommerce's own images; the plugin adds no image handling of its own.
+    locations.multiple: Locations are a product taxonomy, and stock per location is saved as product meta.
+    movements.receive_issue: Stock per location is changed by editing the number on the product or through the API, not by receipt documents.
+    movements.sales_orders: WooCommerce orders reduce stock at the allocated location, and cancelled orders can restore it.
+    ledger.history: Location reductions are written as WooCommerce order notes and to an optional debug log, but there is no per-item history screen.
+    alerts.low_stock: The plugin has no per-location low-stock levels; WooCommerce's own threshold still applies to total stock.
+    alerts.email: Emails are sent when stock is allocated to a location and for new orders, not for low stock.
+    data.csv_import: CSV import is in a separate Import/Export add-on, listed in the plugin at €29.
+    data.csv_export: CSV export is in the same separate Import/Export add-on, listed at €29.
+    data.rest_api: The readme documents GET and PUT on WooCommerce product endpoints and a location endpoint, plus a key-based JSON API.
+    access.roles: Managing locations uses WooCommerce's manage_woocommerce capability; there are no plugin-specific roles.
+    extras.frontend: Shortcodes show stock per location on product and cart pages, and customers can pick a location; maps and location archives are premium.
+    extras.woocommerce: The plugin is a WooCommerce extension and requires WooCommerce 3.4 or later.
+  texts:
+    extras.storage: WooCommerce product meta (_stock_at_<location> keys) plus a "location" taxonomy for the locations; no custom tables.
+
+zintory:
+  summary: "Zintory is a transaction-based inventory plugin where stock moves between configurable accounts such as warehouses, suppliers and customers. The free version covers items, accounts, transaction types and stock per location; a one-off Pro licence adds duplicate transactions, item statistics and change history."
+  award: "Best for simple transaction-based stock tracking"
+  best_for: "Pick it if you want stock to change only through recorded purchases, sales and moves between locations, and do not need item photos, custom fields or alerts."
+  status: "Small user base (30+ active installs); version 4 was a rewrite of the earlier plugin, last updated July 2026."
+  pros:
+    - "Stock changes are recorded as transactions, not by editing a number."
+    - "Quantities are tracked per warehouse or location in the free version."
+    - "Configurable account types and transaction types fit purchases, sales, transfers or rentals."
+    - "Draft, confirmed and completed states before stock is affected."
+    - "Pro is a one-off $59 payment with lifetime updates."
+    - "Optional use of WooCommerce products as the item list."
+  cons:
+    - "Items only have a title, SKU and description: no images, custom fields, units or serials."
+    - "No low-stock levels, email alerts or dashboard."
+    - "Completed transactions can still be deleted, so history is not locked."
+    - "No CSV import, front-end view or barcode scanning in the free code."
+    - "Very small install base and sparse documentation."
+  notes:
+    items.types: "Account and transaction types are configurable, but items themselves have no types."
+    items.sku_barcode: "Items have a SKU field; there is no barcode field."
+    locations.multiple: "Account types marked to track quantity (such as Warehouse) each hold their own stock balance."
+    locations.transfers: "You set up a transaction type between two warehouse accounts to record a move."
+    movements.receive_issue: "Stock is calculated from completed transactions between accounts."
+    movements.checkout: "Loans can be modelled with custom accounts and transaction types, but there are no due dates or check-in tools."
+    movements.adjustments: "One-sided transaction types can adjust a location; the transaction description is the only place for a reason."
+    movements.purchase_orders: "A default Purchase type moves stock from a supplier to a warehouse with PO- numbering and prices."
+    movements.sales_orders: "A default Sale type with SO- numbering reduces stock; there are no invoices."
+    ledger.history: "Each item has a list of the transactions it appears in; the Pro version adds a full change history."
+    ledger.locked: "Transactions in any state, including completed, can be deleted from the admin."
+    alerts.low_stock: "The listing mentions responding to low stock, but the code has no reorder level or warning."
+    reports.reports: "Pro adds per-item statistics (sold, purchased, moved and average price); there are no wider reports."
+    access.roles: "WordPress admins have access, and you can add other WordPress users as plugin admins."
+    extras.woocommerce: "A setting loads the item list from WooCommerce products; it does not sync stock levels back."
+  texts:
+    extras.storage: "Its own database tables (items, accounts, transactions and transaction lines)."
+
+bizuno:
+  summary: Bizuno is a free, open-source ERP and double-entry accounting system that runs inside WordPress. Its inventory module is included at no cost and covers multiple stores, serial numbers, assemblies and FIFO, LIFO or average costing.
+  award: Best free full ERP inventory
+  best_for: Businesses that want full accounting with stock tied to the books, at no license cost, and can handle a more complex system.
+  status: Small install base (about 20 active installs). Last updated June 2026 and tested up to WordPress 6.9.
+  pros:
+    - Free and open source (AGPL), with no paid tiers or per-user fees.
+    - Stock per store, with recorded store transfers and adjustments.
+    - FIFO, LIFO or average costing per item, with cost layers in the history.
+    - Serialized items, assemblies and item variants from master items.
+    - Many inventory reports, including valuation, movement and a re-order worksheet.
+    - CSV import and export of items, including custom fields.
+  cons:
+    - Very small user base and few reviews.
+    - Posted entries can be deleted by users with delete rights.
+    - Runs as its own app with a separate login, not as normal WordPress screens.
+    - The WooCommerce connector plugin was closed on WordPress.org in October 2025.
+    - No documented low-stock email or barcode scanning.
+    - The REST API documentation does not list inventory endpoints.
+  notes:
+    items.sku_barcode: Each item has a SKU and a UPC code field.
+    items.units: Each item has a buy unit and a sell unit, with a quantity that converts between them.
+    movements.adjustments: Adjustments have a free-text description per line rather than a fixed list of reasons.
+    ledger.locked: Users with delete rights can delete posted entries; a per-user option limits changes to the current period.
+    alerts.low_stock: Items have minimum and restock quantities, and a re-order worksheet report lists what to buy.
+    reports.reports: Includes valuation, movement, aging, history by SKU, transfer and re-order reports.
+    data.rest_api: A REST API is documented, but its listed modules cover orders, shipping, payments and import or export, not inventory directly.
+    access.roles: Roles set security levels per area, including a separate level for inventory.
+    access.permissions: Users can be restricted to one store, to their own records or to the current period.
+    extras.frontend: The full app runs on a front-end /bizuno page with its own sign-in.
+    extras.woocommerce: Bizuno pushes products, stock and prices to WooCommerce, but the store needs the bizuno-api plugin, which is no longer on WordPress.org.
+  texts:
+    extras.storage: Custom tables with the bizuno_ prefix in the WordPress database, and files in the uploads/bizuno folder.
+

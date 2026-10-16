@@ -1,0 +1,57 @@
+slug: stock-locations-for-woocommerce
+name: Stock Locations for WooCommerce
+vendor: Fahad Mahmood & Alexandre Faustino
+own: false
+kind: woocommerce
+order: 6
+wporg_slug: stock-locations-for-woocommerce
+homepage: https://shop.androidbubbles.com/product/stock-locations-for-woocommerce/
+verified_at: 2026-10-16
+version_checked: "3.2.1"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/stock-locations-for-woocommerce/", method: docs }
+  pricing: { url: "https://shop.androidbubbles.com/product/stock-locations-for-woocommerce/", method: docs }
+  refunds: { url: "https://shop.androidbubbles.com/refund-policy/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/stock-locations-for-woocommerce/", method: source-code }
+pricing:
+  source: pricing
+  currency: USD
+  free: true
+  lifetime: true
+  refund: unknown
+  tiers:
+    # Also sold as a subscription at US$120 every six months, which the schema cannot express.
+    - { name: Premium, price: 70, period: lifetime, sites: "1" }
+    - { name: Premium + updates, price: 670, period: lifetime, sites: "1" }
+features:
+  items.types: { value: unverified }
+  items.sku_barcode: { value: yes, tier: free, src: code, note: true }
+  items.serials: { value: "no", src: code }
+  items.images: { value: yes, tier: free, src: wporg, note: true }
+  items.custom_fields: { value: unverified }
+  items.units: { value: unverified }
+  locations.multiple: { value: yes, tier: free, src: wporg, note: true }
+  locations.transfers: { value: "no", src: code }
+  movements.receive_issue: { value: "no", src: code, note: true }
+  movements.checkout: { value: "no", src: code }
+  movements.adjustments: { value: "no", src: code }
+  movements.purchase_orders: { value: "no", src: code }
+  movements.sales_orders: { value: yes, tier: free, src: wporg, note: true }
+  ledger.history: { value: partial, tier: free, src: code, note: true }
+  ledger.locked: { value: unverified }
+  valuation.cost: { value: "no", src: code }
+  valuation.fifo_lifo: { value: "no", src: code }
+  alerts.low_stock: { value: "no", src: code, note: true }
+  alerts.email: { value: "no", src: code, note: true }
+  reports.dashboard: { value: unverified }
+  reports.reports: { value: unverified }
+  data.csv_import: { value: yes, tier: addon, tier_name: "Import/Export add-on", src: code, note: true }
+  data.csv_export: { value: yes, tier: addon, tier_name: "Import/Export add-on", src: code, note: true }
+  data.rest_api: { value: yes, tier: free, src: wporg, note: true }
+  data.wp_cli: { value: "no", src: code }
+  access.roles: { value: "no", src: code, note: true }
+  access.permissions: { value: "no", src: code }
+  extras.frontend: { value: yes, tier: free, src: wporg, note: true }
+  extras.scanner: { value: "no", src: code }
+  extras.woocommerce: { value: yes, tier: free, src: wporg, note: true }
+  extras.storage: { text: true, src: code }

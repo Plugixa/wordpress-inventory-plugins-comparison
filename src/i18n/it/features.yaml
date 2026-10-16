@@ -1,0 +1,105 @@
+areas:
+  items: Articoli
+  locations: Magazzini e sedi
+  movements: Movimenti di magazzino
+  ledger: Storico e audit
+  valuation: Valorizzazione delle giacenze
+  alerts: Avvisi
+  reports: Report
+  data: Importazione, esportazione e API
+  access: Accesso del team
+  extras: Piattaforma
+features:
+  items.types:
+    label: Tipi di articolo
+    def: Distingue i tipi di articolo, come i beni che presti, i materiali di consumo che esaurisci e la merce che vendi.
+  items.sku_barcode:
+    label: SKU e codice a barre
+    def: Ogni articolo ha uno SKU o un codice articolo e un campo per il codice a barre.
+  items.serials:
+    label: Numeri di serie o di lotto
+    def: Registra un numero di serie per ogni unità, oppure un numero di lotto.
+  items.images:
+    label: Immagini degli articoli
+    def: Gli articoli possono avere una o più foto.
+  items.custom_fields:
+    label: Campi personalizzati
+    def: Puoi aggiungere campi tuoi agli articoli.
+  items.units:
+    label: Unità di misura
+    def: Gli articoli si contano in unità come pezzi, chilogrammi o scatole, con le conversioni tra l'una e l'altra.
+  locations.multiple:
+    label: Più magazzini
+    def: Le giacenze sono tenute separatamente per magazzino o sede, quindi ognuno ha la propria quantità.
+  locations.transfers:
+    label: Trasferimenti
+    def: La merce passa da una sede all'altra con un trasferimento registrato, non con due modifiche manuali.
+  movements.receive_issue:
+    label: Carichi e scarichi
+    def: La merce in entrata e in uscita viene registrata come movimento, invece che modificando la quantità.
+  movements.checkout:
+    label: Prestito e restituzione
+    def: Gli articoli vengono prestati a una persona e restituiti, con un registro di chi ha cosa.
+  movements.adjustments:
+    label: Rettifiche
+    def: Correzioni e storni, come danni o differenze di inventario, vengono registrati con una causale.
+  movements.purchase_orders:
+    label: Ordini d'acquisto
+    def: Ordini ai fornitori che caricano la merce in magazzino quando viene ricevuta.
+  movements.sales_orders:
+    label: Ordini di vendita
+    def: Ordini di vendita o fatture che scaricano la merce quando vengono evasi.
+  ledger.history:
+    label: Storico delle giacenze
+    def: Ogni variazione di una quantità viene conservata, così puoi vedere come la giacenza di un articolo è arrivata al valore attuale.
+  ledger.locked:
+    label: Storico bloccato
+    def: I movimenti finalizzati e le voci dello storico non si possono modificare né eliminare in seguito.
+  valuation.cost:
+    label: Valorizzazione al costo
+    def: Mostra quanto vale la merce a magazzino in base a quanto ti è costata.
+  valuation.fifo_lifo:
+    label: Costo FIFO o LIFO
+    def: Valorizza la merce in uscita con strati di costo first-in-first-out o last-in-first-out.
+  alerts.low_stock:
+    label: Scorta minima
+    def: Ogni articolo può avere un livello di riordino, e gli articoli sotto quel livello vengono elencati o segnalati.
+  alerts.email:
+    label: Email di scorta bassa
+    def: Viene inviata un'email quando un articolo scende sotto il suo livello di riordino.
+  reports.dashboard:
+    label: Dashboard
+    def: Una panoramica del magazzino con totali e grafici.
+  reports.reports:
+    label: Report di magazzino
+    def: Report come movimenti, rotazione, valorizzazione o anzianità delle giacenze.
+  data.csv_import:
+    label: Importazione CSV
+    def: Gli articoli, e possibilmente le loro giacenze, si possono importare da un foglio di calcolo.
+  data.csv_export:
+    label: Esportazione CSV
+    def: Articoli e livelli di giacenza si possono esportare in un foglio di calcolo.
+  data.rest_api:
+    label: API REST
+    def: Un'API REST documentata per leggere e modificare il magazzino da altri software.
+  data.wp_cli:
+    label: WP-CLI
+    def: Comandi da riga di comando per le operazioni di magazzino.
+  access.roles:
+    label: Ruoli di magazzino
+    def: Il magazzino ha capability o ruoli propri, quindi il personale può usarlo senza essere amministratore.
+  access.permissions:
+    label: Permessi granulari
+    def: Regole su chi può vedere o modificare quali record, azioni o sedi.
+  extras.frontend:
+    label: Sul front-end
+    def: Il magazzino può essere mostrato sul tuo sito pubblico, oppure l'app può funzionare in una pagina del tuo sito.
+  extras.scanner:
+    label: Lettura dei codici a barre
+    def: Trova o movimenta gli articoli leggendo un codice a barre o un codice QR con un lettore o una fotocamera.
+  extras.woocommerce:
+    label: WooCommerce
+    def: Funziona con prodotti e ordini di WooCommerce. Per gli add-on di WooCommerce, WooCommerce è obbligatorio.
+  extras.storage:
+    label: Dove sono salvati i dati
+    def: Dove il plugin conserva articoli e registrazioni di magazzino.

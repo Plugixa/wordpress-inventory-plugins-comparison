@@ -1,0 +1,17 @@
+items:
+  - q: What is the best WordPress inventory plugin?
+    a: It depends on where your stock lives. For a WooCommerce shop, ATUM is the most complete, and Stock Manager for WooCommerce is the quickest for bulk edits. For stock or equipment outside a shop, across several warehouses and with a history that cannot be changed, Plugixa Inventory. For accounting and inventory together, Bizuno or WP ERP.
+  - q: Which WordPress inventory plugin is free?
+    a: "All eight have a free version, and two are entirely free: Stock Manager for WooCommerce and Bizuno. Plugixa Inventory gives several warehouses, movements and a locked ledger free. ATUM gives purchase orders and suppliers free. WP ERP keeps stock movements for its Scale plan."
+  - q: Do I need WooCommerce to manage inventory in WordPress?
+    a: "No. Plugixa Inventory, WP Inventory Manager, Zintory, Bizuno and WP ERP keep their own records and run without WooCommerce. ATUM, Stock Manager for WooCommerce and Stock Locations for WooCommerce require it."
+  - q: Which plugins handle several warehouses?
+    a: "Plugixa Inventory, Bizuno, Zintory and Stock Locations for WooCommerce hold stock per location in their free versions. ATUM and WP Inventory Manager do it through paid add-ons. Stock Manager for WooCommerce does not."
+  - q: Which plugins have purchase orders?
+    a: "ATUM, Bizuno and Zintory have them free. WP ERP has a purchase order screen free, but receiving stock against it needs the Scale plan. Plugixa Inventory, Stock Manager for WooCommerce and Stock Locations for WooCommerce have none."
+  - q: Where is my inventory data stored?
+    a: All eight store data in your WordPress database. The WooCommerce add-ons keep stock on WooCommerce products, sometimes with their own tables beside them. The standalone plugins and the suites use their own tables.
+  - q: Who runs this comparison?
+    a: Plugixa, the company that makes Plugixa Inventory. That is a conflict of interest. To limit it, every value links to its source, each plugin page lists weaknesses as well as strengths, and our own plugin is ranked first only where the data supports it.
+  - q: How often is the data updated?
+    a: Install counts, ratings and version numbers are read from the wordpress.org API every week. Features and prices are checked by hand, and each plugin page shows the date of the last check.

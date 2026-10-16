@@ -1,0 +1,105 @@
+areas:
+  items: Items
+  locations: Warehouses and locations
+  movements: Stock movements
+  ledger: History and audit
+  valuation: Stock valuation
+  alerts: Alerts
+  reports: Reports
+  data: Import, export and API
+  access: Team access
+  extras: Platform
+features:
+  items.types:
+    label: Item types
+    def: Distinguishes kinds of items, such as assets you lend out, consumables you use up and goods you sell.
+  items.sku_barcode:
+    label: SKU and barcode
+    def: Each item has a SKU or item number and a barcode field.
+  items.serials:
+    label: Serial or lot numbers
+    def: Tracks a serial number per unit, or a lot or batch number.
+  items.images:
+    label: Item images
+    def: Items can have one or more photos.
+  items.custom_fields:
+    label: Custom fields
+    def: You can add your own fields to items.
+  items.units:
+    label: Units of measure
+    def: Items are counted in units such as pieces, kilograms or boxes, with conversions between them.
+  locations.multiple:
+    label: Several warehouses
+    def: Stock is held separately per warehouse or location, so each one has its own quantity.
+  locations.transfers:
+    label: Transfers
+    def: Stock moves from one location to another as a recorded transfer, not two manual edits.
+  movements.receive_issue:
+    label: Stock in and out
+    def: Stock arriving and leaving is recorded as a movement, rather than by editing the quantity.
+  movements.checkout:
+    label: Check out and check in
+    def: Items are lent to a person and returned, with a record of who has what.
+  movements.adjustments:
+    label: Adjustments
+    def: Corrections and write-offs, such as damage or a count difference, are recorded with a reason.
+  movements.purchase_orders:
+    label: Purchase orders
+    def: Orders to suppliers that add stock when the goods are received.
+  movements.sales_orders:
+    label: Sales orders
+    def: Sales orders or invoices that take stock out when they are fulfilled.
+  ledger.history:
+    label: Stock history
+    def: Every change to a quantity is kept, so you can see how an item's stock got to where it is.
+  ledger.locked:
+    label: Locked history
+    def: Finalised movements and history entries cannot be edited or deleted afterwards.
+  valuation.cost:
+    label: Stock value at cost
+    def: Shows what the stock on hand is worth at what it cost you.
+  valuation.fifo_lifo:
+    label: FIFO or LIFO costing
+    def: Values stock leaving by first-in-first-out or last-in-first-out cost layers.
+  alerts.low_stock:
+    label: Low-stock levels
+    def: Each item can have a reorder level, and items below it are listed or flagged.
+  alerts.email:
+    label: Low-stock email
+    def: An email is sent when an item falls below its reorder level.
+  reports.dashboard:
+    label: Dashboard
+    def: An inventory overview with totals and charts.
+  reports.reports:
+    label: Inventory reports
+    def: Reports such as movements, turnover, valuation or stock ageing.
+  data.csv_import:
+    label: CSV import
+    def: Items, and ideally their stock, can be imported from a spreadsheet.
+  data.csv_export:
+    label: CSV export
+    def: Items and stock levels can be exported to a spreadsheet.
+  data.rest_api:
+    label: REST API
+    def: A documented REST API for reading and changing inventory from other software.
+  data.wp_cli:
+    label: WP-CLI
+    def: Command-line commands for inventory tasks.
+  access.roles:
+    label: Inventory roles
+    def: Inventory has its own capabilities or roles, so staff can use it without being administrators.
+  access.permissions:
+    label: Fine-grained permissions
+    def: Rules on who can see or change which records, actions or locations.
+  extras.frontend:
+    label: On the front end
+    def: Inventory can be shown on your public site, or the app can run on a page of your site.
+  extras.scanner:
+    label: Barcode scanning
+    def: Finds or moves items by scanning a barcode or QR code with a scanner or a camera.
+  extras.woocommerce:
+    label: WooCommerce
+    def: Works with WooCommerce products and orders. For the WooCommerce add-ons, WooCommerce is required.
+  extras.storage:
+    label: Where data is stored
+    def: Where the plugin keeps items and stock records.

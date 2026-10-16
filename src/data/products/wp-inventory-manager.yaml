@@ -1,0 +1,63 @@
+slug: wp-inventory-manager
+name: WP Inventory Manager
+vendor: WP Inventory
+own: false
+kind: inventory
+order: 5
+wporg_slug: wp-inventory-manager
+homepage: https://www.wpinventory.com/
+verified_at: 2026-10-16
+version_checked: "2.5.9"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/wp-inventory-manager/", method: docs }
+  pricing: { url: "https://www.wpinventory.com/pricing/", method: docs }
+  addons: { url: "https://www.wpinventory.com/add-ons/", method: docs }
+  aim: { url: "https://www.wpinventory.com/documentation/user/add-on-documentation/advanced-inventory-manager/", method: docs }
+  locations: { url: "https://www.wpinventory.com/documentation/user/add-on-documentation/managing-inventory-locations/", method: docs }
+  ledger: { url: "https://www.wpinventory.com/documentation/user/add-on-documentation/ledger-add-on-records/", method: docs }
+  analytics: { url: "https://www.wpinventory.com/documentation/user/add-on-documentation/analytics/", method: docs }
+  importexport: { url: "https://www.wpinventory.com/documentation/user/add-on-documentation/importing-exporting-inventory/", method: docs }
+  usercontrol: { url: "https://www.wpinventory.com/documentation/user/add-on-documentation/specific-user-control/", method: docs }
+  qrcode: { url: "https://www.wpinventory.com/downloads/qr-code/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/wp-inventory-manager/", method: source-code }
+pricing:
+  source: pricing
+  currency: USD
+  free: true
+  lifetime: false
+  refund: days_30
+  tiers:
+    - { name: Pro, price: 79.99, period: year, sites: "2" }
+    - { name: All Access, price: 199, period: year, sites: unlimited }
+features:
+  items.types: { value: yes, tier: addon, tier_name: "Advanced Inventory Manager", src: aim }
+  items.sku_barcode: { value: partial, tier: free, src: code, note: true }
+  items.serials: { value: partial, tier: free, src: code, note: true }
+  items.images: { value: yes, tier: free, src: code }
+  items.custom_fields: { value: yes, tier: addon, tier_name: "Advanced Inventory Manager", src: aim, note: true }
+  items.units: { value: "no", src: code }
+  locations.multiple: { value: yes, tier: addon, tier_name: "Locations Manager", src: locations }
+  locations.transfers: { value: unverified }
+  movements.receive_issue: { value: partial, tier: addon, tier_name: "Ledger", src: ledger, note: true }
+  movements.checkout: { value: unverified }
+  movements.adjustments: { value: partial, tier: addon, tier_name: "Ledger", src: ledger, note: true }
+  movements.purchase_orders: { value: unverified }
+  movements.sales_orders: { value: partial, tier: addon, tier_name: "Ledger", src: ledger, note: true }
+  ledger.history: { value: partial, tier: addon, tier_name: "Ledger", src: ledger, note: true }
+  ledger.locked: { value: "no", src: ledger, note: true }
+  valuation.cost: { value: unverified }
+  valuation.fifo_lifo: { value: unverified }
+  alerts.low_stock: { value: yes, tier: free, src: code, note: true }
+  alerts.email: { value: partial, tier: free, src: code, note: true }
+  reports.dashboard: { value: yes, tier: free, src: code, note: true }
+  reports.reports: { value: partial, tier: addon, tier_name: "Analytics", src: analytics, note: true }
+  data.csv_import: { value: yes, tier: addon, tier_name: "Import and Export", src: importexport }
+  data.csv_export: { value: yes, tier: addon, tier_name: "Import and Export", src: importexport }
+  data.rest_api: { value: "no", src: code }
+  data.wp_cli: { value: "no", src: code }
+  access.roles: { value: partial, tier: free, src: code, note: true }
+  access.permissions: { value: partial, tier: free, src: code, note: true }
+  extras.frontend: { value: yes, tier: free, src: wporg, note: true }
+  extras.scanner: { value: partial, tier: addon, tier_name: "QR Code", src: qrcode, note: true }
+  extras.woocommerce: { value: "no", src: wporg, note: true }
+  extras.storage: { text: true, src: code }

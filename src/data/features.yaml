@@ -1,0 +1,54 @@
+# Feature taxonomy. Labels and definitions live in src/i18n/{locale}/features.yaml.
+# type: support = yes / partial / no / unverified;  text = short free text.
+areas:
+  - id: items
+    features:
+      - { id: items.types, type: support }
+      - { id: items.sku_barcode, type: support }
+      - { id: items.serials, type: support }
+      - { id: items.images, type: support }
+      - { id: items.custom_fields, type: support }
+      - { id: items.units, type: support }
+  - id: locations
+    features:
+      - { id: locations.multiple, type: support }
+      - { id: locations.transfers, type: support }
+  - id: movements
+    features:
+      - { id: movements.receive_issue, type: support }
+      - { id: movements.checkout, type: support }
+      - { id: movements.adjustments, type: support }
+      - { id: movements.purchase_orders, type: support }
+      - { id: movements.sales_orders, type: support }
+  - id: ledger
+    features:
+      - { id: ledger.history, type: support }
+      - { id: ledger.locked, type: support }
+  - id: valuation
+    features:
+      - { id: valuation.cost, type: support }
+      - { id: valuation.fifo_lifo, type: support }
+  - id: alerts
+    features:
+      - { id: alerts.low_stock, type: support }
+      - { id: alerts.email, type: support }
+  - id: reports
+    features:
+      - { id: reports.dashboard, type: support }
+      - { id: reports.reports, type: support }
+  - id: data
+    features:
+      - { id: data.csv_import, type: support }
+      - { id: data.csv_export, type: support }
+      - { id: data.rest_api, type: support }
+      - { id: data.wp_cli, type: support }
+  - id: access
+    features:
+      - { id: access.roles, type: support }
+      - { id: access.permissions, type: support }
+  - id: extras
+    features:
+      - { id: extras.frontend, type: support }
+      - { id: extras.scanner, type: support }
+      - { id: extras.woocommerce, type: support }
+      - { id: extras.storage, type: text }

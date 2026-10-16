@@ -1,0 +1,52 @@
+slug: stock-manager-for-woocommerce
+name: Stock Manager for WooCommerce
+vendor: StoreApps
+own: false
+kind: woocommerce
+order: 2
+wporg_slug: woocommerce-stock-manager
+homepage: https://www.storeapps.org/woocommerce-plugins/
+verified_at: 2026-10-16
+version_checked: "3.11.0"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/woocommerce-stock-manager/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/woocommerce-stock-manager/", method: source-code }
+pricing:
+  source: wporg
+  currency: USD
+  free: true
+  lifetime: false
+  refund: unknown
+  tiers: []
+features:
+  items.types: { value: unverified }
+  items.sku_barcode: { value: partial, tier: free, src: code, note: true }
+  items.serials: { value: "no", src: code }
+  items.images: { value: yes, tier: free, src: wporg, note: true }
+  items.custom_fields: { value: "no", src: wporg, note: true }
+  items.units: { value: unverified }
+  locations.multiple: { value: "no", src: code }
+  locations.transfers: { value: "no", src: code }
+  movements.receive_issue: { value: "no", src: code, note: true }
+  movements.checkout: { value: "no", src: code }
+  movements.adjustments: { value: "no", src: code, note: true }
+  movements.purchase_orders: { value: "no", src: code }
+  movements.sales_orders: { value: yes, tier: free, src: code, note: true }
+  ledger.history: { value: yes, tier: free, src: code, note: true }
+  ledger.locked: { value: partial, tier: free, src: code, note: true }
+  valuation.cost: { value: "no", src: code }
+  valuation.fifo_lifo: { value: "no", src: code }
+  alerts.low_stock: { value: partial, tier: free, src: code, note: true }
+  alerts.email: { value: "no", src: code, note: true }
+  reports.dashboard: { value: partial, tier: free, src: wporg, note: true }
+  reports.reports: { value: unverified }
+  data.csv_import: { value: yes, tier: free, src: wporg, note: true }
+  data.csv_export: { value: yes, tier: free, src: wporg }
+  data.rest_api: { value: "no", src: code, note: true }
+  data.wp_cli: { value: "no", src: code }
+  access.roles: { value: "no", src: code, note: true }
+  access.permissions: { value: "no", src: code }
+  extras.frontend: { value: "no", src: code }
+  extras.scanner: { value: "no", src: code }
+  extras.woocommerce: { value: yes, tier: free, src: wporg, note: true }
+  extras.storage: { text: true, src: code }

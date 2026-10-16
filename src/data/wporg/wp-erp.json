@@ -1,0 +1,16 @@
+{
+  "slug": "erp",
+  "api_url": "https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request[slug]=erp",
+  "fetched_at": "2026-10-16",
+  "listed": true,
+  "name": "ERP: Complete HR, Accounting &amp; CRM Suite Built for WooCommerce",
+  "version": "1.17.10",
+  "active_installs": 5000,
+  "rating": 4.38,
+  "num_ratings": 149,
+  "last_updated": "2026-10-05",
+  "added": "2016-03-17",
+  "requires_wp": "5.6",
+  "requires_php": "7.4",
+  "tested_up_to": "7.0.7"
+}

@@ -1,0 +1,58 @@
+slug: bizuno
+name: Bizuno Accounting – ERP
+vendor: PhreeSoft
+own: false
+kind: erp
+order: 8
+wporg_slug: bizuno-accounting
+homepage: https://www.bizuno.com/
+verified_at: 2026-10-16
+version_checked: "7.4.5"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/bizuno-accounting/", method: docs }
+  pricing: { url: "https://www.bizuno.com/", method: docs }
+  docs_types: { url: "https://www.bizuno.com/docs/inventory-types/", method: docs }
+  docs_costing: { url: "https://www.bizuno.com/docs/history-and-costing/", method: docs }
+  docs_rest: { url: "https://www.bizuno.com/docs/rest-api-surface/", method: docs }
+  docs_woo: { url: "https://www.bizuno.com/docs/woocommerce-via-bizuno-api/", method: docs }
+  bizuno_api: { url: "https://wordpress.org/plugins/bizuno-api/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/bizuno-accounting/", method: source-code }
+pricing:
+  source: pricing
+  currency: USD
+  free: true
+  lifetime: false
+  refund: unknown
+  tiers: []
+features:
+  items.types: { value: yes, tier: free, src: docs_types }
+  items.sku_barcode: { value: yes, tier: free, src: code, note: true }
+  items.serials: { value: yes, tier: free, src: docs_types }
+  items.images: { value: yes, tier: free, src: code }
+  items.custom_fields: { value: yes, tier: free, src: code }
+  items.units: { value: yes, tier: free, src: code, note: true }
+  locations.multiple: { value: yes, tier: free, src: wporg }
+  locations.transfers: { value: yes, tier: free, src: code }
+  movements.receive_issue: { value: yes, tier: free, src: docs_costing }
+  movements.checkout: { value: unverified }
+  movements.adjustments: { value: yes, tier: free, src: docs_costing, note: true }
+  movements.purchase_orders: { value: yes, tier: free, src: wporg }
+  movements.sales_orders: { value: yes, tier: free, src: wporg }
+  ledger.history: { value: yes, tier: free, src: docs_costing }
+  ledger.locked: { value: "no", src: code, note: true }
+  valuation.cost: { value: yes, tier: free, src: code }
+  valuation.fifo_lifo: { value: yes, tier: free, src: docs_costing }
+  alerts.low_stock: { value: yes, tier: free, src: code, note: true }
+  alerts.email: { value: unverified }
+  reports.dashboard: { value: yes, tier: free, src: code }
+  reports.reports: { value: yes, tier: free, src: code, note: true }
+  data.csv_import: { value: yes, tier: free, src: code }
+  data.csv_export: { value: yes, tier: free, src: code }
+  data.rest_api: { value: partial, tier: free, src: docs_rest, note: true }
+  data.wp_cli: { value: "no", src: code }
+  access.roles: { value: yes, tier: free, src: code, note: true }
+  access.permissions: { value: yes, tier: free, src: code, note: true }
+  extras.frontend: { value: yes, tier: free, src: code, note: true }
+  extras.scanner: { value: unverified }
+  extras.woocommerce: { value: partial, tier: free, src: docs_woo, note: true }
+  extras.storage: { text: true, src: code }

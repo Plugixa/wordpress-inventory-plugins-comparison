@@ -1,0 +1,308 @@
+# Prose per plugin. `notes` and `texts` are keyed by feature id (see src/data/features.yaml).
+plugixa-inventory:
+  summary: Eine Lagerverwaltung, die in WordPress läuft, mit Artikeln, Lagern, Lagerbewegungen und einem Bestandsjournal, das sich nicht bearbeiten lässt, dazu ein Dashboard, die Bewertung zu Anschaffungskosten sowie CSV-Import und -Export. All das ist in der kostenlosen Version enthalten; Pro ergänzt Umlagerungen zwischen Lagern, Korrekturbuchungen, FIFO- und LIFO-Bewertung, Berichte, benutzerdefinierte Felder, Mengeneinheiten und feingranulare Berechtigungen.
+  award: Bestes kostenloses Bestandsjournal für mehrere Lager
+  best_for: Kleine Unternehmen und Teams, die Ware oder Ausrüstung an mehr als einem Ort lagern und in WordPress korrekte Mengen je Lager und eine lückenlose Nachverfolgung wollen, ohne gehosteten Lagerdienst.
+  status: Neues Plugin. Version 1.0.0 wurde erst kürzlich auf wordpress.org gelistet. Es hat daher noch keine Nutzerbasis und keine öffentlichen Bewertungen.
+  pros:
+    - Der Bestand wird je Artikel und je Lager geführt, und mehrere Lager sind kostenlos.
+    - Jede Mengenänderung wird in ein Bestandsjournal geschrieben, das keine Seite, keine API-Route und keine Einstellung ändern oder löschen kann. Ein Abgleich prüft die Mengen dagegen.
+    - Die Ausgabe und Rückgabe von Ausrüstung an namentlich erfasste Personen ist kostenlos.
+    - Warnungen bei niedrigem Bestand in der App und per E-Mail, ein Dashboard und die Bewertung zu Anschaffungskosten sind kostenlos.
+    - CSV-Import mit Spaltenzuordnung, Anfangsbestand und Rückgängig-Funktion sowie CSV-Export aus jeder Liste sind kostenlos.
+    - Die Datensätze liegen in eigenen Datenbanktabellen des Plugins auf Ihrer Website; nichts wird an Plugixa gesendet.
+  cons:
+    - Keine Bestellungen, Lieferanten, Kundenaufträge oder Rechnungen.
+    - Keine WooCommerce-Anbindung. Shop-Bestand und Lagerbestand werden getrennt geführt.
+    - Umlagerungen zwischen Lagern, Korrekturbuchungen, FIFO- und LIFO-Bewertung und Berichte gibt es nur in Pro.
+    - Seriennummern sind ein Feld pro Artikel und werden nicht pro Einheit verfolgt. Es gibt keine Chargen.
+    - Neu, noch ohne Erfolgsbilanz und ohne Bewertungen.
+  notes:
+    items.types: Jeder Artikel ist Inventar, Verbrauchsmaterial oder Handelsware. Der Typ bestimmt, an welchen Lagerbewegungen er beteiligt sein kann.
+    items.serials: Ein Artikel hat ein Seriennummernfeld, das der Scanner durchsucht. Seriennummern und Chargen werden aber nicht pro Einheit verfolgt.
+    items.images: Ein Bild pro Artikel, ausgewählt aus der WordPress-Mediathek.
+    items.custom_fields: Zwölf Feldtypen für Artikel, Lager und Empfänger.
+    items.units: Mengeneinheiten in Ketten, etwa ein Dutzend aus Stück, mit Umrechnung zwischen ihnen.
+    locations.multiple: Mengen werden je Artikel und je Lager gespeichert. Jedes Lager hat eine eigene Übersicht mit Bestand, niedrigem Bestand und Aktivität.
+    locations.transfers: Eine Umlagerung schreibt beide Teile in das Journal, den Abgang aus dem einen Lager und den Zugang in das andere.
+    movements.receive_issue: Belege für Zu- und Abgänge werden als Entwurf angelegt und dann abgeschlossen. Erst der Abschluss schreibt in das Journal.
+    movements.checkout: Inventar wird an einen Empfänger ausgegeben, eine Person mit Name, E-Mail-Adresse und Abteilung, und wieder zurückgenommen.
+    movements.adjustments: Korrekturbuchungen für Zugang, Beschädigung und Abgang, jeweils mit Grund.
+    movements.purchase_orders: Wareneingänge sind Zugangsbuchungen mit einem Referenzfeld. Es gibt keine Lieferantendatensätze und keine Bestellungen.
+    movements.sales_orders: Es gibt keine Kundenaufträge oder Rechnungen. Bestand verlässt das Lager über Abgangs- oder Ausgabebuchungen.
+    ledger.locked: Abgeschlossene Belege lassen sich außer bei Notizen und Anhängen weder ändern noch löschen, und Journalzeilen können nie geändert werden. Ein Fehler wird mit einem Gegenbeleg korrigiert.
+    valuation.cost: Der Bestand wird zum Einstandspreis des Artikels mit Durchschnittskosten bewertet. Nur wenn keine Kosten erfasst sind, dient der Verkaufspreis als Ersatz.
+    valuation.fifo_lifo: FIFO und LIFO führen für jeden Wareneingang eine eigene Kostenschicht.
+    alerts.low_stock: Jeder Artikel hat einen Meldebestand. Artikel darunter erscheinen im Dashboard und in der Benachrichtigungsglocke.
+    alerts.email: Eine tägliche E-Mail-Zusammenfassung zu niedrigen Beständen an die Nutzer, die sie abonniert haben, gedrosselt, damit ein Versand keine Flut an E-Mails auslöst.
+    reports.dashboard: Bestandswert, ein Bewegungstrend über 30 Tage, niedrige Bestände und die meistbewegten Artikel auf einer Seite.
+    reports.reports: Bewertung nach Kategorie, Lager und Typ, Umschlag, Wareneinsatz, Trends und Lagerdauer, mit CSV-Export.
+    data.csv_import: Artikel, Kategorien, Lager und Empfänger, mit einem Schritt zur Spaltenzuordnung, dem Anfangsbestand als abgeschlossene Lagerbewegung und einer Rückgängig-Funktion für den gesamten Lauf.
+    data.rest_api: Eine REST-API unter plugixa-inventory/v1, die die App selbst nutzt. Sie folgt daher denselben Berechtigungsregeln.
+    data.wp_cli: WP-CLI-Befehle für die Bestandspflege, etwa den Abgleich der Mengen mit dem Journal. Für alltägliche Datensätze gibt es keine CLI-Befehle.
+    access.roles: Sechs Berechtigungen für die Lagerverwaltung und eine fertige Rolle Inventory Manager sind kostenlos; Pro ergänzt eine Seite zum Anlegen und Zuweisen von Rollen.
+    access.permissions: Pro Datensatztyp und pro Aktion kann eine Rolle alle Datensätze, nur die eigenen oder keine erreichen.
+    extras.frontend: Ein Shortcode bindet die gesamte App auf einer Seite Ihrer Website ein, innerhalb Ihres Themes und mit denselben Berechtigungen wie in wp-admin.
+    extras.scanner: Funktioniert mit einem Handscanner, der in das Suchfeld tippt und Artikel nach Barcode, SKU oder Seriennummer findet. Ein Scan per Kamera ist nicht möglich.
+    extras.woocommerce: Das Plugin liest und ändert den Produktbestand von WooCommerce nicht.
+  texts:
+    extras.storage: Ihre WordPress-Datenbank, in eigenen Tabellen des Plugins
+
+stock-manager-for-woocommerce:
+  summary: Stock Manager for WooCommerce ist ein kostenloser Tabelleneditor für Bestände, Preise und SKUs in WooCommerce, mit einem einfachen Bestandsprotokoll sowie CSV-Import und -Export. Eine eigene kostenpflichtige Version gibt es nicht; die Upgrade-Links führen zum separaten Plugin Smart Manager von StoreApps.
+  award: "Am besten für schnelle Massenänderungen am Bestand"
+  best_for: Kleine WooCommerce-Shops, die den Bestand vieler Produkte und Varianten auf einer Seite bearbeiten und einen einfachen Bestandsverlauf sehen wollen.
+  status: Nur kostenlos. Der Menüpunkt „Go Pro“ führt zu Smart Manager Pro, einem anderen Produkt von StoreApps.
+  pros:
+    - Vollständig kostenlos, ohne eigenen kostenpflichtigen Tarif.
+    - Bestand, Preise, SKU, Steuer- und Versandklasse für Produkte und Varianten in einer Tabelle bearbeiten.
+    - Legt bei jeder Bestandsänderung eines Produkts einen Eintrag im Bestandsprotokoll an, auch bei Bestellungen.
+    - CSV-Export und -Import von Bestandsdaten.
+    - Klein und einfach, mit wenigen Einstellungen.
+  cons:
+    - Setzt WooCommerce voraus und bearbeitet nur WooCommerce-Produkte.
+    - Keine Lagerorte, Bestellungen, Lieferanten oder Bestandsbewertung.
+    - Das Bestandsprotokoll speichert nur Datum und neue Menge, ohne Nutzer oder Grund.
+    - Laut Readme muss der CSV-Import und -Export überarbeitet werden, und die Nutzung erfolgt auf eigenes Risiko.
+    - Keine REST-API, keine WP-CLI-Befehle und keine Barcode-Unterstützung.
+    - Fügt dem Admin-Menü Werbeseiten für Smart Manager von StoreApps hinzu.
+  notes:
+    items.sku_barcode: Sie können die WooCommerce-SKU bearbeiten, aber das Plugin ergänzt kein Barcode-Feld.
+    items.images: Die Tabelle zeigt das Produktbild aus WooCommerce.
+    items.custom_fields: Für benutzerdefinierte Felder verweist das Readme auf das separate Plugin Smart Manager.
+    movements.receive_issue: Der Bestand wird durch Bearbeiten der Menge geändert. Es gibt keine Belege für Wareneingang oder Warenausgang.
+    movements.adjustments: Das Bestandsprotokoll speichert nur Datum, Produkt und Menge, daher gibt es keinen Grund für die Korrektur.
+    movements.sales_orders: WooCommerce-Bestellungen verringern den Bestand wie gewohnt, und jede Änderung wird in das Bestandsprotokoll geschrieben.
+    ledger.history: Das Plugin greift Bestandsänderungen in WooCommerce ab und speichert die neue Menge mit Datum in seiner eigenen Tabelle stock_log.
+    ledger.locked: Das Plugin bietet keine Seite zum Ändern oder Löschen von Protokolleinträgen, aber die Tabelle ist nicht anderweitig geschützt.
+    alerts.low_stock: Zeilen unter dem globalen Schwellenwert für niedrigen Bestand von WooCommerce werden hervorgehoben. Eine eigene Liste gibt es nicht.
+    alerts.email: Das Plugin verschickt keine eigenen E-Mails; die eingebauten Bestands-E-Mails von WooCommerce gelten weiterhin.
+    reports.dashboard: Das „Dashboard“ ist eine bearbeitbare Produkttabelle, keine Statistikübersicht.
+    data.csv_import: Laut Readme müssen Import und Export überarbeitet werden und sollten nur auf eigenes Risiko genutzt werden.
+    data.rest_api: Das Plugin ergänzt nur einen Filter für nicht vorrätige Produkte am Produkt-Endpunkt der WooCommerce-REST-API und hat keine eigene API.
+    access.roles: Der Zugriff nutzt die WooCommerce-Berechtigung manage_woocommerce, die sich per Filter ändern lässt.
+    extras.woocommerce: Das Plugin ist für WooCommerce gebaut und setzt es voraus.
+  texts:
+    extras.storage: Produkt-Metadaten von WooCommerce für Bestand und Preise, dazu eine eigene Tabelle stock_log mit Datum, Produkt-ID und Menge.
+
+atum:
+  summary: ATUM ist ein kostenloses WooCommerce-Plugin, das auf Basis der WooCommerce-Produkte eine Übersicht Stock Central, Lieferanten, Bestellungen, Bestandsprotokolle und ein Statistik-Dashboard ergänzt. Bestand an mehreren Lagerorten, Stücklisten, CSV-Export, Audit-Protokolle und Barcode-Scan werden als separate Jahres-Add-ons verkauft.
+  award: "Bester kostenloser Kern für WooCommerce-Bestände"
+  best_for: WooCommerce-Shops, die Bestellungen, Lieferanten und Bestandsübersichten kostenlos wollen und bereit sind, Add-ons für Lager oder Fertigung zu kaufen.
+  pros:
+    - Der kostenlose Kern enthält Bestellungen, Lieferanten, erwarteten Wareneingang und Bestandsprotokolle.
+    - Stock Central zeigt alle Produkte, SKUs, Einkaufspreise und Bestände auf einer Seite.
+    - Dashboard-Widgets für Umsatz, entgangene Verkäufe, Bestandskontrolle und aktuellen Bestandswert.
+    - Dokumentierte REST-API und WP-CLI-Befehle im kostenlosen Plugin.
+    - Detaillierte Berechtigungen für Bestellungen, Bestandsprotokolle und Lieferanten.
+    - Add-ons decken mehrere Lager, Stücklisten, Inventur und Kommissionierung ab.
+  cons:
+    - Setzt WooCommerce voraus und verwaltet nur WooCommerce-Produkte.
+    - Getrennter Bestand je Lager erfordert das kostenpflichtige Add-on Multi-Inventory.
+    - CSV-Export und -Import erfordern das kostenpflichtige Add-on Export PRO; das kostenlose Plugin exportiert PDF.
+    - Ein vollständiger Änderungsverlauf erfordert das kostenpflichtige Add-on Action Logs.
+    - Add-ons werden einzeln pro Jahr berechnet, mehrere Add-ons summieren sich daher schnell.
+    - Die Rückerstattungsrichtlinie des Anbieters sieht keine allgemeine Geld-zurück-Garantie vor.
+  notes:
+    items.types: Das Add-on Product Levels ergänzt Raw Material, Product Part und deren variable Versionen als WooCommerce-Produkttypen.
+    items.sku_barcode: SKUs sind das eigene Feld von WooCommerce, und das kostenlose Plugin ergänzt ein Barcode-Feld für Produkte und Varianten.
+    items.serials: Multi-Inventory verfolgt Chargennummern und Verfallsdaten je Bestand, keine Seriennummern pro Einheit.
+    locations.multiple: Das kostenlose Plugin ordnet Produkten nur Lagerort-Begriffe zu. Getrennte Mengen je Lagerort erfordern Multi-Inventory.
+    movements.receive_issue: Bestandsprotokolle erhöhen oder verringern den Bestand, und Bestellungen erhöhen ihn beim Wareneingang.
+    movements.adjustments: Zu den Typen der Bestandsprotokolle gehören Reserved Stock, Customer Returns, Warehouse Damage, Lost in Post und Other.
+    movements.purchase_orders: Kostenlose Bestellungen erhöhen den Bestand beim Wareneingang; Purchase Orders PRO ergänzt Lieferungen, Rechnungen und mehr.
+    movements.sales_orders: Der Bestand wird durch normale WooCommerce-Bestellungen verringert.
+    ledger.history: Das Add-on Action Logs erfasst jede Änderung mit Nutzer, Quelle und Zeit; das kostenlose Plugin führt nur Bestandsprotokolle und Bestellnotizen.
+    valuation.cost: Das kostenlose Plugin speichert Einkaufspreise und zeigt auf dieser Grundlage ein Dashboard-Widget Current Stock Value.
+    valuation.fifo_lifo: Multi-Inventory kann Bestände nach FIFO, LIFO oder Verfallsdatum verkaufen. Das ist eine Verkaufsreihenfolge, keine FIFO- oder LIFO-Bewertung.
+    alerts.email: Das Plugin nutzt die eingebauten E-Mails von WooCommerce für niedrigen und fehlenden Bestand und kann sie in manchen Fällen zurückhalten.
+    reports.reports: Berichte bestehen aus Dashboard-Statistiken und einem PDF-Export von Stock Central.
+    data.csv_import: Export PRO wird als Export- und Importwerkzeug beschrieben. Den Import haben wir nicht im Detail geprüft.
+    data.csv_export: Export PRO exportiert als CSV, XML oder JSON, manuell oder zeitgesteuert; das kostenlose Plugin exportiert nur PDF.
+    data.wp_cli: Das kostenlose Plugin registriert einen Befehl „wp atum“, der die ATUM-Werkzeuge ausführt.
+    access.roles: Das Plugin ergänzt eigene Berechtigungen wie atum_edit_purchase_price und atum_read_inbound_stock, aber keine eigenen Rollen.
+    access.permissions: Berechtigungen trennen eigene und fremde Bestellungen, Protokolle und Lieferanten, aber das kostenlose Plugin hat keine Zugriffsregeln je Lagerort.
+    extras.frontend: Multi-Inventory kann Bestände nach Region einschränken, sodass Kunden Bestand und Preise für ihr Gebiet sehen. Eine andere Anzeige im Frontend konnten wir nicht bestätigen.
+    extras.scanner: Barcodes PRO ermöglicht die Suche in ATUM-Listen per gescanntem Barcode und unterstützt 1D- und 2D-Formate.
+    extras.woocommerce: ATUM ist eine WooCommerce-Erweiterung und setzt WooCommerce voraus.
+  texts:
+    extras.storage: WooCommerce-Produkte und ihre Metadaten, dazu eigene Tabellen von ATUM (atum_product_data, atum_order_items, atum_order_itemmeta) für Bestandsdaten, Bestellungen und Bestandsprotokolle.
+
+wp-erp:
+  summary: WP ERP ist eine kostenlose Suite für Personal, CRM und Buchhaltung in WordPress. Das kostenlose Buchhaltungsmodul hat Produkte und Bestellungen, aber die Bestandsführung kommt aus der Erweiterung Inventory, die Teil des kostenpflichtigen Tarifs Scale ist.
+  award: Am besten für Personal und Buchhaltung zusammen
+  best_for: Kleine Unternehmen, die Personal, CRM oder Buchhaltung bereits in WP ERP führen und einfache Bestandsmengen brauchen, die an Ein- und Verkäufe gekoppelt sind.
+  pros:
+    - Kostenloser Kern mit Modulen für Personal, CRM und Buchhaltung, ohne Nutzerbegrenzung.
+    - Einkäufe erhöhen den Bestand und Verkäufe verringern ihn, die Mengen folgen also echten Vorgängen.
+    - Berichte zu Produkteinkäufen, Produktverkäufen und Bestand im Buchhaltungsmodul.
+    - Produkte lassen sich in der kostenlosen Version aus CSV importieren und nach CSV exportieren.
+    - Produkte sind als Lagerartikel oder Dienstleistung typisiert.
+    - Aktive Entwicklung, mit einem Update im Oktober 2026.
+  cons:
+    - Die Bestandsführung erfordert den Tarif Scale für 474 USD pro Jahr, abhängig von der Nutzerzahl.
+    - Keine dokumentierten Lager, Umlagerungen oder Korrekturbuchungen.
+    - Keine dokumentierten Warnungen bei niedrigem Bestand, Barcodes, Seriennummern oder Mengeneinheiten.
+    - Das Bewertungsverfahren ist nicht dokumentiert.
+    - Laut Anbieter wird an der Synchronisierung des WooCommerce-Bestands noch gearbeitet.
+    - Die Rückerstattungsfrist beträgt 14 Tage.
+  notes:
+    items.types: Das kostenlose Buchhaltungsmodul hat zwei Produkttypen, Inventory und Service.
+    items.sku_barcode: Die Seite Inventory zeigt einen Artikelcode. Ein Barcode-Feld ist nicht dokumentiert.
+    movements.receive_issue: Einkäufe erhöhen den Bestand und Verkäufe verringern ihn, erfasst je Vorgang.
+    movements.checkout: Die separate Erweiterung Asset Manager weist Mitarbeitenden Firmeninventar zu, ist aber nicht mit dem Bestand verknüpft.
+    movements.purchase_orders: Bestellungen sind im kostenlosen Buchhaltungsmodul enthalten. Der Wareneingang auf den Bestand erfolgt nur mit der Erweiterung Inventory.
+    ledger.history: Zu- und Abgänge werden je Vorgang in der Datenbank gespeichert. Eine Verlaufsseite pro Artikel ist nicht dokumentiert.
+    reports.reports: Berichte zu Produkteinkäufen, Produktverkäufen und Bestand sind verfügbar, und die meisten Berichte lassen sich als CSV exportieren.
+    data.csv_import: Importiert die Produktliste aus CSV, nicht die Bestandsmengen.
+    data.csv_export: Exportiert die Produktliste als CSV.
+    data.rest_api: Das Plugin hat REST-Routen für Produkte und Kategorien, aber wir haben keine öffentliche API-Referenz gefunden.
+    data.wp_cli: Es gibt WP-CLI-Befehle für Module, Personal und CRM, aber keine für Produkte oder Bestand.
+    access.roles: Nur die Rolle Accounting Manager kann die Inventory-Menüs nutzen. Eine reine Lagerrolle gibt es nicht.
+    extras.woocommerce: Die WooCommerce-Integration im Tarif Growth synchronisiert Bestellungen in die Buchhaltung, nicht den Bestand.
+  texts:
+    extras.storage: Eigene Tabellen mit dem Präfix erp_acct_ in der WordPress-Datenbank, auf Ihrem eigenen Server.
+
+wp-inventory-manager:
+  summary: "WP Inventory Manager ist ein langjähriges Plugin für Kataloge und Bestandszählung, das Artikel in eigenen Tabellen speichert und sie per Shortcode im Frontend auflistet. Der kostenlose Kern umfasst unbegrenzt viele Artikel, Bilder, Kategorien und eine einzelne Menge pro Artikel. Lagerorte, Artikeltypen, benutzerdefinierte Felder, CSV, ein Bestandsjournal und Auswertungen sind kostenpflichtige Add-ons, die eine Lizenz Pro oder All Access erfordern."
+  award: "Am besten für öffentliche Bestandskataloge"
+  best_for: "Wählen Sie es, wenn Sie vor allem Ausrüstung, Teile oder Sammlungen auf Ihrer Website zeigen und eine einfache Mengenzählung führen wollen und bereit sind, Add-ons für mehr zu kaufen."
+  pros:
+    - "Der kostenlose Kern hat keine Artikelbegrenzung und braucht kein WooCommerce."
+    - "Artikelliste im Frontend mit Suche und Sortierung über den Shortcode [wpinventory]."
+    - "Artikelfotos, Schwellenwert für niedrigen Bestand und ein kleines Status-Dashboard in der kostenlosen Version."
+    - "Breites Angebot an Add-ons: Lagerorte, Artikeltypen, CSV-Import/-Export, Journal, Auswertungen, QR-Codes."
+    - "Aktiv gepflegt (2.5.9, aktualisiert im Oktober 2026), mit 30 Tagen Geld-zurück-Garantie."
+  cons:
+    - "Die kostenlose Version führt eine einzige Mengenzahl pro Artikel. Lagerbewegungen gibt es nicht."
+    - "Die meisten Bestandsfunktionen sind separate Jahres-Add-ons ($24.99–$79.99 pro Stück) zusätzlich zu einer Pro-Lizenz."
+    - "Journaleinträge lassen sich ändern oder löschen, der Verlauf ist also nicht revisionssicher."
+    - "Keine Bestellungen, keine dokumentierte Bestandsbewertung und keine erfassten Umlagerungen zwischen Lagerorten."
+    - "Keine REST-API und keine WP-CLI-Befehle im Code des Plugins."
+  notes:
+    items.sku_barcode: "Jeder Artikel hat ein Feld für die Artikelnummer. Ein eigenes Barcode-Feld gibt es nicht."
+    items.serials: "Ein Seriennummernfeld pro Artikeldatensatz, nicht pro Einheit."
+    items.custom_fields: "In der kostenlosen Version lassen sich nur die festen Felder umbenennen. Neue Felder erfordern das Add-on."
+    movements.receive_issue: "Das Ledger erfasst Zu- und Abgänge aus Reservierungen oder manuellen Einträgen; die kostenlose Version ändert nur die Menge."
+    movements.adjustments: "Manuelle Einträge im Ledger können die Menge ändern, aber es gibt kein eigenes Feld für den Grund."
+    movements.sales_orders: "Das Ledger kann aus Einträgen Kundenrechnungen erzeugen. Ein vollständiger Ablauf für Kundenaufträge ist nicht beschrieben."
+    ledger.history: "Das Ledger protokolliert Reservierungen und manuelle Einträge; der Locations Manager protokolliert auch Mengenänderungen."
+    ledger.locked: "Laut Dokumentation des Ledger lässt sich jeder Eintrag ändern oder löschen."
+    alerts.low_stock: "Ein globaler Schwellenwert für niedrige Mengen hebt Artikel im Admin-Bereich hervor und zählt sie im Dashboard."
+    alerts.email: "Die kostenlose E-Mail bei niedriger Menge wird nur nach einer Reservierung im Frontend verschickt; das Add-on Notifications deckt weitere Warnungen ab."
+    reports.dashboard: "Die kostenlose Version zeigt Kacheln mit Zahlen; Diagramme und Aufschlüsselungen kommen mit dem Add-on Analytics."
+    reports.reports: "Analytics bietet Übersichten nach Kategorie, Status, Lagerort, niedrigem Bestand und Reservierungen, aber keinen Bewertungs- oder Bewegungsbericht."
+    access.roles: "Eine Einstellung legt die niedrigste WordPress-Rolle fest, die Artikel anlegen oder ändern darf. Eigene Lagerrollen gibt es nicht."
+    access.permissions: "Sie können Nicht-Administratoren auf das Bearbeiten ihrer eigenen Artikel beschränken; Regeln je Nutzer erfordern Advanced User Control."
+    extras.frontend: "Der Shortcode [wpinventory] zeigt auf jeder Seite eine durchsuchbare, sortierbare Artikelliste."
+    extras.scanner: "Erzeugt QR-Codes, die den Artikel per Handykamera im Admin-Bereich öffnen. Bestand wird damit nicht bewegt."
+    extras.woocommerce: "Das Plugin arbeitet eigenständig und hat keine WooCommerce-Integration."
+  texts:
+    extras.storage: "Eigene Datenbanktabellen (wpinventory_item, category, image, status und weitere)."
+
+stock-locations-for-woocommerce:
+  summary: Stock Locations for WooCommerce verteilt den Bestand eines Produkts auf Lagerorte wie Filialen oder Lager und verringert bei eingehenden Bestellungen den richtigen Lagerort. Die kostenlose Version umfasst Lagerorte, die Zuordnung von Bestellungen, REST-Zugriff und Shortcodes für das Frontend; eine Premium-Version ergänzt Karten, Archivseiten für Lagerorte und einige Anzeigeoptionen.
+  award: "Bester kostenloser Bestand je Lagerort für WooCommerce"
+  best_for: WooCommerce-Shops mit mehreren Filialen oder Lagern, die Bestand je Lagerort brauchen und Kunden einen Lagerort anzeigen oder wählen lassen wollen.
+  pros:
+    - Kostenloser Bestand je Lagerort für einfache und variable Produkte.
+    - Bestellungen werden automatisch oder vom Kunden einem Lagerort zugeordnet.
+    - Shortcodes zeigen den Bestand je Lagerort auf Produkt- und Warenkorbseiten.
+    - Preise je Lagerort und E-Mail-Benachrichtigungen für Lagerorte.
+    - REST-API und Cron-Endpunkte zum Aktualisieren des Bestands je Lagerort.
+    - Barcode-Felder für ISBN, UPC, EAN und ASIN an Produkten.
+  cons:
+    - Setzt WooCommerce voraus und erweitert nur WooCommerce-Produkte.
+    - Keine Umlagerungen, Bestellungen oder Korrekturbuchungen.
+    - Keine Bestandsbewertung und keine Warnungen bei niedrigem Bestand je Lagerort.
+    - CSV-Import und -Export erfordern ein separates kostenpflichtiges Add-on.
+    - Kleines Entwicklerteam und rund 900 aktive Installationen.
+    - Die Rückerstattungsrichtlinie gilt nur für Funktionen, die nicht wie beschrieben funktionieren.
+  notes:
+    items.sku_barcode: SKUs sind das eigene Feld von WooCommerce, und das Plugin ergänzt einen Tab Barcodes mit Feldern für ISBN, UPC, EAN und ASIN.
+    items.images: Produkte nutzen die Bilder von WooCommerce. Das Plugin hat keine eigene Bildverwaltung.
+    locations.multiple: Lagerorte sind eine Produkt-Taxonomie, und der Bestand je Lagerort wird als Produkt-Metadaten gespeichert.
+    movements.receive_issue: Der Bestand je Lagerort wird durch Ändern der Zahl am Produkt oder über die API geändert, nicht über Belege für den Wareneingang.
+    movements.sales_orders: WooCommerce-Bestellungen verringern den Bestand am zugeordneten Lagerort, und stornierte Bestellungen können ihn wiederherstellen.
+    ledger.history: Abgänge je Lagerort werden als Bestellnotizen in WooCommerce und in ein optionales Debug-Protokoll geschrieben, aber es gibt keine Verlaufsseite pro Artikel.
+    alerts.low_stock: Das Plugin hat keinen Meldebestand je Lagerort; der Schwellenwert von WooCommerce gilt weiter für den Gesamtbestand.
+    alerts.email: E-Mails werden verschickt, wenn Bestand einem Lagerort zugeordnet wird, und bei neuen Bestellungen, nicht bei niedrigem Bestand.
+    data.csv_import: Der CSV-Import steckt in einem separaten Add-on Import/Export, im Plugin für 29 € angeboten.
+    data.csv_export: Der CSV-Export steckt im selben separaten Add-on Import/Export, angeboten für 29 €.
+    data.rest_api: Das Readme dokumentiert GET und PUT an den Produkt-Endpunkten von WooCommerce und einen Lagerort-Endpunkt, dazu eine JSON-API mit Schlüssel.
+    access.roles: Die Verwaltung der Lagerorte nutzt die WooCommerce-Berechtigung manage_woocommerce. Eigene Rollen des Plugins gibt es nicht.
+    extras.frontend: Shortcodes zeigen den Bestand je Lagerort auf Produkt- und Warenkorbseiten, und Kunden können einen Lagerort wählen. Karten und Archivseiten für Lagerorte gibt es in Premium.
+    extras.woocommerce: Das Plugin ist eine WooCommerce-Erweiterung und setzt WooCommerce 3.4 oder neuer voraus.
+  texts:
+    extras.storage: Produkt-Metadaten von WooCommerce (Schlüssel _stock_at_<location>) und eine Taxonomie „location“ für die Lagerorte; keine eigenen Tabellen.
+
+zintory:
+  summary: "Zintory ist ein vorgangsbasiertes Lagerverwaltungs-Plugin, in dem Bestand zwischen konfigurierbaren Konten wie Lagern, Lieferanten und Kunden bewegt wird. Die kostenlose Version umfasst Artikel, Konten, Vorgangstypen und Bestand je Lagerort; eine einmalige Pro-Lizenz ergänzt das Duplizieren von Vorgängen, Artikelstatistiken und einen Änderungsverlauf."
+  award: "Am besten für einfache, vorgangsbasierte Bestandsführung"
+  best_for: "Wählen Sie es, wenn sich der Bestand nur über erfasste Einkäufe, Verkäufe und Bewegungen zwischen Lagerorten ändern soll und Sie keine Artikelfotos, benutzerdefinierten Felder oder Warnungen brauchen."
+  status: "Kleine Nutzerbasis (30+ aktive Installationen). Version 4 war eine Neuentwicklung des früheren Plugins, zuletzt aktualisiert im Juli 2026."
+  pros:
+    - "Bestandsänderungen werden als Vorgänge erfasst, nicht durch Ändern einer Zahl."
+    - "Mengen werden in der kostenlosen Version je Lager oder Lagerort geführt."
+    - "Konfigurierbare Konto- und Vorgangstypen passen zu Einkäufen, Verkäufen, Umlagerungen oder Vermietung."
+    - "Die Status Entwurf, bestätigt und abgeschlossen, bevor der Bestand betroffen ist."
+    - "Pro kostet einmalig $59, mit lebenslangen Updates."
+    - "WooCommerce-Produkte lassen sich optional als Artikelliste nutzen."
+  cons:
+    - "Artikel haben nur Titel, SKU und Beschreibung, also keine Bilder, benutzerdefinierten Felder, Mengeneinheiten oder Seriennummern."
+    - "Kein Meldebestand, keine E-Mail-Warnungen und kein Dashboard."
+    - "Abgeschlossene Vorgänge lassen sich weiterhin löschen, der Verlauf ist also nicht gesperrt."
+    - "Kein CSV-Import, keine Anzeige im Frontend und kein Barcode-Scan im kostenlosen Code."
+    - "Sehr kleine Nutzerbasis und spärliche Dokumentation."
+  notes:
+    items.types: "Konto- und Vorgangstypen sind konfigurierbar, aber Artikel selbst haben keine Typen."
+    items.sku_barcode: "Artikel haben ein SKU-Feld. Ein Barcode-Feld gibt es nicht."
+    locations.multiple: "Kontotypen, die Mengen führen (etwa Warehouse), haben jeweils einen eigenen Bestand."
+    locations.transfers: "Sie legen einen Vorgangstyp zwischen zwei Lagerkonten an, um eine Bewegung zu erfassen."
+    movements.receive_issue: "Der Bestand wird aus abgeschlossenen Vorgängen zwischen Konten berechnet."
+    movements.checkout: "Ausleihen lassen sich mit eigenen Konten und Vorgangstypen abbilden, aber es gibt keine Fälligkeitsdaten und keine Rückgabe-Werkzeuge."
+    movements.adjustments: "Einseitige Vorgangstypen können einen Lagerort korrigieren. Ein Grund lässt sich nur in der Vorgangsbeschreibung angeben."
+    movements.purchase_orders: "Ein vorgegebener Typ Purchase bewegt Bestand von einem Lieferanten in ein Lager, mit PO-Nummerierung und Preisen."
+    movements.sales_orders: "Ein vorgegebener Typ Sale mit SO-Nummerierung verringert den Bestand. Rechnungen gibt es nicht."
+    ledger.history: "Jeder Artikel hat eine Liste der Vorgänge, in denen er vorkommt; die Pro-Version ergänzt einen vollständigen Änderungsverlauf."
+    ledger.locked: "Vorgänge in jedem Status, auch abgeschlossene, lassen sich im Admin-Bereich löschen."
+    alerts.low_stock: "Der Eintrag erwähnt die Reaktion auf niedrigen Bestand, aber der Code hat weder Meldebestand noch Warnung."
+    reports.reports: "Pro ergänzt Statistiken je Artikel (verkauft, eingekauft, bewegt und Durchschnittspreis). Weitere Berichte gibt es nicht."
+    access.roles: "WordPress-Administratoren haben Zugriff, und Sie können weitere WordPress-Nutzer als Plugin-Administratoren hinzufügen."
+    extras.woocommerce: "Eine Einstellung lädt die Artikelliste aus WooCommerce-Produkten. Bestände werden nicht zurück synchronisiert."
+  texts:
+    extras.storage: "Eigene Datenbanktabellen (Artikel, Konten, Vorgänge und Vorgangszeilen)."
+
+bizuno:
+  summary: Bizuno ist ein kostenloses Open-Source-ERP mit doppelter Buchführung, das in WordPress läuft. Sein Lagermodul ist ohne Aufpreis enthalten und umfasst mehrere Lager, Seriennummern, Baugruppen sowie Bewertung nach FIFO, LIFO oder Durchschnittskosten.
+  award: Beste kostenlose Lagerverwaltung in einem vollständigen ERP
+  best_for: Unternehmen, die eine vollständige Buchhaltung mit an die Bücher gekoppeltem Bestand ohne Lizenzkosten wollen und mit einem komplexeren System zurechtkommen.
+  status: Kleine Nutzerbasis (etwa 20 aktive Installationen). Zuletzt aktualisiert im Juni 2026 und getestet bis WordPress 6.9.
+  pros:
+    - Kostenlos und Open Source (AGPL), ohne kostenpflichtige Tarife oder Gebühren pro Nutzer.
+    - Bestand je Lager, mit erfassten Umlagerungen und Korrekturbuchungen.
+    - Bewertung nach FIFO, LIFO oder Durchschnittskosten je Artikel, mit Kostenschichten im Verlauf.
+    - Artikel mit Seriennummern, Baugruppen und Artikelvarianten aus Stammartikeln.
+    - Viele Bestandsberichte, darunter Bewertung, Bewegungen und eine Nachbestellliste.
+    - CSV-Import und -Export von Artikeln, einschließlich benutzerdefinierter Felder.
+  cons:
+    - Sehr kleine Nutzerbasis und wenige Bewertungen.
+    - Gebuchte Einträge können von Nutzern mit Löschrechten gelöscht werden.
+    - Läuft als eigene App mit separater Anmeldung, nicht als normale WordPress-Seiten.
+    - Das WooCommerce-Connector-Plugin wurde im Oktober 2025 auf WordPress.org geschlossen.
+    - Keine dokumentierte E-Mail bei niedrigem Bestand und kein Barcode-Scan.
+    - Die Dokumentation der REST-API nennt keine Endpunkte für den Bestand.
+  notes:
+    items.sku_barcode: Jeder Artikel hat eine SKU und ein Feld für den UPC-Code.
+    items.units: Jeder Artikel hat eine Einkaufs- und eine Verkaufseinheit, mit einer Menge, die zwischen beiden umrechnet.
+    movements.adjustments: Korrekturbuchungen haben eine freie Beschreibung pro Zeile statt einer festen Liste von Gründen.
+    ledger.locked: Nutzer mit Löschrechten können gebuchte Einträge löschen. Eine Option pro Nutzer beschränkt Änderungen auf die aktuelle Periode.
+    alerts.low_stock: Artikel haben Mindest- und Nachbestellmengen, und ein Bericht als Nachbestellliste zeigt, was einzukaufen ist.
+    reports.reports: Umfasst Berichte zu Bewertung, Bewegungen, Lagerdauer, Verlauf je SKU, Umlagerungen und Nachbestellung.
+    data.rest_api: Eine REST-API ist dokumentiert, aber die aufgeführten Module betreffen Bestellungen, Versand, Zahlungen und Import oder Export, nicht direkt den Bestand.
+    access.roles: Rollen legen Sicherheitsstufen je Bereich fest, einschließlich einer eigenen Stufe für die Lagerverwaltung.
+    access.permissions: Nutzer lassen sich auf ein Lager, auf ihre eigenen Datensätze oder auf die aktuelle Periode beschränken.
+    extras.frontend: Die gesamte App läuft auf einer Frontend-Seite /bizuno mit eigener Anmeldung.
+    extras.woocommerce: Bizuno überträgt Produkte, Bestand und Preise an WooCommerce, aber der Shop braucht das Plugin bizuno-api, das nicht mehr auf WordPress.org verfügbar ist.
+  texts:
+    extras.storage: Eigene Tabellen mit dem Präfix bizuno_ in der WordPress-Datenbank und Dateien im Ordner uploads/bizuno.

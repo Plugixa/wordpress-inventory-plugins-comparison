@@ -1,0 +1,87 @@
+# Keyed by guide slug in src/data/pages.yaml. `picks` is keyed by product slug.
+best-wordpress-inventory-plugins:
+  title: "Best WordPress Inventory Plugins ({year}): 8 Compared With Sources"
+  nav: Best inventory plugins overall
+  description: Eight maintained WordPress inventory and stock plugins ranked by what each does best, with prices, wordpress.org numbers and sources.
+  h1: Best WordPress inventory plugins
+  intro:
+    - '"Inventory" covers three kinds of plugin in WordPress. Some manage the stock of WooCommerce products. Some are standalone stock systems for warehouses, equipment or supplies. Some are accounting or ERP suites with an inventory module.'
+    - The ranking below weighs how much each plugin does, what it costs and how proven it is, then notes where another plugin fits better.
+  picks:
+    atum: The most complete inventory suite for WooCommerce, with more than 10,000 active installs. Purchase orders, suppliers, inventory logs and a stock value are free. Locations, barcodes, CSV export and the full action log are paid add-ons, priced per site per year.
+    plugixa-inventory: "Our own plugin. The most complete free standalone stock system here: several warehouses, movements, check-out, a locked ledger, low-stock email and CSV import and export. It ranks second, not first, because it is new, has no purchase orders and does not connect to WooCommerce."
+    wp-inventory-manager: A long-standing standalone plugin built around a public catalogue of items. Locations, a ledger, import and export are add-ons that need a Pro licence.
+    stock-manager-for-woocommerce: The most installed plugin here, and free. It is a fast table for editing WooCommerce stock and prices, not a full inventory system.
+    stock-locations-for-woocommerce: Free stock per location for WooCommerce, with orders assigned to a location and a REST API.
+    bizuno: A free, open-source accounting system with a strong inventory module, including serials, transfers and FIFO or LIFO costing. It has very few users, and its WooCommerce bridge was closed on wordpress.org.
+    wp-erp: An HR, accounting and CRM suite. Stock in and out needs the Scale plan, and warehouses and low-stock alerts are not documented.
+    zintory: A small ledger of transactions between accounts, with free transfers and orders, but no low-stock alerts or dashboard.
+  how:
+    - We ranked on four things that can be checked. They are what the free version includes, what the paid plans cost, how actively the plugin is maintained, and what its wordpress.org users say.
+    - We did not run speed tests, and we did not test every feature by hand. Values come from each vendor's own pages and the plugins' code; the methodology page explains the limits of that.
+
+best-free-inventory-plugins:
+  title: "Best Free WordPress Inventory Plugins ({year})"
+  nav: Best free inventory plugins
+  description: What each free WordPress inventory plugin includes without paying, from warehouses and ledgers to purchase orders, with sources.
+  h1: Best free WordPress inventory plugins
+  intro:
+    - Every plugin here has a free version, but they hold back different things. One gives warehouses free and charges for transfers. Another gives purchase orders free and charges for locations.
+    - The right free plugin depends on which feature you can least do without.
+  picks:
+    plugixa-inventory: "Our own plugin. Free: several warehouses, add and remove movements, check-out, a locked ledger, stock value at cost, low-stock email, a dashboard, CSV import and export, a REST API and WP-CLI. Transfers, adjustments and reports are Pro."
+    atum: "Free: purchase orders, suppliers, inventory logs, stock value at purchase price, a dashboard and a REST API, for WooCommerce products. Locations and CSV export are paid add-ons."
+    bizuno: "Entirely free and open source, with stock per store, transfers, serials and FIFO or LIFO costing. You also take on a full accounting application, with few other users."
+    stock-manager-for-woocommerce: Entirely free bulk editing of WooCommerce stock, with CSV import and export and a basic log.
+    wp-inventory-manager: A free catalogue of items with images, a low-stock threshold and a public listing. Stock movements and locations need paid add-ons.
+    zintory: Free transactions between accounts, transfers between warehouses and numbered purchase and sale orders. No alerts or dashboard.
+  how:
+    - We looked only at the free version of each plugin, and at what it lets you do without any paid add-on.
+
+woocommerce-inventory-plugins:
+  title: "Best WooCommerce Inventory Plugins ({year})"
+  nav: WooCommerce inventory plugins
+  description: WordPress plugins that manage WooCommerce stock, compared on purchase orders, locations and price, with sources.
+  h1: Best inventory plugins for WooCommerce
+  intro:
+    - WooCommerce counts stock per product, and these plugins add what it lacks, such as purchasing, locations or faster editing. All three require WooCommerce.
+    - If some of your stock is not sold through the shop, a standalone plugin may fit better; see the guide to plugins without WooCommerce.
+  picks:
+    atum: The most complete option, with purchase orders, suppliers, logs and a dashboard free, and locations, barcodes and stock takes as paid add-ons.
+    stock-manager-for-woocommerce: The quickest way to edit the stock of many products, free.
+    stock-locations-for-woocommerce: Free stock per location, with orders assigned to a location.
+  how:
+    - We included only maintained plugins whose main job is WooCommerce stock. Bulk product editors with stock as one field among many were left out.
+
+inventory-plugins-without-woocommerce:
+  title: "WordPress Inventory Plugins Without WooCommerce ({year})"
+  nav: Inventory without WooCommerce
+  description: Standalone WordPress plugins that track stock, equipment and supplies without WooCommerce, compared with sources.
+  h1: Inventory plugins that do not need WooCommerce
+  intro:
+    - Not all stock is for sale. Equipment that is lent out, supplies that are used up and parts held in a store room need inventory without a shop. These plugins keep their own records and do not need WooCommerce.
+  picks:
+    plugixa-inventory: "Our own plugin. Warehouses, movements, check-out to named people and a ledger nobody can edit, free, with transfers and adjustments in Pro."
+    wp-inventory-manager: A catalogue of items you can publish on your site, with paid add-ons for locations and a ledger.
+    bizuno: Inventory inside a free accounting system, with transfers, serials and costing.
+    zintory: A lean ledger of transactions between warehouses, suppliers and customers.
+    wp-erp: Inventory as part of an HR and accounting suite, in the Scale plan.
+  how:
+    - We included plugins that keep inventory in their own records and run without WooCommerce. Some can also read WooCommerce products; that is noted in the table.
+
+multi-warehouse-inventory-plugins:
+  title: "WordPress Inventory Plugins for Several Warehouses ({year})"
+  nav: Multi-warehouse inventory
+  description: WordPress plugins that hold stock per warehouse or location, compared on transfers, price and history, with sources.
+  h1: Inventory plugins for several warehouses
+  intro:
+    - Holding stock in more than one place means each place needs its own quantity, and moving stock between them should be one recorded transfer. These plugins hold stock per location; they differ on transfers and on what is free.
+  picks:
+    plugixa-inventory: "Our own plugin. Stock per warehouse, a warehouse overview and per-warehouse low stock are free; transfers that write both legs to the ledger are Pro."
+    bizuno: Stock per store and transfers between stores, free, inside an accounting system.
+    stock-locations-for-woocommerce: Free stock per location for WooCommerce, with orders assigned to a location. There is no transfer document.
+    zintory: Each warehouse is an account with its own balance, and transfers are free.
+    atum: Stock per location through the paid Multi-Inventory add-on, for WooCommerce.
+    wp-inventory-manager: Locations through the paid Locations Manager add-on, which needs a Pro licence.
+  how:
+    - We included plugins where each location has its own stock quantity, not just a location label on an item.

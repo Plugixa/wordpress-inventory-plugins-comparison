@@ -1,0 +1,107 @@
+# One entry per pair in src/data/pages.yaml, keyed "{a}-vs-{b}".
+plugixa-inventory-vs-atum:
+  intro:
+    - "Questi due plugin partono da punti diversi. ATUM gestisce le giacenze di un negozio WooCommerce, con ordini d'acquisto e fornitori nel plugin gratuito e la maggior parte delle altre funzioni venduta come add-on. Plugixa Inventory è un sistema di magazzino autonomo con magazzini, movimenti di magazzino e un registro bloccato, e non richiede WooCommerce."
+    - "ATUM è affermato, con più di 10.000 installazioni attive. Plugixa Inventory è nuovo."
+  choose_a:
+    - "Hai merce o attrezzature che non vendi tramite WooCommerce, oppure non hai affatto un negozio."
+    - "Ti servono le giacenze per magazzino senza acquistare un add-on; Multi-Inventory di ATUM è venduto a parte."
+    - "Presti attrezzature alle persone e ti servono prestito e restituzione."
+    - "Vuoi un registro che nessuno possa modificare o eliminare, con un controllo che le quantità derivino ancora da esso."
+  choose_b:
+    - "Le tue giacenze sono prodotti WooCommerce e le vuoi gestire accanto ai tuoi ordini."
+    - "Ti servono ordini d'acquisto e fornitori; Plugixa Inventory non ha né gli uni né gli altri."
+    - "Vuoi un plugin con un'ampia base di installazioni e un lungo storico di aggiornamenti."
+  verdict: "Per un negozio WooCommerce scegli ATUM: legge i tuoi prodotti e i tuoi ordini, e i suoi ordini d'acquisto gratuiti sono un vero punto di forza. Per merce o attrezzature tenute fuori da un negozio, o su più magazzini con un budget ridotto, scegli Plugixa Inventory."
+
+plugixa-inventory-vs-wp-inventory-manager:
+  intro:
+    - "Entrambi i plugin gestiscono il magazzino senza WooCommerce. WP Inventory Manager è prima di tutto un catalogo, con un elenco pubblico degli articoli, e vende sedi, registro, importazione ed esportazione come add-on che richiedono una licenza Pro. Plugixa Inventory è prima di tutto un sistema di magazzino, con magazzini, movimenti e un registro bloccato nella versione gratuita."
+    - "WP Inventory Manager ha più di 1.000 installazioni attive e una lunga storia. Plugixa Inventory è nuovo."
+  choose_a:
+    - "Ti servono giacenze per magazzino, movimenti registrati e uno storico, senza acquistare add-on."
+    - "Vuoi voci di storico che non si possano modificare né eliminare; quelle del registro di WP Inventory Manager si possono."
+    - "Vuoi importazione ed esportazione CSV, un'API REST e WP-CLI nella versione gratuita."
+  choose_b:
+    - "Vuoi soprattutto mostrare sul tuo sito pubblico un catalogo di articoli ricercabile."
+    - "Vuoi che i visitatori possano prenotare articoli da quel catalogo."
+    - "Preferisci un plugin con anni di aggiornamenti e recensioni pubbliche."
+  verdict: "Per pubblicare un catalogo di articoli scegli WP Inventory Manager. Per contare correttamente le giacenze su più magazzini, con movimenti e una traccia di audit, scegli Plugixa Inventory; in questo offre di più gratis."
+
+plugixa-inventory-vs-stock-manager-for-woocommerce:
+  intro:
+    - "Questi plugin fanno lavori diversi. Stock Manager for WooCommerce è una tabella veloce per modificare giacenze e prezzi dei prodotti WooCommerce, con un semplice log delle modifiche. Plugixa Inventory è un sistema di magazzino separato con magazzini, movimenti e un registro."
+    - "Stock Manager for WooCommerce ha più di 20.000 installazioni attive ed è gratuito. Plugixa Inventory è nuovo."
+  choose_a:
+    - "Ti servono più magazzini, movimenti registrati o il prestito a persone."
+    - "Vuoi la valorizzazione al costo, l'email di scorta bassa e una dashboard."
+    - "Le tue giacenze non sono, o non sono solo, prodotti WooCommerce."
+  choose_b:
+    - "Hai un negozio WooCommerce e vuoi modificare in fretta molti livelli di giacenza in un'unica tabella."
+    - "Non ti servono magazzini, ordini d'acquisto o uno storico oltre a un log di base."
+    - "Vuoi un plugin interamente gratuito, senza versione a pagamento."
+  verdict: "Per modifiche rapide in blocco delle giacenze WooCommerce scegli Stock Manager for WooCommerce. Per una vera gestione del magazzino, con sedi e uno storico affidabile, scegli Plugixa Inventory."
+
+plugixa-inventory-vs-wp-erp:
+  intro:
+    - "WP ERP è una suite aziendale con gestione del personale, contabilità e un CRM. Prodotti e ordini d'acquisto sono gratuiti, ma per registrare carichi e scarichi serve il piano Scale. Plugixa Inventory fa un solo lavoro, il magazzino, e ne fa gran parte nella versione gratuita."
+    - "WP ERP ha più di 5.000 installazioni attive. Plugixa Inventory è nuovo."
+  choose_a:
+    - "Ti serve solo il magazzino, non una suite per personale o contabilità."
+    - "Ti servono giacenze per magazzino, prestiti e uno storico bloccato senza un piano da centinaia di dollari l'anno."
+    - "Vuoi avvisi di scorta bassa e una dashboard delle giacenze, che WP ERP non documenta."
+  choose_b:
+    - "Vuoi contabilità, personale e un CRM nello stesso plugin, e il magazzino ne è una piccola parte."
+    - "Ti servono ordini d'acquisto e vendite che vengano registrati nella tua contabilità."
+  verdict: "Se adotti comunque WP ERP per la contabilità, la sua funzione Inventory tiene le giacenze accanto ai tuoi conti. Per il solo magazzino scegli Plugixa Inventory: è gratuito per gran parte di ciò per cui WP ERP richiede il piano Scale."
+
+plugixa-inventory-vs-zintory:
+  intro:
+    - "Sono entrambi piccoli plugin di magazzino autonomi con tabelle di database proprie. Zintory registra transazioni tra conti, quindi un magazzino, un fornitore e un cliente sono tutti conti, e la giacenza è il saldo di ciò che si è spostato tra loro. Plugixa Inventory registra documenti su articoli e magazzini e scrive un registro bloccato."
+    - "Zintory ha circa 30 installazioni attive e un prezzo Pro una tantum. Plugixa Inventory è nuovo."
+  choose_a:
+    - "Vuoi livelli di scorta minima, email di scorta bassa e una dashboard; Zintory non ha nessuna di queste cose."
+    - "Vuoi uno storico finalizzato che non si possa eliminare; Zintory permette di eliminare le transazioni completate."
+    - "Vuoi tipi di articolo, immagini, importazione CSV e un'app sul front-end."
+  choose_b:
+    - "Vuoi transazioni di acquisto e vendita, numerate come ordini, nella versione gratuita."
+    - "Vuoi trasferimenti tra magazzini senza pagare."
+    - "Preferisci un pagamento unico per Pro a una licenza annuale."
+  verdict: "Zintory è un registro di transazioni essenziale con trasferimenti e ordini gratuiti. Plugixa Inventory offre di più attorno alle giacenze, con avvisi, una dashboard, la valorizzazione, l'importazione e uno storico che non si può eliminare. Scegli in base a ciò che ti serve."
+
+plugixa-inventory-vs-bizuno:
+  intro:
+    - "Bizuno è un sistema completo open source di contabilità ed ERP che funziona dentro WordPress, e il suo modulo di magazzino è gratuito. Copre giacenze per punto vendita, numeri di serie, assemblaggi e costo FIFO o LIFO. Plugixa Inventory è solo un sistema di magazzino."
+    - "Entrambi hanno basi di installazioni molto piccole. Bizuno è stato aggiornato l'ultima volta a giugno 2026; Plugixa Inventory è nuovo."
+  choose_a:
+    - "Ti serve solo il magazzino e lo vuoi dentro wp-admin, non in un'applicazione di contabilità separata."
+    - "Vuoi un registro che non si possa modificare né eliminare; in Bizuno gli utenti con diritti di eliminazione possono eliminare le registrazioni contabilizzate."
+    - "Vuoi l'email di scorta bassa, WP-CLI e un'API REST che copra il magazzino."
+  choose_b:
+    - "Vuoi una contabilità completa in partita doppia insieme al magazzino, gratis."
+    - "Ti servono numeri di serie per unità, assemblaggi o costo FIFO e LIFO senza pagare."
+  verdict: "Se vuoi contabilità e magazzino insieme senza costi, e ti trovi bene con un'applicazione grande e con pochi utenti, Bizuno merita uno sguardo. Per un sistema di magazzino mirato dentro WordPress, scegli Plugixa Inventory."
+
+atum-vs-stock-manager-for-woocommerce:
+  intro:
+    - "Entrambi i plugin lavorano sulle giacenze di WooCommerce. Stock Manager for WooCommerce è una tabella per modificare in fretta giacenze e prezzi. ATUM è una suite di magazzino con ordini d'acquisto, fornitori, log di magazzino e una dashboard, e add-on a pagamento per sedi, codici a barre e altro."
+    - "Stock Manager for WooCommerce ha più installazioni; ATUM ha più funzioni."
+  choose_a:
+    - "Ti servono ordini d'acquisto e fornitori."
+    - "Vuoi la valorizzazione delle giacenze al prezzo d'acquisto, log di magazzino e una dashboard."
+    - "In futuro potrebbero servirti sedi, codici a barre o inventari fisici, che ATUM vende come add-on."
+  choose_b:
+    - "Vuoi modificare livelli di giacenza e prezzi di molti prodotti in un'unica tabella."
+    - "Vuoi qualcosa di piccolo e interamente gratuito."
+  verdict: "Per modifiche in blocco delle giacenze scegli Stock Manager for WooCommerce. Per gestire acquisti e giacenze come un processo, scegli ATUM."
+
+atum-vs-stock-locations-for-woocommerce:
+  intro:
+    - "Entrambi i plugin possono tenere le giacenze WooCommerce su più sedi. Stock Locations for WooCommerce lo fa nel plugin gratuito, con gli ordini assegnati a una sede. ATUM lo fa con l'add-on a pagamento Multi-Inventory, accanto a una serie più ampia di strumenti gratuiti."
+  choose_a:
+    - "Oltre alle sedi ti servono ordini d'acquisto, fornitori, log di magazzino e una dashboard."
+    - "Vuoi un'ampia base di installazioni e aggiornamenti frequenti."
+  choose_b:
+    - "Le giacenze per sede sono la cosa principale che ti serve, e le vuoi gratis."
+    - "Vuoi mostrare le giacenze per sede nelle pagine prodotto."
+  verdict: "Per più sedi di magazzino in un negozio senza costi, scegli Stock Locations for WooCommerce. Per un processo completo di acquisti e magazzino, scegli ATUM e metti in conto Multi-Inventory."

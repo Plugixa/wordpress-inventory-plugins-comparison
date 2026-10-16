@@ -1,0 +1,16 @@
+{
+  "slug": "bizuno-accounting",
+  "api_url": "https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request[slug]=bizuno-accounting",
+  "fetched_at": "2026-10-16",
+  "listed": true,
+  "name": "Bizuno Accounting – ERP/Accounting/CRM (for WordPress)",
+  "version": "7.4.5",
+  "active_installs": 20,
+  "rating": 4.5,
+  "num_ratings": 4,
+  "last_updated": "2026-06-18",
+  "added": "2018-03-01",
+  "requires_wp": "6.5",
+  "requires_php": "8.2",
+  "tested_up_to": "6.9.10"
+}

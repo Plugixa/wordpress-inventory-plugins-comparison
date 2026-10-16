@@ -1,0 +1,107 @@
+# One entry per pair in src/data/pages.yaml, keyed "{a}-vs-{b}".
+plugixa-inventory-vs-atum:
+  intro:
+    - Estos dos plugins parten de puntos distintos. ATUM gestiona el stock de una tienda WooCommerce, con órdenes de compra y proveedores en el plugin gratuito y la mayoría de las demás funciones vendidas como complementos. Plugixa Inventory es un sistema de stock independiente con almacenes, movimientos de stock y un libro de movimientos bloqueado, y no necesita WooCommerce.
+    - ATUM es la opción consolidada, con más de 10.000 instalaciones activas. Plugixa Inventory es nuevo.
+  choose_a:
+    - Tienes stock o equipos que no se venden a través de WooCommerce, o no tienes ninguna tienda.
+    - Necesitas stock por almacén sin comprar un complemento; Multi-Inventory de ATUM se vende aparte.
+    - Prestas equipos a personas y necesitas registrar préstamos y devoluciones.
+    - Quieres un libro de movimientos que nadie pueda editar ni borrar, con una comprobación de que las cantidades siguen cuadrando con él.
+  choose_b:
+    - Tu stock son productos de WooCommerce y quieres gestionarlo junto a tus pedidos.
+    - Necesitas órdenes de compra y proveedores; Plugixa Inventory no tiene ninguna de las dos cosas.
+    - Quieres un plugin con una gran base de instalaciones y un largo historial de actualizaciones.
+  verdict: "Para una tienda WooCommerce, elige ATUM: lee tus productos y pedidos, y sus órdenes de compra gratuitas son un verdadero punto fuerte. Para stock o equipos fuera de una tienda, o repartidos en varios almacenes con poco presupuesto, elige Plugixa Inventory."
+
+plugixa-inventory-vs-wp-inventory-manager:
+  intro:
+    - Los dos plugins gestionan el inventario sin WooCommerce. WP Inventory Manager es ante todo un catálogo, con un listado público de artículos, y vende las ubicaciones, el libro de movimientos, la importación y la exportación como complementos que requieren una licencia Pro. Plugixa Inventory es ante todo un sistema de stock, con almacenes, movimientos y un libro de movimientos bloqueado en la versión gratuita.
+    - WP Inventory Manager tiene más de 1.000 instalaciones activas y una larga trayectoria. Plugixa Inventory es nuevo.
+  choose_a:
+    - Necesitas stock por almacén, movimientos registrados y un historial, sin comprar complementos.
+    - Quieres entradas de historial que no se puedan editar ni borrar; las del libro de movimientos de WP Inventory Manager sí se pueden.
+    - Quieres importación y exportación CSV, una API REST y WP-CLI en la versión gratuita.
+  choose_b:
+    - Sobre todo quieres mostrar en tu sitio público un catálogo de artículos con búsqueda.
+    - Quieres que los visitantes reserven artículos de ese catálogo.
+    - Prefieres un plugin con años de actualizaciones y reseñas públicas.
+  verdict: "Para publicar un catálogo de artículos, elige WP Inventory Manager. Para contar bien el stock en varios almacenes, con movimientos y un registro de auditoría, elige Plugixa Inventory; ofrece más de eso gratis."
+
+plugixa-inventory-vs-stock-manager-for-woocommerce:
+  intro:
+    - Estos plugins hacen trabajos distintos. Stock Manager for WooCommerce es una tabla rápida para editar el stock y los precios de los productos de WooCommerce, con un registro sencillo de cambios. Plugixa Inventory es un sistema de stock aparte con almacenes, movimientos y un libro de movimientos.
+    - Stock Manager for WooCommerce tiene más de 20.000 instalaciones activas y es gratuito. Plugixa Inventory es nuevo.
+  choose_a:
+    - Necesitas varios almacenes, movimientos registrados o préstamos a personas.
+    - Quieres el valor del stock al coste, email de stock bajo y un panel.
+    - Tu stock no son productos de WooCommerce, o no solo.
+  choose_b:
+    - Tienes una tienda WooCommerce y quieres editar rápidamente muchos niveles de stock en una sola tabla.
+    - No necesitas almacenes, órdenes de compra ni más historial que un registro básico.
+    - Quieres un plugin totalmente gratuito, sin versión de pago.
+  verdict: "Para ediciones masivas rápidas del stock de WooCommerce, elige Stock Manager for WooCommerce. Para una gestión de inventario real, con ubicaciones y un historial fiable, elige Plugixa Inventory."
+
+plugixa-inventory-vs-wp-erp:
+  intro:
+    - WP ERP es una suite empresarial con RR. HH., contabilidad y un CRM. Los productos y las órdenes de compra son gratis, pero registrar entradas y salidas de stock requiere el plan Scale. Plugixa Inventory hace un solo trabajo, el stock, y hace la mayor parte en la versión gratuita.
+    - WP ERP tiene más de 5.000 instalaciones activas. Plugixa Inventory es nuevo.
+  choose_a:
+    - Solo necesitas inventario, no una suite de RR. HH. o de contabilidad.
+    - Necesitas stock por almacén, préstamos y un historial bloqueado sin un plan que cuesta cientos de dólares al año.
+    - Quieres alertas de stock bajo y un panel de stock, que WP ERP no documenta.
+  choose_b:
+    - Quieres contabilidad, RR. HH. y un CRM en el mismo plugin, y el stock es una parte pequeña de eso.
+    - Necesitas órdenes de compra y ventas que se contabilicen en tus cuentas.
+  verdict: "Si vas a adoptar WP ERP para la contabilidad de todos modos, su función Inventory mantiene el stock junto a tus libros contables. Para el inventario por sí solo, elige Plugixa Inventory: es gratis para la mayor parte de lo que en WP ERP requiere el plan Scale."
+
+plugixa-inventory-vs-zintory:
+  intro:
+    - Los dos son plugins de inventario independientes y pequeños, con sus propias tablas en la base de datos. Zintory registra transacciones entre cuentas, así que un almacén, un proveedor y un cliente son todos cuentas, y el stock es el saldo de lo que se ha movido entre ellas. Plugixa Inventory registra documentos sobre artículos y almacenes y escribe un libro de movimientos bloqueado.
+    - Zintory tiene unas 30 instalaciones activas y un precio Pro de pago único. Plugixa Inventory es nuevo.
+  choose_a:
+    - Quieres niveles de stock bajo, email de stock bajo y un panel; Zintory no tiene nada de eso.
+    - Quieres un historial finalizado que no se pueda borrar; Zintory permite borrar transacciones completadas.
+    - Quieres tipos de artículo, imágenes, importación CSV y una aplicación en la parte pública.
+  choose_b:
+    - Quieres transacciones de compra y venta, numeradas como pedidos, en la versión gratuita.
+    - Quieres transferencias entre almacenes sin pagar.
+    - Prefieres un único pago por Pro antes que una licencia anual.
+  verdict: "Zintory es un registro sencillo de transacciones con transferencias y pedidos gratis. Plugixa Inventory ofrece más en torno al propio stock, con alertas, un panel, valoración, importación y un historial que no se puede borrar. Elige según cuál de esas cosas necesites."
+
+plugixa-inventory-vs-bizuno:
+  intro:
+    - Bizuno es un sistema completo de contabilidad y ERP de código abierto que funciona dentro de WordPress, y su módulo de inventario es gratuito. Cubre stock por tienda, números de serie, ensamblajes y coste FIFO o LIFO. Plugixa Inventory es solo un sistema de stock.
+    - Los dos tienen muy pocas instalaciones. Bizuno se actualizó por última vez en junio de 2026; Plugixa Inventory es nuevo.
+  choose_a:
+    - Solo necesitas inventario y lo quieres dentro de wp-admin, no en una aplicación de contabilidad aparte.
+    - Quieres un libro de movimientos que no se pueda editar ni borrar; en Bizuno, los usuarios con permiso de borrado pueden borrar asientos contabilizados.
+    - Quieres email de stock bajo, WP-CLI y una API REST que cubra el inventario.
+  choose_b:
+    - Quieres contabilidad completa por partida doble junto con tu inventario, gratis.
+    - Necesitas números de serie por unidad, ensamblajes o coste FIFO y LIFO sin pagar.
+  verdict: "Si quieres contabilidad e inventario juntos sin coste, y no te importa una aplicación grande con pocos usuarios, vale la pena mirar Bizuno. Para un sistema de stock centrado dentro de WordPress, elige Plugixa Inventory."
+
+atum-vs-stock-manager-for-woocommerce:
+  intro:
+    - Los dos plugins trabajan sobre el stock de WooCommerce. Stock Manager for WooCommerce es una tabla para editar rápidamente el stock y los precios. ATUM es una suite de inventario con órdenes de compra, proveedores, registros de inventario y un panel, y complementos de pago para ubicaciones, códigos de barras y más.
+    - Stock Manager for WooCommerce tiene más instalaciones; ATUM tiene más funciones.
+  choose_a:
+    - Necesitas órdenes de compra y proveedores.
+    - Quieres el valor del stock a precio de compra, registros de inventario y un panel.
+    - Más adelante podrías necesitar ubicaciones, códigos de barras o recuentos de inventario, que ATUM vende como complementos.
+  choose_b:
+    - Quieres editar los niveles de stock y los precios de muchos productos en una sola tabla.
+    - Quieres algo pequeño y totalmente gratuito.
+  verdict: "Para ediciones masivas de stock, elige Stock Manager for WooCommerce. Para gestionar las compras y el stock como un proceso, elige ATUM."
+
+atum-vs-stock-locations-for-woocommerce:
+  intro:
+    - Los dos plugins pueden guardar el stock de WooCommerce en más de una ubicación. Stock Locations for WooCommerce lo hace en el plugin gratuito, con los pedidos asignados a una ubicación. ATUM lo hace mediante su complemento de pago Multi-Inventory, junto a un conjunto más amplio de herramientas gratuitas.
+  choose_a:
+    - Necesitas órdenes de compra, proveedores, registros de inventario y un panel además de ubicaciones.
+    - Quieres una gran base de instalaciones y actualizaciones frecuentes.
+  choose_b:
+    - El stock por ubicación es lo principal que necesitas, y lo quieres gratis.
+    - Quieres mostrar el stock por ubicación en las páginas de producto.
+  verdict: "Para varias ubicaciones de stock en una tienda sin coste, elige Stock Locations for WooCommerce. Para un proceso completo de compras e inventario, elige ATUM y reserva presupuesto para Multi-Inventory."

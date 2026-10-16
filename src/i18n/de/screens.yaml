@@ -1,0 +1,8 @@
+# Plugixa Inventory screenshots shown on its review page. Files are in public/plugixa/.
+items:
+  - { file: dashboard.webp, alt: "Dashboard mit Bestandswert, niedrigen Beständen, einem Bewegungstrend über 30 Tage und den meistbewegten Artikeln" }
+  - { file: items.webp, alt: "Artikelkatalog mit SKUs, Artikeltypen und vorhandenen Gesamtmengen" }
+  - { file: stock-movement.webp, alt: "Eine Lagerbewegung, zuerst als Entwurf angelegt und dann abgeschlossen, um in das Journal zu schreiben" }
+  - { file: ledger.webp, alt: "Bestandsjournal mit jeder Änderung an jeder Menge, die neueste zuerst" }
+  - { file: warehouse.webp, alt: "Lagerübersicht mit Bestand, niedrigen Beständen und den letzten Aktivitäten eines Lagerorts" }
+  - { file: stock-health.webp, alt: "Bestandsprüfung, die belegt, dass die Mengen weiterhin aus dem Journal folgen" }

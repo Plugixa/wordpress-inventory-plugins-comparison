@@ -1,0 +1,56 @@
+slug: zintory
+name: Zintory – Inventory Manager
+vendor: Plainware
+own: false
+kind: inventory
+order: 7
+wporg_slug: z-inventory-manager
+homepage: https://www.zintory.com/
+verified_at: 2026-10-16
+version_checked: "4.0.2"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/z-inventory-manager/", method: docs }
+  pricing: { url: "https://www.zintory.com/order/", method: docs }
+  home: { url: "https://www.zintory.com/", method: docs }
+  features: { url: "https://www.zintory.com/features/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/z-inventory-manager/", method: source-code }
+pricing:
+  source: pricing
+  currency: USD
+  free: true
+  lifetime: true
+  refund: days_14
+  tiers:
+    - { name: Pro, price: 59, period: lifetime, sites: "1" }
+features:
+  items.types: { value: "no", src: code, note: true }
+  items.sku_barcode: { value: partial, tier: free, src: code, note: true }
+  items.serials: { value: "no", src: code }
+  items.images: { value: "no", src: code }
+  items.custom_fields: { value: "no", src: code }
+  items.units: { value: "no", src: code }
+  locations.multiple: { value: yes, tier: free, src: code, note: true }
+  locations.transfers: { value: yes, tier: free, src: features, note: true }
+  movements.receive_issue: { value: yes, tier: free, src: code, note: true }
+  movements.checkout: { value: partial, tier: free, src: home, note: true }
+  movements.adjustments: { value: partial, tier: free, src: features, note: true }
+  movements.purchase_orders: { value: yes, tier: free, src: code, note: true }
+  movements.sales_orders: { value: partial, tier: free, src: code, note: true }
+  ledger.history: { value: yes, tier: free, src: code, note: true }
+  ledger.locked: { value: "no", src: code, note: true }
+  valuation.cost: { value: "no", src: code }
+  valuation.fifo_lifo: { value: "no", src: code }
+  alerts.low_stock: { value: "no", src: code, note: true }
+  alerts.email: { value: "no", src: code }
+  reports.dashboard: { value: "no", src: code }
+  reports.reports: { value: partial, tier: paid, tier_name: "Pro", src: pricing, note: true }
+  data.csv_import: { value: "no", src: code }
+  data.csv_export: { value: unverified }
+  data.rest_api: { value: unverified }
+  data.wp_cli: { value: "no", src: code }
+  access.roles: { value: partial, tier: free, src: code, note: true }
+  access.permissions: { value: "no", src: code }
+  extras.frontend: { value: "no", src: code }
+  extras.scanner: { value: "no", src: code }
+  extras.woocommerce: { value: partial, tier: free, src: code, note: true }
+  extras.storage: { text: true, src: code }

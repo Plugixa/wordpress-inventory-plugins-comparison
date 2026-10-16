@@ -1,0 +1,107 @@
+# One entry per pair in src/data/pages.yaml, keyed "{a}-vs-{b}".
+plugixa-inventory-vs-atum:
+  intro:
+    - Diese beiden Plugins setzen an unterschiedlichen Stellen an. ATUM verwaltet den Bestand eines WooCommerce-Shops, mit Bestellungen und Lieferanten im kostenlosen Plugin und den meisten weiteren Funktionen als Add-ons. Plugixa Inventory ist eine eigenständige Lagerverwaltung mit Lagern, Lagerbewegungen und einem gesperrten Journal und braucht kein WooCommerce.
+    - ATUM ist etabliert, mit mehr als 10.000 aktiven Installationen. Plugixa Inventory ist neu.
+  choose_a:
+    - Sie Ware oder Ausrüstung lagern, die nicht über WooCommerce verkauft wird, oder gar keinen Shop betreiben.
+    - Sie Bestand je Lager brauchen, ohne ein Add-on zu kaufen; Multi-Inventory von ATUM wird separat verkauft.
+    - Sie Ausrüstung an Personen verleihen und Ausgabe und Rückgabe brauchen.
+    - Sie ein Journal möchten, das niemand ändern oder löschen kann, mit einer Prüfung, ob die Mengen noch daraus folgen.
+  choose_b:
+    - Ihr Bestand aus WooCommerce-Produkten besteht und Sie ihn neben Ihren Bestellungen verwalten möchten.
+    - Sie Bestellungen und Lieferanten brauchen; Plugixa Inventory hat beides nicht.
+    - Sie ein Plugin mit großer Nutzerbasis und langer Update-Historie möchten.
+  verdict: "Für einen WooCommerce-Shop wählen Sie ATUM. Es liest Ihre Produkte und Bestellungen, und die kostenlosen Bestellungen an Lieferanten sind eine echte Stärke. Für Ware oder Ausrüstung außerhalb eines Shops oder für mehrere Lager mit kleinem Budget wählen Sie Plugixa Inventory."
+
+plugixa-inventory-vs-wp-inventory-manager:
+  intro:
+    - Beide Plugins verwalten Bestände ohne WooCommerce. WP Inventory Manager ist in erster Linie ein Katalog mit einer öffentlichen Artikelliste und verkauft Lagerorte, ein Journal sowie Import und Export als Add-ons, die eine Pro-Lizenz erfordern. Plugixa Inventory ist in erster Linie eine Lagerverwaltung, mit Lagern, Lagerbewegungen und einem gesperrten Journal in der kostenlosen Version.
+    - WP Inventory Manager hat mehr als 1.000 aktive Installationen und eine lange Geschichte. Plugixa Inventory ist neu.
+  choose_a:
+    - Sie Bestand je Lager, erfasste Lagerbewegungen und einen Verlauf brauchen, ohne Add-ons zu kaufen.
+    - Sie Verlaufseinträge möchten, die sich nicht ändern oder löschen lassen; bei WP Inventory Manager ist das möglich.
+    - Sie CSV-Import und -Export, eine REST-API und WP-CLI in der kostenlosen Version möchten.
+  choose_b:
+    - Sie vor allem einen durchsuchbaren Artikelkatalog auf Ihrer öffentlichen Website zeigen möchten.
+    - Besucher Artikel aus diesem Katalog reservieren können sollen.
+    - Sie ein Plugin mit jahrelangen Updates und öffentlichen Bewertungen bevorzugen.
+  verdict: "Um einen Artikelkatalog zu veröffentlichen, wählen Sie WP Inventory Manager. Um Bestände über mehrere Lager korrekt zu zählen, mit Lagerbewegungen und lückenloser Nachverfolgung, wählen Sie Plugixa Inventory; es bietet davon mehr kostenlos."
+
+plugixa-inventory-vs-stock-manager-for-woocommerce:
+  intro:
+    - Diese Plugins erfüllen unterschiedliche Aufgaben. Stock Manager for WooCommerce ist eine schnelle Tabelle zum Bearbeiten von Bestand und Preisen der WooCommerce-Produkte, mit einem einfachen Änderungsprotokoll. Plugixa Inventory ist eine separate Lagerverwaltung mit Lagern, Lagerbewegungen und einem Journal.
+    - Stock Manager for WooCommerce hat mehr als 20.000 aktive Installationen und ist kostenlos. Plugixa Inventory ist neu.
+  choose_a:
+    - Sie mehrere Lager, erfasste Lagerbewegungen oder die Ausgabe an Personen brauchen.
+    - Sie die Bewertung zu Anschaffungskosten, E-Mails bei niedrigem Bestand und ein Dashboard möchten.
+    - Ihr Bestand nicht oder nicht nur aus WooCommerce-Produkten besteht.
+  choose_b:
+    - Sie einen WooCommerce-Shop betreiben und viele Bestände schnell in einer Tabelle ändern möchten.
+    - Sie keine Lager, keine Bestellungen und keinen Verlauf über ein einfaches Protokoll hinaus brauchen.
+    - Sie ein vollständig kostenloses Plugin ohne kostenpflichtige Version möchten.
+  verdict: "Für schnelle Massenänderungen am WooCommerce-Bestand wählen Sie Stock Manager for WooCommerce. Für echte Lagerverwaltung, mit Lagerorten und einem verlässlichen Verlauf, wählen Sie Plugixa Inventory."
+
+plugixa-inventory-vs-wp-erp:
+  intro:
+    - WP ERP ist eine Business-Suite mit Personal, Buchhaltung und CRM. Produkte und Bestellungen sind kostenlos, aber das Erfassen von Zu- und Abgängen erfordert den Tarif Scale. Plugixa Inventory erfüllt eine Aufgabe, den Bestand, und erledigt das meiste davon in der kostenlosen Version.
+    - WP ERP hat mehr als 5.000 aktive Installationen. Plugixa Inventory ist neu.
+  choose_a:
+    - Sie nur eine Lagerverwaltung brauchen, keine Suite für Personal oder Buchhaltung.
+    - Sie Bestand je Lager, Ausgabe und einen gesperrten Verlauf brauchen, ohne einen Tarif für mehrere hundert Dollar pro Jahr.
+    - Sie Warnungen bei niedrigem Bestand und ein Bestands-Dashboard möchten, die WP ERP nicht dokumentiert.
+  choose_b:
+    - Sie Buchhaltung, Personal und CRM im selben Plugin möchten und der Bestand nur ein kleiner Teil davon ist.
+    - Sie Bestellungen und Verkäufe brauchen, die in Ihre Buchhaltung gebucht werden.
+  verdict: "Wenn Sie WP ERP ohnehin für die Buchhaltung einführen, hält dessen Funktion Inventory den Bestand neben Ihren Büchern. Für eine reine Lagerverwaltung wählen Sie Plugixa Inventory: Das meiste, wofür WP ERP den Tarif Scale braucht, ist dort kostenlos."
+
+plugixa-inventory-vs-zintory:
+  intro:
+    - Beide sind kleine, eigenständige Lagerverwaltungs-Plugins mit eigenen Datenbanktabellen. Zintory erfasst Vorgänge zwischen Konten. Ein Lager, ein Lieferant und ein Kunde sind dort jeweils Konten, und der Bestand ist der Saldo dessen, was zwischen ihnen bewegt wurde. Plugixa Inventory erfasst Belege zu Artikeln und Lagern und schreibt ein gesperrtes Journal.
+    - Zintory hat etwa 30 aktive Installationen und einen einmaligen Pro-Preis. Plugixa Inventory ist neu.
+  choose_a:
+    - Sie Meldebestände, E-Mails bei niedrigem Bestand und ein Dashboard möchten; Zintory hat nichts davon.
+    - Sie einen abgeschlossenen Verlauf möchten, der sich nicht löschen lässt; Zintory erlaubt das Löschen abgeschlossener Vorgänge.
+    - Sie Artikeltypen, Bilder, CSV-Import und eine App im Frontend möchten.
+  choose_b:
+    - Sie Einkaufs- und Verkaufsvorgänge mit Auftragsnummern in der kostenlosen Version möchten.
+    - Sie Umlagerungen zwischen Lagern möchten, ohne zu bezahlen.
+    - Sie für Pro eine Einmalzahlung statt einer Jahreslizenz bevorzugen.
+  verdict: "Zintory ist ein schlankes Vorgangsjournal mit kostenlosen Umlagerungen und Aufträgen. Plugixa Inventory bietet mehr rund um den Bestand selbst, mit Warnungen, Dashboard, Bewertung, Import und einem Verlauf, der sich nicht löschen lässt. Entscheiden Sie danach, was Sie davon brauchen."
+
+plugixa-inventory-vs-bizuno:
+  intro:
+    - Bizuno ist ein vollständiges Open-Source-System für Buchhaltung und ERP, das in WordPress läuft, und sein Lagermodul ist kostenlos. Es umfasst Bestand je Lager, Seriennummern, Baugruppen und Bewertung nach FIFO oder LIFO. Plugixa Inventory ist ausschließlich eine Lagerverwaltung.
+    - Beide haben eine sehr kleine Nutzerbasis. Bizuno wurde zuletzt im Juni 2026 aktualisiert; Plugixa Inventory ist neu.
+  choose_a:
+    - Sie nur eine Lagerverwaltung brauchen und diese in wp-admin haben möchten, nicht als separate Buchhaltungsanwendung.
+    - Sie ein Journal möchten, das sich nicht ändern oder löschen lässt; in Bizuno können Nutzer mit Löschrechten gebuchte Einträge löschen.
+    - Sie E-Mails bei niedrigem Bestand, WP-CLI und eine REST-API möchten, die den Bestand abdeckt.
+  choose_b:
+    - Sie eine vollständige doppelte Buchführung samt Lagerverwaltung kostenlos möchten.
+    - Sie Seriennummern pro Einheit, Baugruppen oder FIFO- und LIFO-Bewertung brauchen, ohne zu bezahlen.
+  verdict: "Wenn Sie Buchhaltung und Lagerverwaltung zusammen kostenlos möchten und mit einer großen Anwendung mit wenigen Nutzern zurechtkommen, lohnt sich ein Blick auf Bizuno. Für eine fokussierte Lagerverwaltung in WordPress wählen Sie Plugixa Inventory."
+
+atum-vs-stock-manager-for-woocommerce:
+  intro:
+    - Beide Plugins arbeiten mit dem WooCommerce-Bestand. Stock Manager for WooCommerce ist eine Tabelle zum schnellen Bearbeiten von Bestand und Preisen. ATUM ist eine Lagerverwaltungs-Suite mit Bestellungen, Lieferanten, Bestandsprotokollen und einem Dashboard, dazu kostenpflichtige Add-ons für Lagerorte, Barcodes und mehr.
+    - Stock Manager for WooCommerce hat mehr Installationen, ATUM mehr Funktionen.
+  choose_a:
+    - Sie Bestellungen und Lieferanten brauchen.
+    - Sie die Bewertung zum Einkaufspreis, Bestandsprotokolle und ein Dashboard möchten.
+    - Sie später Lagerorte, Barcodes oder Inventuren brauchen könnten, die ATUM als Add-ons verkauft.
+  choose_b:
+    - Sie Bestände und Preise vieler Produkte in einer Tabelle bearbeiten möchten.
+    - Sie etwas Kleines und vollständig Kostenloses möchten.
+  verdict: "Für Massenänderungen am Bestand wählen Sie Stock Manager for WooCommerce. Um Einkauf und Bestand als Prozess zu steuern, wählen Sie ATUM."
+
+atum-vs-stock-locations-for-woocommerce:
+  intro:
+    - Beide Plugins können WooCommerce-Bestand an mehr als einem Lagerort führen. Stock Locations for WooCommerce tut das im kostenlosen Plugin und ordnet Bestellungen einem Lagerort zu. ATUM tut das über das kostenpflichtige Add-on Multi-Inventory, neben einer breiteren Auswahl kostenloser Werkzeuge.
+  choose_a:
+    - Sie neben Lagerorten auch Bestellungen, Lieferanten, Bestandsprotokolle und ein Dashboard brauchen.
+    - Sie eine große Nutzerbasis und häufige Updates möchten.
+  choose_b:
+    - Bestand je Lagerort das Wichtigste ist, das Sie brauchen, und Sie ihn kostenlos möchten.
+    - Sie den Bestand je Lagerort auf Ihren Produktseiten anzeigen möchten.
+  verdict: "Für mehrere Lagerorte in einem Shop ohne Kosten wählen Sie Stock Locations for WooCommerce. Für einen vollständigen Einkaufs- und Lagerprozess wählen Sie ATUM und planen das Budget für Multi-Inventory ein."

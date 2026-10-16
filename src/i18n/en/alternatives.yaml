@@ -1,0 +1,54 @@
+# Keyed by `target` in src/data/pages.yaml. `picks` is keyed by product slug.
+atum:
+  description: Alternatives to ATUM Inventory Management, compared on what is free, what the add-ons cost and whether WooCommerce is required, with sources.
+  intro: ATUM is the most complete inventory suite for WooCommerce, and its free purchase orders are a real strength. People look elsewhere because locations, barcodes, CSV export and a full change history are each sold as a yearly add-on, and because it only works with WooCommerce.
+  why:
+    - Stock per location needs the Multi-Inventory add-on, at €184 a year for one site.
+    - CSV export, barcodes, stock takes and the full action log are separate add-ons, each priced per site per year.
+    - It requires WooCommerce, so it cannot manage stock that is not a shop product.
+  picks:
+    stock-manager-for-woocommerce: Free bulk editing of WooCommerce stock and prices in one table, with a simple change log.
+    stock-locations-for-woocommerce: Free stock per location for WooCommerce, with orders assigned to a location.
+    plugixa-inventory: "Several warehouses, recorded movements, check-out and a locked ledger, free and without WooCommerce."
+    bizuno: Free open-source accounting with inventory per store, transfers and FIFO or LIFO costing.
+  migrate: "Export your products and stock levels to CSV, then use the target plugin's importer. Purchase orders, suppliers and ATUM's logs do not carry across this way. Test the import on a staging copy first."
+
+wp-inventory-manager:
+  description: Alternatives to WP Inventory Manager for tracking stock across locations with a proper history, compared with sources.
+  intro: WP Inventory Manager is a good way to publish a catalogue of items on a WordPress site. People look elsewhere when they need real stock control, because locations, the ledger, import and export are add-ons that also need a Pro licence.
+  why:
+    - Locations, the ledger, import and export are each paid add-ons that need Pro.
+    - Ledger entries can be edited or deleted, so the history is not an audit trail.
+    - There is no REST API or WP-CLI.
+  picks:
+    plugixa-inventory: "Several warehouses, movements, a ledger nobody can edit, CSV import and export, a REST API and WP-CLI, all free."
+    bizuno: Free inventory per store, transfers, serials and costing, inside a full accounting system.
+    zintory: A small free ledger of transactions with transfers between warehouses and a one-off Pro price.
+    atum: The choice if your items are WooCommerce products and you need purchase orders.
+  migrate: "WP Inventory Manager's Import and Export add-on writes a CSV of your items. Map its columns to the target plugin's importer, and bring opening stock in per location. Test on a staging copy first."
+
+stock-manager-for-woocommerce:
+  description: Alternatives to Stock Manager for WooCommerce when you need more than a bulk stock editor, compared with sources.
+  intro: Stock Manager for WooCommerce is free and does one thing well, editing the stock of many products quickly. People look elsewhere when they need locations, purchasing or a full history.
+  why:
+    - There are no locations, purchase orders or suppliers.
+    - The stock log keeps only the date and the new quantity.
+    - The plugin itself calls its CSV import and export "use at your own risk".
+  picks:
+    atum: Purchase orders, suppliers, inventory logs and a dashboard free, with paid add-ons for locations and barcodes.
+    stock-locations-for-woocommerce: Free stock per location, with orders assigned to a location.
+    plugixa-inventory: A separate stock system with warehouses and a locked ledger, for stock that is not only shop products.
+  migrate: Stock lives in WooCommerce itself, so ATUM and Stock Locations for WooCommerce read it as it is. A separate system such as Plugixa Inventory needs the items and opening stock imported from a CSV export.
+
+business-manager:
+  description: Alternatives to the Business Manager plugin, closed on wordpress.org, for inventory and stock inside WordPress.
+  intro: Business Manager, an ERP plugin with HR, CRM and projects, was closed on wordpress.org on 28 October 2024 for a guideline violation. A closed plugin receives no updates from the directory, so sites still running it should plan a move.
+  why:
+    - Closed on wordpress.org since 28 October 2024.
+    - No updates through wordpress.org, including security fixes.
+  picks:
+    plugixa-inventory: "A focused stock system with warehouses, movements and a locked ledger, free."
+    wp-erp: A maintained ERP suite with HR, accounting and a CRM, and inventory in the Scale plan.
+    bizuno: A free, open-source accounting and ERP system with inventory included.
+    wp-inventory-manager: An inventory catalogue with a public listing and paid add-ons for locations and a ledger.
+  migrate: Export what you can to CSV before removing the plugin, then import items into the new plugin. Test on a staging copy first.

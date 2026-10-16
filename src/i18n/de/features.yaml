@@ -1,0 +1,105 @@
+areas:
+  items: Artikel
+  locations: Lager und Lagerorte
+  movements: Lagerbewegungen
+  ledger: Verlauf und Nachvollziehbarkeit
+  valuation: Bestandsbewertung
+  alerts: Warnungen
+  reports: Berichte
+  data: Import, Export und API
+  access: Teamzugriff
+  extras: Plattform
+features:
+  items.types:
+    label: Artikeltypen
+    def: Unterscheidet Arten von Artikeln, etwa Inventar zum Verleihen, Verbrauchsmaterial und Handelsware.
+  items.sku_barcode:
+    label: SKU und Barcode
+    def: Jeder Artikel hat eine SKU oder Artikelnummer und ein Barcode-Feld.
+  items.serials:
+    label: Serien- oder Chargennummern
+    def: Erfasst eine Seriennummer pro Einheit oder eine Los- bzw. Chargennummer.
+  items.images:
+    label: Artikelbilder
+    def: Artikel können ein oder mehrere Fotos haben.
+  items.custom_fields:
+    label: Benutzerdefinierte Felder
+    def: Sie können Artikeln eigene Felder hinzufügen.
+  items.units:
+    label: Mengeneinheiten
+    def: Artikel werden in Einheiten wie Stück, Kilogramm oder Karton gezählt, mit Umrechnung zwischen ihnen.
+  locations.multiple:
+    label: Mehrere Lager
+    def: Der Bestand wird je Lager oder Lagerort getrennt geführt, sodass jeder seine eigene Menge hat.
+  locations.transfers:
+    label: Umlagerungen
+    def: Bestand wird als erfasste Umlagerung von einem Lagerort zum anderen bewegt, nicht durch zwei manuelle Änderungen.
+  movements.receive_issue:
+    label: Wareneingang und Warenausgang
+    def: Zu- und Abgänge werden als Lagerbewegung erfasst, statt die Menge direkt zu ändern.
+  movements.checkout:
+    label: Ausgabe und Rückgabe
+    def: Artikel werden an eine Person ausgegeben und zurückgegeben, mit einem Nachweis, wer was hat.
+  movements.adjustments:
+    label: Korrekturbuchungen
+    def: Korrekturen und Abschreibungen, etwa bei Beschädigung oder Inventurdifferenz, werden mit Grund erfasst.
+  movements.purchase_orders:
+    label: Bestellungen
+    def: Bestellungen bei Lieferanten, die beim Wareneingang den Bestand erhöhen.
+  movements.sales_orders:
+    label: Kundenaufträge
+    def: Kundenaufträge oder Rechnungen, die bei der Auslieferung den Bestand verringern.
+  ledger.history:
+    label: Bestandsverlauf
+    def: Jede Mengenänderung bleibt erhalten, sodass Sie sehen, wie der Bestand eines Artikels zustande kam.
+  ledger.locked:
+    label: Gesperrter Verlauf
+    def: Abgeschlossene Lagerbewegungen und Verlaufseinträge lassen sich nachträglich weder ändern noch löschen.
+  valuation.cost:
+    label: Bewertung zu Anschaffungskosten
+    def: Zeigt, was der vorhandene Bestand zu Ihren Einstandskosten wert ist.
+  valuation.fifo_lifo:
+    label: FIFO- oder LIFO-Bewertung
+    def: Bewertet Abgänge nach dem First-in-first-out- oder Last-in-first-out-Verfahren.
+  alerts.low_stock:
+    label: Meldebestand
+    def: Jeder Artikel kann einen Meldebestand haben. Artikel darunter werden aufgelistet oder markiert.
+  alerts.email:
+    label: E-Mail bei niedrigem Bestand
+    def: Eine E-Mail wird verschickt, wenn ein Artikel unter seinen Meldebestand fällt.
+  reports.dashboard:
+    label: Dashboard
+    def: Eine Bestandsübersicht mit Summen und Diagrammen.
+  reports.reports:
+    label: Bestandsberichte
+    def: Berichte etwa zu Lagerbewegungen, Umschlag, Bewertung oder Lagerdauer.
+  data.csv_import:
+    label: CSV-Import
+    def: Artikel, idealerweise samt Bestand, lassen sich aus einer Tabelle importieren.
+  data.csv_export:
+    label: CSV-Export
+    def: Artikel und Bestände lassen sich in eine Tabelle exportieren.
+  data.rest_api:
+    label: REST-API
+    def: Eine dokumentierte REST-API, um den Bestand aus anderer Software zu lesen und zu ändern.
+  data.wp_cli:
+    label: WP-CLI
+    def: Befehle für die Kommandozeile für Aufgaben der Lagerverwaltung.
+  access.roles:
+    label: Rollen für die Lagerverwaltung
+    def: Die Lagerverwaltung hat eigene Berechtigungen oder Rollen, sodass Mitarbeitende sie ohne Administratorrechte nutzen können.
+  access.permissions:
+    label: Feingranulare Berechtigungen
+    def: Regeln dazu, wer welche Datensätze, Aktionen oder Lagerorte sehen oder ändern darf.
+  extras.frontend:
+    label: Im Frontend
+    def: Bestände lassen sich auf Ihrer öffentlichen Website anzeigen, oder die App läuft auf einer Seite Ihrer Website.
+  extras.scanner:
+    label: Barcode-Scan
+    def: Findet oder bewegt Artikel per Scan eines Barcodes oder QR-Codes mit einem Scanner oder einer Kamera.
+  extras.woocommerce:
+    label: WooCommerce
+    def: Arbeitet mit WooCommerce-Produkten und -Bestellungen. Die WooCommerce-Add-ons setzen WooCommerce voraus.
+  extras.storage:
+    label: Speicherort der Daten
+    def: Wo das Plugin Artikel und Bestandsdaten speichert.

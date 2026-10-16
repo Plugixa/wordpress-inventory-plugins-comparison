@@ -1,0 +1,57 @@
+slug: wp-erp
+name: WP ERP
+vendor: weDevs
+own: false
+kind: erp
+order: 4
+wporg_slug: erp
+homepage: https://wperp.com/
+verified_at: 2026-10-16
+version_checked: "1.17.10"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/erp/", method: docs }
+  pricing: { url: "https://wperp.com/pricing/", method: docs }
+  inventory_page: { url: "https://wperp.com/downloads/inventory/", method: docs }
+  inventory_docs: { url: "https://wperp.com/docs/accounting-add-ons/inventory/", method: docs }
+  woo: { url: "https://wperp.com/downloads/woocommerce-crm/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/erp/", method: source-code }
+pricing:
+  source: pricing
+  currency: USD
+  free: true
+  lifetime: false
+  refund: days_14
+  tiers:
+    - { name: Scale, price: 474, regular: 948, period: year, sites: unlimited }
+features:
+  items.types: { value: yes, tier: free, src: code, note: true }
+  items.sku_barcode: { value: partial, tier: paid, tier_name: Scale, src: inventory_page, note: true }
+  items.serials: { value: unverified }
+  items.images: { value: unverified }
+  items.custom_fields: { value: unverified }
+  items.units: { value: unverified }
+  locations.multiple: { value: unverified }
+  locations.transfers: { value: unverified }
+  movements.receive_issue: { value: yes, tier: paid, tier_name: Scale, src: inventory_docs, note: true }
+  movements.checkout: { value: partial, tier: paid, tier_name: Starter, src: wporg, note: true }
+  movements.adjustments: { value: unverified }
+  movements.purchase_orders: { value: yes, tier: paid, tier_name: Scale, src: inventory_docs, note: true }
+  movements.sales_orders: { value: yes, tier: paid, tier_name: Scale, src: inventory_page }
+  ledger.history: { value: partial, tier: paid, tier_name: Scale, src: code, note: true }
+  ledger.locked: { value: unverified }
+  valuation.cost: { value: unverified }
+  valuation.fifo_lifo: { value: unverified }
+  alerts.low_stock: { value: unverified }
+  alerts.email: { value: unverified }
+  reports.dashboard: { value: unverified }
+  reports.reports: { value: yes, tier: paid, tier_name: Scale, src: inventory_docs, note: true }
+  data.csv_import: { value: yes, tier: free, src: code, note: true }
+  data.csv_export: { value: yes, tier: free, src: code, note: true }
+  data.rest_api: { value: partial, tier: free, src: code, note: true }
+  data.wp_cli: { value: "no", src: code, note: true }
+  access.roles: { value: partial, tier: free, src: inventory_docs, note: true }
+  access.permissions: { value: unverified }
+  extras.frontend: { value: unverified }
+  extras.scanner: { value: unverified }
+  extras.woocommerce: { value: partial, tier: paid, tier_name: Growth, src: woo, note: true }
+  extras.storage: { text: true, src: code }

@@ -1,0 +1,16 @@
+{
+  "slug": "wp-inventory-manager",
+  "api_url": "https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request[slug]=wp-inventory-manager",
+  "fetched_at": "2026-10-16",
+  "listed": true,
+  "name": "WP Inventory Manager",
+  "version": "2.5.9",
+  "active_installs": 1000,
+  "rating": 4.56,
+  "num_ratings": 32,
+  "last_updated": "2026-10-13",
+  "added": "2015-09-01",
+  "requires_wp": "3.5.0",
+  "requires_php": null,
+  "tested_up_to": "7.1.3"
+}

@@ -1,0 +1,87 @@
+# Keyed by guide slug in src/data/pages.yaml. `picks` is keyed by product slug.
+best-wordpress-inventory-plugins:
+  title: "Die besten WordPress-Plugins für die Lagerverwaltung ({year}): 8 im Vergleich, mit Quellen"
+  nav: Die besten Lagerverwaltungs-Plugins insgesamt
+  description: Acht gepflegte WordPress-Plugins für Lagerverwaltung und Bestand, geordnet nach ihrer jeweiligen Stärke, mit Preisen, Zahlen von wordpress.org und Quellen.
+  h1: Die besten WordPress-Plugins für die Lagerverwaltung
+  intro:
+    - "„Lagerverwaltung“ umfasst in WordPress drei Arten von Plugins. Manche verwalten den Bestand von WooCommerce-Produkten. Manche sind eigenständige Lagerverwaltungen für Lager, Ausrüstung oder Verbrauchsmaterial. Manche sind Buchhaltungs- oder ERP-Suiten mit einem Lagermodul."
+    - Die Rangfolge unten gewichtet, wie viel jedes Plugin kann, was es kostet und wie bewährt es ist, und nennt dann, wo ein anderes Plugin besser passt.
+  picks:
+    atum: Die umfassendste Lagerverwaltungs-Suite für WooCommerce, mit mehr als 10.000 aktiven Installationen. Bestellungen, Lieferanten, Bestandsprotokolle und ein Bestandswert sind kostenlos. Lagerorte, Barcodes, CSV-Export und das vollständige Aktionsprotokoll sind kostenpflichtige Add-ons, berechnet pro Website und Jahr.
+    plugixa-inventory: "Unser eigenes Plugin. Die umfassendste kostenlose eigenständige Lagerverwaltung hier: mehrere Lager, Lagerbewegungen, Ausgabe an Personen, ein gesperrtes Journal, E-Mails bei niedrigem Bestand sowie CSV-Import und -Export. Es steht auf Platz zwei, nicht auf Platz eins, weil es neu ist, keine Bestellungen hat und nicht an WooCommerce angebunden ist."
+    wp-inventory-manager: Ein langjähriges eigenständiges Plugin, aufgebaut um einen öffentlichen Artikelkatalog. Lagerorte, ein Journal, Import und Export sind Add-ons, die eine Pro-Lizenz erfordern.
+    stock-manager-for-woocommerce: Das meistinstallierte Plugin hier, und kostenlos. Es ist eine schnelle Tabelle zum Bearbeiten von Bestand und Preisen in WooCommerce, keine vollständige Lagerverwaltung.
+    stock-locations-for-woocommerce: Kostenloser Bestand je Lagerort für WooCommerce, mit Zuordnung von Bestellungen zu einem Lagerort und einer REST-API.
+    bizuno: Ein kostenloses Open-Source-Buchhaltungssystem mit einem starken Lagermodul, einschließlich Seriennummern, Umlagerungen und Bewertung nach FIFO oder LIFO. Es hat sehr wenige Nutzer, und seine Brücke zu WooCommerce wurde auf wordpress.org geschlossen.
+    wp-erp: Eine Suite für Personal, Buchhaltung und CRM. Zu- und Abgänge erfordern den Tarif Scale, und Lager sowie Warnungen bei niedrigem Bestand sind nicht dokumentiert.
+    zintory: Ein kleines Journal von Vorgängen zwischen Konten, mit kostenlosen Umlagerungen und Aufträgen, aber ohne Warnungen bei niedrigem Bestand und ohne Dashboard.
+  how:
+    - Wir haben nach vier prüfbaren Kriterien gewertet. Das sind der Umfang der kostenlosen Version, die Kosten der kostenpflichtigen Tarife, wie aktiv das Plugin gepflegt wird und was seine Nutzer auf wordpress.org sagen.
+    - Wir haben keine Geschwindigkeitstests durchgeführt und nicht jede Funktion von Hand getestet. Die Werte stammen von den Seiten der Anbieter und aus dem Code der Plugins; die Methodik-Seite erklärt die Grenzen dieses Vorgehens.
+
+best-free-inventory-plugins:
+  title: "Die besten kostenlosen WordPress-Plugins für die Lagerverwaltung ({year})"
+  nav: Die besten kostenlosen Lagerverwaltungs-Plugins
+  description: Was jedes kostenlose WordPress-Plugin für die Lagerverwaltung ohne Bezahlung bietet, von Lagern und Journalen bis zu Bestellungen, mit Quellen.
+  h1: Die besten kostenlosen WordPress-Plugins für die Lagerverwaltung
+  intro:
+    - Jedes Plugin hier hat eine kostenlose Version, aber sie halten unterschiedliche Dinge zurück. Eines bietet Lager kostenlos und berechnet Umlagerungen. Ein anderes bietet Bestellungen kostenlos und berechnet Lagerorte.
+    - Das richtige kostenlose Plugin hängt davon ab, auf welche Funktion Sie am wenigsten verzichten können.
+  picks:
+    plugixa-inventory: "Unser eigenes Plugin. Kostenlos: mehrere Lager, Zu- und Abgangsbuchungen, Ausgabe an Personen, ein gesperrtes Journal, die Bewertung zu Anschaffungskosten, E-Mails bei niedrigem Bestand, ein Dashboard, CSV-Import und -Export, eine REST-API und WP-CLI. Umlagerungen, Korrekturbuchungen und Berichte gibt es in Pro."
+    atum: "Kostenlos: Bestellungen, Lieferanten, Bestandsprotokolle, Bestandswert zum Einkaufspreis, ein Dashboard und eine REST-API, für WooCommerce-Produkte. Lagerorte und CSV-Export sind kostenpflichtige Add-ons."
+    bizuno: "Vollständig kostenlos und Open Source, mit Bestand je Lager, Umlagerungen, Seriennummern und Bewertung nach FIFO oder LIFO. Dafür übernehmen Sie eine vollständige Buchhaltungsanwendung mit wenigen anderen Nutzern."
+    stock-manager-for-woocommerce: Vollständig kostenlose Massenbearbeitung des WooCommerce-Bestands, mit CSV-Import und -Export und einem einfachen Protokoll.
+    wp-inventory-manager: Ein kostenloser Artikelkatalog mit Bildern, einem Schwellenwert für niedrigen Bestand und einer öffentlichen Liste. Lagerbewegungen und Lagerorte erfordern kostenpflichtige Add-ons.
+    zintory: Kostenlose Vorgänge zwischen Konten, Umlagerungen zwischen Lagern und nummerierte Einkaufs- und Verkaufsaufträge. Keine Warnungen und kein Dashboard.
+  how:
+    - Wir haben nur die kostenlose Version jedes Plugins betrachtet und das, was sie ohne kostenpflichtiges Add-on ermöglicht.
+
+woocommerce-inventory-plugins:
+  title: "Die besten Lagerverwaltungs-Plugins für WooCommerce ({year})"
+  nav: Lagerverwaltungs-Plugins für WooCommerce
+  description: WordPress-Plugins, die den WooCommerce-Bestand verwalten, verglichen nach Bestellungen, Lagerorten und Preis, mit Quellen.
+  h1: Die besten Lagerverwaltungs-Plugins für WooCommerce
+  intro:
+    - WooCommerce zählt den Bestand je Produkt, und diese Plugins ergänzen, was fehlt, etwa Einkauf, Lagerorte oder schnelleres Bearbeiten. Alle drei setzen WooCommerce voraus.
+    - Wenn ein Teil Ihres Bestands nicht über den Shop verkauft wird, passt ein eigenständiges Plugin womöglich besser; siehe die Übersicht der Plugins ohne WooCommerce.
+  picks:
+    atum: Die umfassendste Option, mit kostenlosen Bestellungen, Lieferanten, Protokollen und Dashboard sowie Lagerorten, Barcodes und Inventur als kostenpflichtige Add-ons.
+    stock-manager-for-woocommerce: Der schnellste Weg, den Bestand vieler Produkte zu bearbeiten, kostenlos.
+    stock-locations-for-woocommerce: Kostenloser Bestand je Lagerort, mit Zuordnung von Bestellungen zu einem Lagerort.
+  how:
+    - Wir haben nur gepflegte Plugins aufgenommen, deren Hauptaufgabe der WooCommerce-Bestand ist. Editoren für Massenänderungen an Produkten, bei denen der Bestand nur ein Feld unter vielen ist, haben wir ausgelassen.
+
+inventory-plugins-without-woocommerce:
+  title: "WordPress-Plugins für die Lagerverwaltung ohne WooCommerce ({year})"
+  nav: Lagerverwaltung ohne WooCommerce
+  description: Eigenständige WordPress-Plugins, die Bestand, Ausrüstung und Verbrauchsmaterial ohne WooCommerce verwalten, verglichen mit Quellen.
+  h1: Lagerverwaltungs-Plugins, die kein WooCommerce brauchen
+  intro:
+    - Nicht jeder Bestand ist zum Verkauf bestimmt. Ausrüstung zum Verleihen, Verbrauchsmaterial und Teile in einem Lagerraum brauchen eine Lagerverwaltung ohne Shop. Diese Plugins führen eigene Datensätze und brauchen kein WooCommerce.
+  picks:
+    plugixa-inventory: "Unser eigenes Plugin. Lager, Lagerbewegungen, Ausgabe an namentlich erfasste Personen und ein Journal, das niemand ändern kann, kostenlos, mit Umlagerungen und Korrekturbuchungen in Pro."
+    wp-inventory-manager: Ein Artikelkatalog, den Sie auf Ihrer Website veröffentlichen können, mit kostenpflichtigen Add-ons für Lagerorte und ein Journal.
+    bizuno: Lagerverwaltung in einem kostenlosen Buchhaltungssystem, mit Umlagerungen, Seriennummern und Bewertung.
+    zintory: Ein schlankes Journal von Vorgängen zwischen Lagern, Lieferanten und Kunden.
+    wp-erp: Lagerverwaltung als Teil einer Suite für Personal und Buchhaltung, im Tarif Scale.
+  how:
+    - Wir haben Plugins aufgenommen, die den Bestand in eigenen Datensätzen führen und ohne WooCommerce laufen. Manche können zusätzlich WooCommerce-Produkte lesen; das ist in der Tabelle vermerkt.
+
+multi-warehouse-inventory-plugins:
+  title: "WordPress-Plugins für die Lagerverwaltung mit mehreren Lagern ({year})"
+  nav: Lagerverwaltung mit mehreren Lagern
+  description: WordPress-Plugins, die Bestand je Lager oder Lagerort führen, verglichen nach Umlagerungen, Preis und Verlauf, mit Quellen.
+  h1: Lagerverwaltungs-Plugins für mehrere Lager
+  intro:
+    - Wer Bestand an mehr als einem Ort lagert, braucht für jeden Ort eine eigene Menge, und eine Bewegung zwischen ihnen sollte eine einzige erfasste Umlagerung sein. Diese Plugins führen Bestand je Lagerort; sie unterscheiden sich bei Umlagerungen und darin, was kostenlos ist.
+  picks:
+    plugixa-inventory: "Unser eigenes Plugin. Bestand je Lager, eine Lagerübersicht und niedriger Bestand je Lager sind kostenlos; Umlagerungen, die beide Teile in das Journal schreiben, gibt es in Pro."
+    bizuno: Bestand je Lager und Umlagerungen zwischen Lagern, kostenlos, innerhalb eines Buchhaltungssystems.
+    stock-locations-for-woocommerce: Kostenloser Bestand je Lagerort für WooCommerce, mit Zuordnung von Bestellungen zu einem Lagerort. Einen Umlagerungsbeleg gibt es nicht.
+    zintory: Jedes Lager ist ein Konto mit eigenem Bestand, und Umlagerungen sind kostenlos.
+    atum: Bestand je Lagerort über das kostenpflichtige Add-on Multi-Inventory, für WooCommerce.
+    wp-inventory-manager: Lagerorte über das kostenpflichtige Add-on Locations Manager, das eine Pro-Lizenz erfordert.
+  how:
+    - Wir haben Plugins aufgenommen, bei denen jeder Lagerort eine eigene Bestandsmenge hat, nicht nur eine Lagerort-Kennzeichnung am Artikel.

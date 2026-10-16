@@ -1,0 +1,57 @@
+slug: plugixa-inventory
+name: Plugixa Inventory
+vendor: Plugixa
+own: true
+kind: inventory
+order: 1
+wporg_slug: plugixa-inventory
+homepage: https://www.plugixa.com/plugins/plugixa-inventory
+verified_at: 2026-10-16
+version_checked: "1.0.0"
+sources:
+  code: { url: "https://plugins.trac.wordpress.org/browser/plugixa-inventory/", method: source-code }
+  wporg: { url: "https://wordpress.org/plugins/plugixa-inventory/", method: docs }
+  docs: { url: "https://www.plugixa.com/documentation/plugixa-inventory", method: docs }
+  pricing: { url: "https://www.plugixa.com/plugins/plugixa-inventory#pricing", method: docs }
+pricing:
+  source: pricing
+  currency: EUR
+  free: true
+  lifetime: false
+  refund: defect_14
+  # Single site and unlimited sites are a choice on the one Pro card; unlimited price confirmed by Plugixa (2026-10-16).
+  tiers:
+    - { name: Pro, price: 69, period: year, sites: "1" }
+    - { name: Pro, price: 99, period: year, sites: unlimited }
+features:
+  items.types: { value: yes, tier: free, src: code, note: true }
+  items.sku_barcode: { value: yes, tier: free, src: code }
+  items.serials: { value: partial, tier: free, src: code, note: true }
+  items.images: { value: yes, tier: free, src: code, note: true }
+  items.custom_fields: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  items.units: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  locations.multiple: { value: yes, tier: free, src: code, note: true }
+  locations.transfers: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  movements.receive_issue: { value: yes, tier: free, src: code, note: true }
+  movements.checkout: { value: yes, tier: free, src: code, note: true }
+  movements.adjustments: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  movements.purchase_orders: { value: "no", src: code, note: true }
+  movements.sales_orders: { value: "no", src: code, note: true }
+  ledger.history: { value: yes, tier: free, src: code }
+  ledger.locked: { value: yes, tier: free, src: code, note: true }
+  valuation.cost: { value: yes, tier: free, src: code, note: true }
+  valuation.fifo_lifo: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  alerts.low_stock: { value: yes, tier: free, src: code, note: true }
+  alerts.email: { value: yes, tier: free, src: code, note: true }
+  reports.dashboard: { value: yes, tier: free, src: code, note: true }
+  reports.reports: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  data.csv_import: { value: yes, tier: free, src: code, note: true }
+  data.csv_export: { value: yes, tier: free, src: code }
+  data.rest_api: { value: yes, tier: free, src: code, note: true }
+  data.wp_cli: { value: yes, tier: free, src: code, note: true }
+  access.roles: { value: yes, tier: free, src: code, note: true }
+  access.permissions: { value: yes, tier: paid, tier_name: Pro, src: wporg, note: true }
+  extras.frontend: { value: yes, tier: free, src: code, note: true }
+  extras.scanner: { value: partial, tier: free, src: code, note: true }
+  extras.woocommerce: { value: "no", src: code, note: true }
+  extras.storage: { text: true, src: code }

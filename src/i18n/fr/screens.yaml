@@ -1,0 +1,8 @@
+# Captures d'écran de Plugixa Inventory affichées sur sa page d'avis. Les fichiers sont dans public/plugixa/.
+items:
+  - { file: dashboard.webp, alt: "Tableau de bord avec la valeur du stock, les stocks bas, l'évolution des mouvements sur 30 jours et les articles les plus mouvementés" }
+  - { file: items.webp, alt: "Catalogue d'articles avec SKU, types d'articles et totaux disponibles" }
+  - { file: stock-movement.webp, alt: "Un mouvement de stock créé en brouillon, puis validé pour être inscrit au registre" }
+  - { file: ledger.webp, alt: "Registre de stock listant chaque modification de chaque quantité, de la plus récente à la plus ancienne" }
+  - { file: warehouse.webp, alt: "Vue d'un entrepôt avec le stock, les stocks bas et l'activité récente pour un emplacement" }
+  - { file: stock-health.webp, alt: "Contrôle de cohérence du stock prouvant que les quantités découlent toujours du registre" }

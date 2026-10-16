@@ -1,0 +1,68 @@
+slug: atum
+name: ATUM Inventory Management
+vendor: Stock Management Labs
+own: false
+kind: woocommerce
+order: 3
+wporg_slug: atum-stock-manager-for-woocommerce
+homepage: https://stockmanagementlabs.com/
+verified_at: 2026-10-16
+version_checked: "2.0.6"
+sources:
+  wporg: { url: "https://wordpress.org/plugins/atum-stock-manager-for-woocommerce/", method: docs }
+  pricing: { url: "https://stockmanagementlabs.com/addons/", method: docs }
+  refunds: { url: "https://stockmanagementlabs.com/refunds-policy/", method: docs }
+  code: { url: "https://plugins.trac.wordpress.org/browser/atum-stock-manager-for-woocommerce/", method: source-code }
+  restapi: { url: "https://stockmanagementlabs.github.io/atum-rest-api-docs/", method: docs }
+  multi_inventory: { url: "https://stockmanagementlabs.com/addons/atum-multi-inventory/", method: docs }
+  product_levels: { url: "https://stockmanagementlabs.com/addons/atum-product-levels/", method: docs }
+  export_pro: { url: "https://stockmanagementlabs.com/addons/atum-export-pro/", method: docs }
+  action_logs: { url: "https://stockmanagementlabs.com/addons/atum-action-logs/", method: docs }
+  barcodes_pro: { url: "https://stockmanagementlabs.com/addons/atum-barcodes-pro/", method: docs }
+pricing:
+  source: pricing
+  currency: EUR
+  free: true
+  lifetime: false
+  refund: unknown
+  tiers:
+    - { name: "Action Logs", price: 105, period: year, sites: "1" }
+    - { name: "Barcodes PRO", price: 105, period: year, sites: "1" }
+    - { name: "Pick & Pack", price: 105, period: year, sites: "1" }
+    - { name: "Purchase Orders PRO", price: 144, period: year, sites: "1" }
+    - { name: "Export PRO", price: 148, period: year, sites: "1" }
+    - { name: "Product Levels", price: 164, period: year, sites: "1" }
+    - { name: "Multi-Inventory", price: 184, period: year, sites: "1" }
+    - { name: "Stock Takes", price: 210, period: year, sites: "1" }
+features:
+  items.types: { value: yes, tier: addon, tier_name: "Product Levels", src: product_levels, note: true }
+  items.sku_barcode: { value: yes, tier: free, src: code, note: true }
+  items.serials: { value: partial, tier: addon, tier_name: "Multi-Inventory", src: multi_inventory, note: true }
+  items.images: { value: yes, tier: free, src: wporg }
+  items.custom_fields: { value: unverified }
+  items.units: { value: unverified }
+  locations.multiple: { value: yes, tier: addon, tier_name: "Multi-Inventory", src: multi_inventory, note: true }
+  locations.transfers: { value: unverified }
+  movements.receive_issue: { value: yes, tier: free, src: wporg, note: true }
+  movements.checkout: { value: unverified }
+  movements.adjustments: { value: yes, tier: free, src: code, note: true }
+  movements.purchase_orders: { value: yes, tier: free, src: wporg, note: true }
+  movements.sales_orders: { value: yes, tier: free, src: wporg, note: true }
+  ledger.history: { value: yes, tier: addon, tier_name: "Action Logs", src: action_logs, note: true }
+  ledger.locked: { value: unverified }
+  valuation.cost: { value: yes, tier: free, src: code, note: true }
+  valuation.fifo_lifo: { value: partial, tier: addon, tier_name: "Multi-Inventory", src: multi_inventory, note: true }
+  alerts.low_stock: { value: yes, tier: free, src: wporg }
+  alerts.email: { value: partial, tier: free, src: code, note: true }
+  reports.dashboard: { value: yes, tier: free, src: wporg }
+  reports.reports: { value: yes, tier: free, src: wporg, note: true }
+  data.csv_import: { value: yes, tier: addon, tier_name: "Export PRO", src: export_pro, note: true }
+  data.csv_export: { value: yes, tier: addon, tier_name: "Export PRO", src: export_pro, note: true }
+  data.rest_api: { value: yes, tier: free, src: restapi }
+  data.wp_cli: { value: yes, tier: free, src: code, note: true }
+  access.roles: { value: yes, tier: free, src: code, note: true }
+  access.permissions: { value: partial, tier: free, src: code, note: true }
+  extras.frontend: { value: partial, tier: addon, tier_name: "Multi-Inventory", src: multi_inventory, note: true }
+  extras.scanner: { value: yes, tier: addon, tier_name: "Barcodes PRO", src: barcodes_pro, note: true }
+  extras.woocommerce: { value: yes, tier: free, src: wporg, note: true }
+  extras.storage: { text: true, src: code }

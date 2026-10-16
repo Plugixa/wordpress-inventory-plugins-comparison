@@ -1,0 +1,8 @@
+# Plugixa Inventory screenshots shown on its review page. Files are in public/plugixa/.
+items:
+  - { file: dashboard.webp, alt: "Panel con el valor del stock, el stock bajo, la tendencia de movimientos de 30 días y los artículos con más movimiento" }
+  - { file: items.webp, alt: "Catálogo de artículos con SKU, tipos de artículo y totales disponibles" }
+  - { file: stock-movement.webp, alt: "Un movimiento de stock creado primero como borrador y finalizado después para escribirlo en el libro de movimientos" }
+  - { file: ledger.webp, alt: "Libro de movimientos con cada cambio de cada cantidad, del más reciente al más antiguo" }
+  - { file: warehouse.webp, alt: "Vista general de un almacén con el stock, el stock bajo y la actividad reciente de esa ubicación" }
+  - { file: stock-health.webp, alt: "Comprobación del estado del stock que demuestra que las cantidades siguen cuadrando con el libro de movimientos" }

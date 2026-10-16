@@ -1,0 +1,54 @@
+# Keyed by `target` in src/data/pages.yaml. `picks` is keyed by product slug.
+atum:
+  description: Alternativen zu ATUM Inventory Management, verglichen danach, was kostenlos ist, was die Add-ons kosten und ob WooCommerce nötig ist, mit Quellen.
+  intro: ATUM ist die umfassendste Lagerverwaltungs-Suite für WooCommerce, und die kostenlosen Bestellungen an Lieferanten sind eine echte Stärke. Nutzer suchen nach Alternativen, weil Lagerorte, Barcodes, CSV-Export und ein vollständiger Änderungsverlauf jeweils als Jahres-Add-on verkauft werden und weil es nur mit WooCommerce funktioniert.
+  why:
+    - Bestand je Lagerort erfordert das Add-on Multi-Inventory, für 184 € pro Jahr für eine Website.
+    - CSV-Export, Barcodes, Inventur und das vollständige Aktionsprotokoll sind separate Add-ons, jeweils pro Website und Jahr berechnet.
+    - Es setzt WooCommerce voraus und kann daher keinen Bestand verwalten, der kein Shop-Produkt ist.
+  picks:
+    stock-manager-for-woocommerce: Kostenlose Massenbearbeitung von Bestand und Preisen in WooCommerce in einer Tabelle, mit einem einfachen Änderungsprotokoll.
+    stock-locations-for-woocommerce: Kostenloser Bestand je Lagerort für WooCommerce, mit Zuordnung von Bestellungen zu einem Lagerort.
+    plugixa-inventory: "Mehrere Lager, erfasste Lagerbewegungen, Ausgabe an Personen und ein gesperrtes Journal, kostenlos und ohne WooCommerce."
+    bizuno: Kostenlose Open-Source-Buchhaltung mit Bestand je Lager, Umlagerungen und Bewertung nach FIFO oder LIFO.
+  migrate: "Exportieren Sie Ihre Produkte und Bestände als CSV und nutzen Sie dann den Importer des neuen Plugins. Bestellungen, Lieferanten und die Protokolle von ATUM werden auf diesem Weg nicht übertragen. Testen Sie den Import zuerst auf einer Staging-Kopie."
+
+wp-inventory-manager:
+  description: Alternativen zu WP Inventory Manager, um Bestand über mehrere Lagerorte mit einem sauberen Verlauf zu führen, verglichen mit Quellen.
+  intro: WP Inventory Manager eignet sich gut, um einen Artikelkatalog auf einer WordPress-Website zu veröffentlichen. Nutzer suchen nach Alternativen, wenn sie eine echte Bestandsführung brauchen, denn Lagerorte, das Journal, Import und Export sind Add-ons, die zusätzlich eine Pro-Lizenz erfordern.
+  why:
+    - Lagerorte, das Journal, Import und Export sind jeweils kostenpflichtige Add-ons, die Pro erfordern.
+    - Journaleinträge lassen sich ändern oder löschen, der Verlauf ist also kein revisionssicherer Nachweis.
+    - Es gibt keine REST-API und kein WP-CLI.
+  picks:
+    plugixa-inventory: "Mehrere Lager, Lagerbewegungen, ein Journal, das niemand ändern kann, CSV-Import und -Export, eine REST-API und WP-CLI, alles kostenlos."
+    bizuno: Kostenloser Bestand je Lager, Umlagerungen, Seriennummern und Bewertung, innerhalb eines vollständigen Buchhaltungssystems.
+    zintory: Ein kleines, kostenloses Vorgangsjournal mit Umlagerungen zwischen Lagern und einem einmaligen Pro-Preis.
+    atum: Die Wahl, wenn Ihre Artikel WooCommerce-Produkte sind und Sie Bestellungen brauchen.
+  migrate: "Das Add-on Import and Export von WP Inventory Manager schreibt eine CSV-Datei Ihrer Artikel. Ordnen Sie die Spalten im Importer des neuen Plugins zu und übernehmen Sie den Anfangsbestand je Lagerort. Testen Sie das zuerst auf einer Staging-Kopie."
+
+stock-manager-for-woocommerce:
+  description: Alternativen zu Stock Manager for WooCommerce, wenn Sie mehr als einen Editor für Massenänderungen am Bestand brauchen, verglichen mit Quellen.
+  intro: Stock Manager for WooCommerce ist kostenlos und erledigt eine Aufgabe gut, das schnelle Bearbeiten des Bestands vieler Produkte. Nutzer suchen nach Alternativen, wenn sie Lagerorte, Einkauf oder einen vollständigen Verlauf brauchen.
+  why:
+    - Es gibt keine Lagerorte, Bestellungen oder Lieferanten.
+    - Das Bestandsprotokoll speichert nur das Datum und die neue Menge.
+    - Das Plugin selbst bezeichnet seinen CSV-Import und -Export als Nutzung „auf eigenes Risiko“.
+  picks:
+    atum: Bestellungen, Lieferanten, Bestandsprotokolle und ein Dashboard kostenlos, mit kostenpflichtigen Add-ons für Lagerorte und Barcodes.
+    stock-locations-for-woocommerce: Kostenloser Bestand je Lagerort, mit Zuordnung von Bestellungen zu einem Lagerort.
+    plugixa-inventory: Eine separate Lagerverwaltung mit Lagern und einem gesperrten Journal, für Bestand, der nicht nur aus Shop-Produkten besteht.
+  migrate: Der Bestand liegt in WooCommerce selbst, daher lesen ATUM und Stock Locations for WooCommerce ihn so, wie er ist. Ein separates System wie Plugixa Inventory braucht einen Import der Artikel und des Anfangsbestands aus einem CSV-Export.
+
+business-manager:
+  description: Alternativen zum Plugin Business Manager, das auf wordpress.org geschlossen wurde, für Lagerverwaltung und Bestand in WordPress.
+  intro: Business Manager, ein ERP-Plugin mit Personal, CRM und Projekten, wurde am 28. Oktober 2024 wegen eines Richtlinienverstoßes auf wordpress.org geschlossen. Ein geschlossenes Plugin erhält keine Updates aus dem Verzeichnis, daher sollten Websites, die es noch einsetzen, einen Umzug planen.
+  why:
+    - Seit dem 28. Oktober 2024 auf wordpress.org geschlossen.
+    - Keine Updates über wordpress.org, auch keine Sicherheitskorrekturen.
+  picks:
+    plugixa-inventory: "Eine fokussierte Lagerverwaltung mit Lagern, Lagerbewegungen und einem gesperrten Journal, kostenlos."
+    wp-erp: Eine gepflegte ERP-Suite mit Personal, Buchhaltung und CRM sowie Lagerverwaltung im Tarif Scale.
+    bizuno: Ein kostenloses Open-Source-System für Buchhaltung und ERP mit enthaltener Lagerverwaltung.
+    wp-inventory-manager: Ein Bestandskatalog mit öffentlicher Liste und kostenpflichtigen Add-ons für Lagerorte und ein Journal.
+  migrate: Exportieren Sie vor dem Entfernen des Plugins so viel wie möglich als CSV und importieren Sie die Artikel dann in das neue Plugin. Testen Sie das zuerst auf einer Staging-Kopie.
